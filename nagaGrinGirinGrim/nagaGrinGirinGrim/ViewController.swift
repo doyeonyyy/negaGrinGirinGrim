@@ -26,9 +26,10 @@ class ViewController: UIViewController {
     }
     @IBAction func editProfileSegueAct(_ sender: Any) {
         let editProfileViewControllerID = UIStoryboard(name: "EditProfileStoryboard", bundle: .none).instantiateViewController(identifier: "editProfileViewControllerID") as! EditProfileViewController
+        editProfileViewControllerID.title = "프로필 수정"
         navigationController?.pushViewController(editProfileViewControllerID, animated: true)
                 let backButton = UIBarButtonItem()
-                backButton.title = "뒤로 가기"
+                backButton.title = "취소"
         //        navigationItem.leftBarButtonItem = backButton
                 navigationItem.backBarButtonItem = backButton
     }
