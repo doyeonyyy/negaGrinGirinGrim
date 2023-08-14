@@ -20,18 +20,16 @@ class MainPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    
-        
     }
 }
 
+
+
 extension MainPageViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
-    
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 10 /* <---- 여기에 도연님이패이지에서 입력되는 데이터들의 배열에 수만큼 나오게 해줘야함
+                   예를들면  item.count     */
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
