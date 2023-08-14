@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,21 +16,99 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="디테일입니다 동준님 파이팅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4X-sM-w64">
-                                <rect key="frame" x="111" y="176" width="186" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uhM-qf-0Ee" userLabel="PostImage">
+                                <rect key="frame" x="5" y="59.000000000000028" width="383" height="478.66666666666674"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uhM-qf-0Ee" secondAttribute="height" multiplier="1:1.25" id="ElY-in-Ii9"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ofs-mc-lV7" userLabel="ProfileImage">
+                                <rect key="frame" x="8" y="542.66666666666663" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="QYa-eG-G87"/>
+                                    <constraint firstAttribute="height" constant="80" id="X44-zr-YAb"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fUF-NB-C2C">
+                                <rect key="frame" x="93" y="542.66666666666663" width="295" height="80.666666666666629"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wuT-mO-RMI">
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목 공간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHk-dD-XPC">
+                                                <rect key="frame" x="0.0" y="0.0" width="257" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="TvZ-pj-o6E"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYf-97-C5Z">
+                                                <rect key="frame" x="265" y="0.0" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="BGa-f0-ddb"/>
+                                                    <constraint firstAttribute="width" secondItem="cYf-97-C5Z" secondAttribute="height" multiplier="1:1" id="Jfn-vd-5RA"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="수정">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="8"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="날짜 영역" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXz-9H-Kwa">
+                                        <rect key="frame" x="0.0" y="35" width="295" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="바디 텍스트 공간" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kC-3o-bxn">
+                                        <rect key="frame" x="0.0" y="60.333333333333378" width="295" height="20.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="wuT-mO-RMI" secondAttribute="trailing" id="WNW-s9-8Rw"/>
+                                    <constraint firstAttribute="trailing" secondItem="gXz-9H-Kwa" secondAttribute="trailing" id="bGz-cJ-8ob"/>
+                                    <constraint firstAttribute="trailing" secondItem="1kC-3o-bxn" secondAttribute="trailing" id="mFj-7G-qHO"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJ1-7Y-Jbg">
+                                <rect key="frame" x="271.33333333333331" y="59" width="116.66666666666669" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="드롭다운 버튼"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ofs-mc-lV7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="0ia-3A-f3L"/>
+                            <constraint firstItem="ofs-mc-lV7" firstAttribute="trailing" secondItem="uhM-qf-0Ee" secondAttribute="trailing" constant="-300" id="6fN-Df-yPL"/>
+                            <constraint firstItem="fUF-NB-C2C" firstAttribute="leading" secondItem="ofs-mc-lV7" secondAttribute="trailing" constant="5" id="Bg4-fu-TLu"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fUF-NB-C2C" secondAttribute="trailing" constant="5" id="KQD-Hk-xN3"/>
+                            <constraint firstItem="ofs-mc-lV7" firstAttribute="top" secondItem="uhM-qf-0Ee" secondAttribute="bottom" constant="5" id="Sdb-HO-YLK"/>
+                            <constraint firstItem="fUF-NB-C2C" firstAttribute="top" secondItem="uhM-qf-0Ee" secondAttribute="bottom" constant="5" id="asa-rY-Yxo"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="uhM-qf-0Ee" secondAttribute="trailing" constant="5" id="egg-mp-C7x"/>
+                            <constraint firstItem="qJ1-7Y-Jbg" firstAttribute="top" secondItem="uhM-qf-0Ee" secondAttribute="top" id="fnt-c5-08H"/>
+                            <constraint firstItem="qJ1-7Y-Jbg" firstAttribute="trailing" secondItem="uhM-qf-0Ee" secondAttribute="trailing" id="g0n-fg-DIu"/>
+                            <constraint firstItem="uhM-qf-0Ee" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="poQ-Ux-WeA"/>
+                            <constraint firstItem="uhM-qf-0Ee" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="5" id="r6B-GN-9A3"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="detailBodyLabel" destination="1kC-3o-bxn" id="q4t-8N-dRH"/>
+                        <outlet property="detailDateLabel" destination="gXz-9H-Kwa" id="75o-kC-Hh3"/>
+                        <outlet property="detailTitleLabel" destination="rHk-dD-XPC" id="K07-FJ-vEJ"/>
+                        <outlet property="postedImage" destination="uhM-qf-0Ee" id="aQr-Qu-qJn"/>
+                        <outlet property="profileImage" destination="ofs-mc-lV7" id="6so-7j-QAQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="43" y="-34"/>
+            <point key="canvasLocation" x="41.984732824427482" y="-34.507042253521128"/>
         </scene>
     </scenes>
     <resources>

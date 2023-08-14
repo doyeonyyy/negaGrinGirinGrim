@@ -9,6 +9,14 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var postedImage: UIImageView!
+    @IBOutlet weak var profileImage: UIImageView!
+    
+    @IBOutlet weak var detailTitleLabel: UILabel!
+    @IBOutlet weak var detailDateLabel: UILabel!
+    @IBOutlet weak var detailBodyLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
