@@ -87,14 +87,22 @@
 				DC78819B2A8A064100FAFBD8 /* MainPageViewController.swift */,
 				DC78819D2A8A069400FAFBD8 /* ProfileViewController.swift */,
 				DC78819F2A8A06AA00FAFBD8 /* EditProfileViewController.swift */,
-				DC7881A12A8A06E100FAFBD8 /* WritingViewController.swift */,
 				DC7881A32A8A078300FAFBD8 /* DetailStoryboard.storyboard */,
 				DC7881A52A8A079D00FAFBD8 /* MainPageStoryboard.storyboard */,
 				DC7881A72A8A07AF00FAFBD8 /* ProfileStoryboard.storyboard */,
 				DC7881A92A8A07D800FAFBD8 /* EditProfileStoryboard.storyboard */,
-				DC7881AB2A8A07F800FAFBD8 /* WritingStoryboard.storyboard */,
+				63A531D02A8A1469001DFF71 /* Writing */,
 			);
 			path = nagaGrinGirinGrim;
+			sourceTree = "<group>";
+		};
+		63A531D02A8A1469001DFF71 /* Writing */ = {
+			isa = PBXGroup;
+			children = (
+				DC7881AB2A8A07F800FAFBD8 /* WritingStoryboard.storyboard */,
+				DC7881A12A8A06E100FAFBD8 /* WritingViewController.swift */,
+			);
+			path = Writing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
