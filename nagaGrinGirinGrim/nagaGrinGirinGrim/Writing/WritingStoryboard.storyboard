@@ -26,6 +26,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="취소"/>
+                                <connections>
+                                    <action selector="takeBack:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Cc3-uz-3ed"/>
+                                </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jxw-Gj-9it">
                                 <rect key="frame" x="0.0" y="48" width="393" height="44"/>
@@ -68,6 +71,7 @@
                     </view>
                     <connections>
                         <outlet property="clickAdd" destination="Yzm-2M-KCT" id="ia3-GD-a87"/>
+                        <outlet property="clickCancel" destination="Wge-L0-vaP" id="z0t-tx-7Ga"/>
                         <outlet property="imageView" destination="Ii3-Hz-Rt0" id="PnI-d2-egX"/>
                     </connections>
                 </viewController>

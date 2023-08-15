@@ -9,6 +9,7 @@ import UIKit
 
 class WritingViewController: UIViewController {
     
+    @IBOutlet weak var clickCancel: UIButton!
     @IBOutlet weak var clickAdd: UIButton!
     
     @IBOutlet weak var imageView: UIImageView!
@@ -17,18 +18,22 @@ class WritingViewController: UIViewController {
         super.viewDidLoad()
         setupViews()
         addPhotos()
+        self.view.addSubview(self.clickCancel)
     }
-
+    
+    @IBAction func takeBack(_ sender: Any) {
+        self.dismiss(animated: true)
+        clickCancel.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
+    }
+    
     func setupViews() {
         clickAdd.setTitle("사진", for: .normal)
         clickAdd.addTarget(self, action: #selector(uploadPhoto), for: .touchUpInside)
         
         view.addSubview(imageView)
         view.addSubview(clickAdd)
-        view.subviews.forEach { view in view.translatesAutoresizingMaskIntoConstraints = false
-            view.sizeToFit()
-        }
     }
+    
     func addPhotos() {
         let safeArea = view.safeAreaLayoutGuide; NSLayoutConstraint.activate([
             imageView.heightAnchor.constraint(equalTo: view.heightAnchor),
@@ -43,7 +48,9 @@ class WritingViewController: UIViewController {
         // imagePicker.allowsEditing = true
         present(imagePicker, animated: true)
     }
-    
+    @objc func buttonPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 
 extension WritingViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
