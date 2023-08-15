@@ -15,6 +15,11 @@
 		63A531C92A89E4D2001DFF71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63A531C72A89E4D2001DFF71 /* LaunchScreen.storyboard */; };
 		96C51C3D2A8A1B4200861CB8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C51C3C2A8A1B4200861CB8 /* User.swift */; };
 		96C51C402A8A615E00861CB8 /* UIcolor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C51C3F2A8A615E00861CB8 /* UIcolor.swift */; };
+		96C8F39F2A8B0B3A00DC0267 /* UserInfoCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C8F39E2A8B0B3A00DC0267 /* UserInfoCollectionView.swift */; };
+		96C8F3A12A8B4CD900DC0267 /* NavigationTapbar_top.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C8F3A02A8B4CD900DC0267 /* NavigationTapbar_top.swift */; };
+		96C8F3A32A8B549A00DC0267 /* CollectionViewTry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C8F3A22A8B549A00DC0267 /* CollectionViewTry.swift */; };
+		96C8F3A72A8B588900DC0267 /* CollectionViewTry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96C8F3A62A8B588900DC0267 /* CollectionViewTry.storyboard */; };
+		96C8F3A92A8B655700DC0267 /* DomoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C8F3A82A8B655700DC0267 /* DomoCell.swift */; };
 		DC78819A2A8A062600FAFBD8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7881992A8A062600FAFBD8 /* DetailViewController.swift */; };
 		DC78819C2A8A064100FAFBD8 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78819B2A8A064100FAFBD8 /* MainPageViewController.swift */; };
 		DC78819E2A8A069400FAFBD8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78819D2A8A069400FAFBD8 /* ProfileViewController.swift */; };
@@ -38,6 +43,11 @@
 		63A531CA2A89E4D2001DFF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96C51C3C2A8A1B4200861CB8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		96C51C3F2A8A615E00861CB8 /* UIcolor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIcolor.swift; sourceTree = "<group>"; };
+		96C8F39E2A8B0B3A00DC0267 /* UserInfoCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoCollectionView.swift; sourceTree = "<group>"; };
+		96C8F3A02A8B4CD900DC0267 /* NavigationTapbar_top.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTapbar_top.swift; sourceTree = "<group>"; };
+		96C8F3A22A8B549A00DC0267 /* CollectionViewTry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTry.swift; sourceTree = "<group>"; };
+		96C8F3A62A8B588900DC0267 /* CollectionViewTry.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CollectionViewTry.storyboard; sourceTree = "<group>"; };
+		96C8F3A82A8B655700DC0267 /* DomoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomoCell.swift; sourceTree = "<group>"; };
 		DC7881992A8A062600FAFBD8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DC78819B2A8A064100FAFBD8 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		DC78819D2A8A069400FAFBD8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -106,7 +116,12 @@
 			children = (
 				DC7881A92A8A07D800FAFBD8 /* EditProfileStoryboard.storyboard */,
 				DC78819F2A8A06AA00FAFBD8 /* EditProfileViewController.swift */,
+				96C8F39E2A8B0B3A00DC0267 /* UserInfoCollectionView.swift */,
 				96C51C3F2A8A615E00861CB8 /* UIcolor.swift */,
+				96C8F3A02A8B4CD900DC0267 /* NavigationTapbar_top.swift */,
+				96C8F3A22A8B549A00DC0267 /* CollectionViewTry.swift */,
+				96C8F3A82A8B655700DC0267 /* DomoCell.swift */,
+				96C8F3A62A8B588900DC0267 /* CollectionViewTry.storyboard */,
 			);
 			path = EditProfile;
 			sourceTree = "<group>";
@@ -171,6 +186,7 @@
 			files = (
 				DC7881A62A8A079D00FAFBD8 /* MainPageStoryboard.storyboard in Resources */,
 				63A531C92A89E4D2001DFF71 /* LaunchScreen.storyboard in Resources */,
+				96C8F3A72A8B588900DC0267 /* CollectionViewTry.storyboard in Resources */,
 				DC7881AC2A8A07F800FAFBD8 /* WritingStoryboard.storyboard in Resources */,
 				63A531C62A89E4D2001DFF71 /* Assets.xcassets in Resources */,
 				DC7881A42A8A078300FAFBD8 /* DetailStoryboard.storyboard in Resources */,
@@ -188,9 +204,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC7881A02A8A06AA00FAFBD8 /* EditProfileViewController.swift in Sources */,
+				96C8F39F2A8B0B3A00DC0267 /* UserInfoCollectionView.swift in Sources */,
 				DC7881A22A8A06E100FAFBD8 /* WritingViewController.swift in Sources */,
 				63A531C12A89E4D1001DFF71 /* ViewController.swift in Sources */,
+				96C8F3A92A8B655700DC0267 /* DomoCell.swift in Sources */,
 				DC78819C2A8A064100FAFBD8 /* MainPageViewController.swift in Sources */,
+				96C8F3A32A8B549A00DC0267 /* CollectionViewTry.swift in Sources */,
+				96C8F3A12A8B4CD900DC0267 /* NavigationTapbar_top.swift in Sources */,
 				63A531BD2A89E4D1001DFF71 /* AppDelegate.swift in Sources */,
 				96C51C3D2A8A1B4200861CB8 /* User.swift in Sources */,
 				DC78819A2A8A062600FAFBD8 /* DetailViewController.swift in Sources */,

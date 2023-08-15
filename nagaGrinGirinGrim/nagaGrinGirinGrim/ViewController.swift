@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     // 뷰 컨트롤러를 지워버렸을 때는 아래와 같이 다시 셋팅
     // let storyboardID = UIStoryboard(name: "className", bundle: .none).instantiateViewController(identifier: "storyboardID") as! className
     // navigationController?.pushViewController(storyboardID, animated: true) - 원하는 presentation 방식 변경
-
+    
     @IBAction func mainSegueAct(_ sender: Any) {
         let mainPageStoryboardID = UIStoryboard(name: "MainPageStoryboard", bundle: .none).instantiateViewController(identifier: "mainPageViewControllerID") as! MainPageViewController
         navigationController?.pushViewController(mainPageStoryboardID, animated: true)
@@ -28,10 +28,11 @@ class ViewController: UIViewController {
         let editProfileViewControllerID = UIStoryboard(name: "EditProfileStoryboard", bundle: .none).instantiateViewController(identifier: "editProfileViewControllerID") as! EditProfileViewController
         editProfileViewControllerID.title = "프로필 수정"
         navigationController?.pushViewController(editProfileViewControllerID, animated: true)
-                let backButton = UIBarButtonItem()
-                backButton.title = "취소"
-        //        navigationItem.leftBarButtonItem = backButton
-                navigationItem.backBarButtonItem = backButton
+        
+        
+        
+        
+        
     }
     @IBAction func writingSegueAct(_ sender: Any) {
         let writingViewControllerID = UIStoryboard(name: "WritingStoryboard", bundle: .none).instantiateViewController(identifier: "writingViewControllerID") as! WritingViewController
@@ -43,7 +44,12 @@ class ViewController: UIViewController {
         
         
     }
-
-
+    
+    @objc func saveButtonTapped() {
+        // This function will be called when the "Save" button is tapped
+        // Add your save logic here
+    }
+    
+    
 }
 
