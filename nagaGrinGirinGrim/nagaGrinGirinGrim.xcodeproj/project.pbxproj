@@ -55,15 +55,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1F954FE92A8C9E70004A1360 /* MainPage */ = {
-			isa = PBXGroup;
-			children = (
-				DC78819B2A8A064100FAFBD8 /* MainPageViewController.swift */,
-				1F954FE62A8C7783004A1360 /* CellCustom.swift */,
-			);
-			path = MainPage;
-			sourceTree = "<group>";
-		};
 		63A531B02A89E4D1001DFF71 = {
 			isa = PBXGroup;
 			children = (
@@ -90,7 +81,8 @@
 				63A531C52A89E4D2001DFF71 /* Assets.xcassets */,
 				63A531C72A89E4D2001DFF71 /* LaunchScreen.storyboard */,
 				63A531CA2A89E4D2001DFF71 /* Info.plist */,
-				1F954FE92A8C9E70004A1360 /* MainPage */,
+				DC78819B2A8A064100FAFBD8 /* MainPageViewController.swift */,
+				1F954FE62A8C7783004A1360 /* CellCustom.swift */,
 				DC7881992A8A062600FAFBD8 /* DetailViewController.swift */,
 				DC78819D2A8A069400FAFBD8 /* ProfileViewController.swift */,
 				DC78819F2A8A06AA00FAFBD8 /* EditProfileViewController.swift */,
