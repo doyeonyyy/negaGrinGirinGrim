@@ -118,3 +118,4 @@ extension MainPageViewController: UIImagePickerControllerDelegate & UINavigation
 //     @IBOutlet weak var postImgNames: UIImageView!
 //     @IBOutlet weak var postTitles: UILabel!
 //}
+//--------//
