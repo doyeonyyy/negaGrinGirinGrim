@@ -125,7 +125,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var profileImg: UIImageView!
     
     func loading() {
-        let picName: String = defaults.string(forKey: "profilePicture")!
+        let picName: String = defaults.string(forKey: "profilePicture") ?? "two_zo_img"
         print(picName)
         profileImg.image = UIImage(named: picName)
         profileImg.frame(forAlignmentRect: CGRect(x: 20, y: 110, width: 150, height: 150))
