@@ -14,16 +14,16 @@
 		63A531C42A89E4D1001DFF71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63A531C22A89E4D1001DFF71 /* Main.storyboard */; };
 		63A531C62A89E4D2001DFF71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63A531C52A89E4D2001DFF71 /* Assets.xcassets */; };
 		63A531C92A89E4D2001DFF71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63A531C72A89E4D2001DFF71 /* LaunchScreen.storyboard */; };
+		63B67EFD2A8CE76600AE22E9 /* DomoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B67EFC2A8CE76600AE22E9 /* DomoCell.swift */; };
+		63B67EFF2A8CE77C00AE22E9 /* Edit+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B67EFE2A8CE77C00AE22E9 /* Edit+Layout.swift */; };
+		63B67F012A8CE7FA00AE22E9 /* NavigationTapbar_top.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B67F002A8CE7FA00AE22E9 /* NavigationTapbar_top.swift */; };
+		63B67F032A8CE80B00AE22E9 /* UIcolor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B67F022A8CE80B00AE22E9 /* UIcolor.swift */; };
+		63B67F052A8CE81800AE22E9 /* UserInfoCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B67F042A8CE81800AE22E9 /* UserInfoCollectionView.swift */; };
+		63B67F072A8CE85100AE22E9 /* EditProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63B67F062A8CE85100AE22E9 /* EditProfileStoryboard.storyboard */; };
+		63B67F092A8CE86D00AE22E9 /* CollectionViewTry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63B67F082A8CE86D00AE22E9 /* CollectionViewTry.storyboard */; };
+		63B67F0B2A8CE87B00AE22E9 /* CollectionViewTry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B67F0A2A8CE87B00AE22E9 /* CollectionViewTry.swift */; };
 		96E73D542A8CB64200901756 /* WritingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E73D522A8CB64200901756 /* WritingStoryboard.storyboard */; };
 		96E73D552A8CB64200901756 /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E73D532A8CB64200901756 /* WritingViewController.swift */; };
-		96E73D5B2A8CB8DB00901756 /* EditProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E73D5A2A8CB8DB00901756 /* EditProfileStoryboard.storyboard */; };
-		96E73D5E2A8CB94500901756 /* CollectionViewTry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E73D5C2A8CB94500901756 /* CollectionViewTry.storyboard */; };
-		96E73D5F2A8CB94500901756 /* CollectionViewTry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E73D5D2A8CB94500901756 /* CollectionViewTry.swift */; };
-		96E73D652A8CB96A00901756 /* UIcolor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E73D602A8CB96A00901756 /* UIcolor.swift */; };
-		96E73D662A8CB96A00901756 /* NavigationTapbar_top.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E73D612A8CB96A00901756 /* NavigationTapbar_top.swift */; };
-		96E73D672A8CB96A00901756 /* DomoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E73D622A8CB96A00901756 /* DomoCell.swift */; };
-		96E73D682A8CB96A00901756 /* Edit+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E73D632A8CB96A00901756 /* Edit+Layout.swift */; };
-		96E73D692A8CB96A00901756 /* UserInfoCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E73D642A8CB96A00901756 /* UserInfoCollectionView.swift */; };
 		C069E5A42A8C6B47001C11A8 /* MyDiaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C069E5A32A8C6B47001C11A8 /* MyDiaryTableViewCell.swift */; };
 		DC78819A2A8A062600FAFBD8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7881992A8A062600FAFBD8 /* DetailViewController.swift */; };
 		DC78819C2A8A064100FAFBD8 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78819B2A8A064100FAFBD8 /* MainPageViewController.swift */; };
@@ -44,16 +44,16 @@
 		63A531C52A89E4D2001DFF71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63A531C82A89E4D2001DFF71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63A531CA2A89E4D2001DFF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63B67EFC2A8CE76600AE22E9 /* DomoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomoCell.swift; sourceTree = "<group>"; };
+		63B67EFE2A8CE77C00AE22E9 /* Edit+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Edit+Layout.swift"; sourceTree = "<group>"; };
+		63B67F002A8CE7FA00AE22E9 /* NavigationTapbar_top.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTapbar_top.swift; sourceTree = "<group>"; };
+		63B67F022A8CE80B00AE22E9 /* UIcolor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIcolor.swift; sourceTree = "<group>"; };
+		63B67F042A8CE81800AE22E9 /* UserInfoCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoCollectionView.swift; sourceTree = "<group>"; };
+		63B67F062A8CE85100AE22E9 /* EditProfileStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditProfileStoryboard.storyboard; sourceTree = "<group>"; };
+		63B67F082A8CE86D00AE22E9 /* CollectionViewTry.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CollectionViewTry.storyboard; sourceTree = "<group>"; };
+		63B67F0A2A8CE87B00AE22E9 /* CollectionViewTry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewTry.swift; sourceTree = "<group>"; };
 		96E73D522A8CB64200901756 /* WritingStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WritingStoryboard.storyboard; sourceTree = "<group>"; };
 		96E73D532A8CB64200901756 /* WritingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
-		96E73D5A2A8CB8DB00901756 /* EditProfileStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = EditProfileStoryboard.storyboard; path = ../../../../.Trash/EditProfileStoryboard.storyboard; sourceTree = "<group>"; };
-		96E73D5C2A8CB94500901756 /* CollectionViewTry.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CollectionViewTry.storyboard; path = "../../../iOS/6weeks-SNS/negaGrinGirinGrim/nagaGrinGirinGrim/nagaGrinGirinGrim/EditProfile/CollectionViewTry.storyboard"; sourceTree = "<group>"; };
-		96E73D5D2A8CB94500901756 /* CollectionViewTry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionViewTry.swift; path = "../../../iOS/6weeks-SNS/negaGrinGirinGrim/nagaGrinGirinGrim/nagaGrinGirinGrim/EditProfile/CollectionViewTry.swift"; sourceTree = "<group>"; };
-		96E73D602A8CB96A00901756 /* UIcolor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIcolor.swift; path = "../../../iOS/6weeks-SNS/negaGrinGirinGrim/nagaGrinGirinGrim/nagaGrinGirinGrim/EditProfile/UIcolor.swift"; sourceTree = "<group>"; };
-		96E73D612A8CB96A00901756 /* NavigationTapbar_top.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationTapbar_top.swift; path = "../../../iOS/6weeks-SNS/negaGrinGirinGrim/nagaGrinGirinGrim/nagaGrinGirinGrim/EditProfile/NavigationTapbar_top.swift"; sourceTree = "<group>"; };
-		96E73D622A8CB96A00901756 /* DomoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DomoCell.swift; path = "../../../iOS/6weeks-SNS/negaGrinGirinGrim/nagaGrinGirinGrim/nagaGrinGirinGrim/EditProfile/DomoCell.swift"; sourceTree = "<group>"; };
-		96E73D632A8CB96A00901756 /* Edit+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Edit+Layout.swift"; path = "../../../iOS/6weeks-SNS/negaGrinGirinGrim/nagaGrinGirinGrim/nagaGrinGirinGrim/EditProfile/Edit+Layout.swift"; sourceTree = "<group>"; };
-		96E73D642A8CB96A00901756 /* UserInfoCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfoCollectionView.swift; path = "../../../iOS/6weeks-SNS/negaGrinGirinGrim/nagaGrinGirinGrim/nagaGrinGirinGrim/EditProfile/UserInfoCollectionView.swift"; sourceTree = "<group>"; };
 		C069E5A32A8C6B47001C11A8 /* MyDiaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDiaryTableViewCell.swift; sourceTree = "<group>"; };
 		DC7881992A8A062600FAFBD8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DC78819B2A8A064100FAFBD8 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
@@ -109,14 +109,14 @@
 				DC7881A32A8A078300FAFBD8 /* DetailStoryboard.storyboard */,
 				DC7881A52A8A079D00FAFBD8 /* MainPageStoryboard.storyboard */,
 				DC7881A72A8A07AF00FAFBD8 /* ProfileStoryboard.storyboard */,
-				96E73D622A8CB96A00901756 /* DomoCell.swift */,
-				96E73D632A8CB96A00901756 /* Edit+Layout.swift */,
-				96E73D612A8CB96A00901756 /* NavigationTapbar_top.swift */,
-				96E73D602A8CB96A00901756 /* UIcolor.swift */,
-				96E73D642A8CB96A00901756 /* UserInfoCollectionView.swift */,
-				96E73D5A2A8CB8DB00901756 /* EditProfileStoryboard.storyboard */,
-				96E73D5C2A8CB94500901756 /* CollectionViewTry.storyboard */,
-				96E73D5D2A8CB94500901756 /* CollectionViewTry.swift */,
+				63B67EFC2A8CE76600AE22E9 /* DomoCell.swift */,
+				63B67EFE2A8CE77C00AE22E9 /* Edit+Layout.swift */,
+				63B67F002A8CE7FA00AE22E9 /* NavigationTapbar_top.swift */,
+				63B67F022A8CE80B00AE22E9 /* UIcolor.swift */,
+				63B67F042A8CE81800AE22E9 /* UserInfoCollectionView.swift */,
+				63B67F062A8CE85100AE22E9 /* EditProfileStoryboard.storyboard */,
+				63B67F082A8CE86D00AE22E9 /* CollectionViewTry.storyboard */,
+				63B67F0A2A8CE87B00AE22E9 /* CollectionViewTry.swift */,
 				DC78819F2A8A06AA00FAFBD8 /* EditProfileViewController.swift */,
 				C069E5A32A8C6B47001C11A8 /* MyDiaryTableViewCell.swift */,
 				96E73D522A8CB64200901756 /* WritingStoryboard.storyboard */,
@@ -191,11 +191,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				96E73D542A8CB64200901756 /* WritingStoryboard.storyboard in Resources */,
-				96E73D5E2A8CB94500901756 /* CollectionViewTry.storyboard in Resources */,
 				DC7881A62A8A079D00FAFBD8 /* MainPageStoryboard.storyboard in Resources */,
-				96E73D5B2A8CB8DB00901756 /* EditProfileStoryboard.storyboard in Resources */,
+				63B67F092A8CE86D00AE22E9 /* CollectionViewTry.storyboard in Resources */,
 				63A531C92A89E4D2001DFF71 /* LaunchScreen.storyboard in Resources */,
 				63A531C62A89E4D2001DFF71 /* Assets.xcassets in Resources */,
+				63B67F072A8CE85100AE22E9 /* EditProfileStoryboard.storyboard in Resources */,
 				DC7881A42A8A078300FAFBD8 /* DetailStoryboard.storyboard in Resources */,
 				DC7881A82A8A07AF00FAFBD8 /* ProfileStoryboard.storyboard in Resources */,
 				63A531C42A89E4D1001DFF71 /* Main.storyboard in Resources */,
@@ -211,20 +211,20 @@
 			files = (
 				1F954FE72A8C7783004A1360 /* CellCustom.swift in Sources */,
 				DC7881A02A8A06AA00FAFBD8 /* EditProfileViewController.swift in Sources */,
-				96E73D5F2A8CB94500901756 /* CollectionViewTry.swift in Sources */,
+				63B67F0B2A8CE87B00AE22E9 /* CollectionViewTry.swift in Sources */,
 				63A531C12A89E4D1001DFF71 /* ViewController.swift in Sources */,
-				96E73D672A8CB96A00901756 /* DomoCell.swift in Sources */,
 				C069E5A42A8C6B47001C11A8 /* MyDiaryTableViewCell.swift in Sources */,
 				DC78819C2A8A064100FAFBD8 /* MainPageViewController.swift in Sources */,
 				96E73D552A8CB64200901756 /* WritingViewController.swift in Sources */,
 				63A531BD2A89E4D1001DFF71 /* AppDelegate.swift in Sources */,
-				96E73D692A8CB96A00901756 /* UserInfoCollectionView.swift in Sources */,
+				63B67F032A8CE80B00AE22E9 /* UIcolor.swift in Sources */,
 				DC78819A2A8A062600FAFBD8 /* DetailViewController.swift in Sources */,
-				96E73D662A8CB96A00901756 /* NavigationTapbar_top.swift in Sources */,
-				96E73D652A8CB96A00901756 /* UIcolor.swift in Sources */,
+				63B67F012A8CE7FA00AE22E9 /* NavigationTapbar_top.swift in Sources */,
+				63B67F052A8CE81800AE22E9 /* UserInfoCollectionView.swift in Sources */,
+				63B67EFD2A8CE76600AE22E9 /* DomoCell.swift in Sources */,
 				DC78819E2A8A069400FAFBD8 /* ProfileViewController.swift in Sources */,
 				63A531BF2A89E4D1001DFF71 /* SceneDelegate.swift in Sources */,
-				96E73D682A8CB96A00901756 /* Edit+Layout.swift in Sources */,
+				63B67EFF2A8CE77C00AE22E9 /* Edit+Layout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
