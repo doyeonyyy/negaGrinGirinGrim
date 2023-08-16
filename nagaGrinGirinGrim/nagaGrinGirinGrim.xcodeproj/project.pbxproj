@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F954FE72A8C7783004A1360 /* CellCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F954FE62A8C7783004A1360 /* CellCustom.swift */; };
 		63A531BD2A89E4D1001DFF71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A531BC2A89E4D1001DFF71 /* AppDelegate.swift */; };
 		63A531BF2A89E4D1001DFF71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A531BE2A89E4D1001DFF71 /* SceneDelegate.swift */; };
 		63A531C12A89E4D1001DFF71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A531C02A89E4D1001DFF71 /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F954FE62A8C7783004A1360 /* CellCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellCustom.swift; sourceTree = "<group>"; };
 		63A531B92A89E4D1001DFF71 /* nagaGrinGirinGrim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nagaGrinGirinGrim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63A531BC2A89E4D1001DFF71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63A531BE2A89E4D1001DFF71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				DC7881992A8A062600FAFBD8 /* DetailViewController.swift */,
 				DC78819B2A8A064100FAFBD8 /* MainPageViewController.swift */,
 				DC78819D2A8A069400FAFBD8 /* ProfileViewController.swift */,
+				1F954FE62A8C7783004A1360 /* CellCustom.swift */,
 				DC78819F2A8A06AA00FAFBD8 /* EditProfileViewController.swift */,
 				DC7881A32A8A078300FAFBD8 /* DetailStoryboard.storyboard */,
 				DC7881A52A8A079D00FAFBD8 /* MainPageStoryboard.storyboard */,
@@ -181,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F954FE72A8C7783004A1360 /* CellCustom.swift in Sources */,
 				DC7881A02A8A06AA00FAFBD8 /* EditProfileViewController.swift in Sources */,
 				DC7881A22A8A06E100FAFBD8 /* WritingViewController.swift in Sources */,
 				63A531C12A89E4D1001DFF71 /* ViewController.swift in Sources */,
