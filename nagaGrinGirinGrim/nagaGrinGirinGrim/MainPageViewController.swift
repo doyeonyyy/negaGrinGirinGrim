@@ -9,9 +9,15 @@ import UIKit
 
 class MainPageViewController: UIViewController {
 
-    
-    
-    
+    @IBAction func cameraButton(_ sender: UIButton) {
+        let camera = UIImagePickerController()
+        camera.sourceType = .camera
+        camera.allowsEditing = true
+        camera.cameraDevice = .rear
+        camera.cameraCaptureMode = .photo
+        camera.delegate = self
+        present(camera, animated: true, completion: nil)
+    }
     
     
     @IBOutlet weak var mainCollectionView: UICollectionView!
@@ -22,8 +28,6 @@ class MainPageViewController: UIViewController {
         super.viewDidLoad()
     }
 }
-
-
 
 extension MainPageViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
@@ -39,4 +43,11 @@ extension MainPageViewController: UICollectionViewDelegate, UICollectionViewData
            }
            return cell
     }
+}
+
+extension MainPageViewController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+            picker.dismiss(animated: true, completion: nil)
+        }
 }
