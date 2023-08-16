@@ -113,9 +113,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="6D7-Sc-peA">
-                                <rect key="frame" x="138" y="504" width="116" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="6D7-Sc-peA">
+                                <rect key="frame" x="138.66666666666666" y="506.66666666666674" width="115.66666666666666" height="26"/>
                                 <connections>
                                     <action selector="pageChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="Y8l-zY-IXO"/>
                                 </connections>
@@ -128,12 +127,14 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="YOc-E4-m9G" secondAttribute="trailing" constant="8" id="33c-As-WE2"/>
                             <constraint firstItem="ofs-mc-lV7" firstAttribute="trailing" secondItem="fUF-NB-C2C" secondAttribute="leading" constant="-5" id="6fN-Df-yPL"/>
                             <constraint firstItem="fUF-NB-C2C" firstAttribute="leading" secondItem="ofs-mc-lV7" secondAttribute="trailing" constant="5" id="Bg4-fu-TLu"/>
+                            <constraint firstItem="uhM-qf-0Ee" firstAttribute="bottom" secondItem="6D7-Sc-peA" secondAttribute="bottom" constant="5" id="CIe-pK-t9s"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fUF-NB-C2C" secondAttribute="trailing" constant="5" id="KQD-Hk-xN3"/>
                             <constraint firstItem="ofs-mc-lV7" firstAttribute="top" secondItem="uhM-qf-0Ee" secondAttribute="bottom" constant="5" id="Sdb-HO-YLK"/>
                             <constraint firstItem="fUF-NB-C2C" firstAttribute="top" secondItem="uhM-qf-0Ee" secondAttribute="bottom" constant="5" id="asa-rY-Yxo"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="YOc-E4-m9G" secondAttribute="bottom" id="crC-kx-hh9"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="uhM-qf-0Ee" secondAttribute="trailing" constant="5" id="egg-mp-C7x"/>
                             <constraint firstItem="YOc-E4-m9G" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="eyA-wy-BRc"/>
+                            <constraint firstItem="6D7-Sc-peA" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="pD4-WK-6db"/>
                             <constraint firstItem="uhM-qf-0Ee" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="poQ-Ux-WeA"/>
                             <constraint firstItem="uhM-qf-0Ee" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="5" id="r6B-GN-9A3"/>
                         </constraints>
@@ -143,13 +144,13 @@
                         <outlet property="detailDateLabel" destination="gXz-9H-Kwa" id="75o-kC-Hh3"/>
                         <outlet property="detailTitleLabel" destination="rHk-dD-XPC" id="K07-FJ-vEJ"/>
                         <outlet property="editButton" destination="cYf-97-C5Z" id="uV5-oq-HoU"/>
-                        <outlet property="firstEmojiButton" destination="yoc-qF-PLY" id="x8b-eJ-5Xa"/>
-                        <outlet property="fourthEmojiButton" destination="s1v-Q0-Ry1" id="n7N-NK-J31"/>
+                        <outlet property="firstEmoji" destination="yoc-qF-PLY" id="hgO-SU-tPV"/>
+                        <outlet property="fourthEmoji" destination="s1v-Q0-Ry1" id="4tW-Vq-1f6"/>
                         <outlet property="pageControl" destination="6D7-Sc-peA" id="lkp-wa-sY5"/>
                         <outlet property="postedImage" destination="uhM-qf-0Ee" id="aQr-Qu-qJn"/>
                         <outlet property="profileImage" destination="ofs-mc-lV7" id="6so-7j-QAQ"/>
-                        <outlet property="secondEmojiButton" destination="eEe-IR-pjH" id="xqg-0Z-6hQ"/>
-                        <outlet property="thirdEmojiButton" destination="bLX-R5-biQ" id="uxB-4V-9Vl"/>
+                        <outlet property="secondEmoji" destination="eEe-IR-pjH" id="eWQ-vK-TgE"/>
+                        <outlet property="thirdEmoji" destination="bLX-R5-biQ" id="ows-lE-JTY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

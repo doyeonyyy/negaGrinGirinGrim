@@ -9,8 +9,6 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-//    var image = []
-    
     @IBOutlet weak var postedImage: UIImageView!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -21,15 +19,18 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var detailDateLabel: UILabel!
     @IBOutlet weak var detailBodyLabel: UILabel!
     
-    @IBOutlet weak var firstEmojiButton: UIButton!
-    @IBOutlet weak var secondEmojiButton: UIButton!
-    @IBOutlet weak var thirdEmojiButton: UIButton!
-    @IBOutlet weak var fourthEmojiButton: UIButton!
+    @IBOutlet weak var firstEmoji: UIButton!
+    @IBOutlet weak var secondEmoji: UIButton!
+    @IBOutlet weak var thirdEmoji: UIButton!
+    @IBOutlet weak var fourthEmoji: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
         editButton.setImage(UIImage(systemName: "ellipsis.circle"), for: .normal)
+//        navigationBarHidden()
+        navigationSwipeBackMotion()
     }
     
     func configureUI() {
@@ -50,25 +51,25 @@ class DetailViewController: UIViewController {
     }
     
     func configureButton() {
-        firstEmojiButton.layer.cornerRadius = 10
-        firstEmojiButton.setTitle("🫠", for: .normal)
-        firstEmojiButton.backgroundColor = .red
+        firstEmoji.layer.cornerRadius = 10
+        firstEmoji.setTitle("🫠", for: .normal)
+        firstEmoji.backgroundColor = .red
         
-        secondEmojiButton.layer.cornerRadius = 10
-        secondEmojiButton.setTitle("🔥", for: .normal)
-        secondEmojiButton.backgroundColor = .orange
+        secondEmoji.layer.cornerRadius = 10
+        secondEmoji.setTitle("🔥", for: .normal)
+        secondEmoji.backgroundColor = .orange
         
-        thirdEmojiButton.layer.cornerRadius = 10
-        thirdEmojiButton.setTitle("❤️", for: .normal)
-        thirdEmojiButton.backgroundColor = .yellow
+        thirdEmoji.layer.cornerRadius = 10
+        thirdEmoji.setTitle("❤️", for: .normal)
+        thirdEmoji.backgroundColor = .yellow
         
-        fourthEmojiButton.layer.cornerRadius = 10
-        fourthEmojiButton.setTitle("⭐️", for: .normal)
-        fourthEmojiButton.backgroundColor = .green
+        fourthEmoji.layer.cornerRadius = 10
+        fourthEmoji.setTitle("⭐️", for: .normal)
+        fourthEmoji.backgroundColor = .green
     }
     
     @IBAction func pageChanged(_ sender: UIPageControl) {
-        postedImage.image = UIImage(named: images[pageControl.currentPage])
+        //        postedImage.image = UIImage(named: images[pageControl.currentPage])
     }
     
     
@@ -85,7 +86,7 @@ class DetailViewController: UIViewController {
         let shareSheetVC = UIActivityViewController(activityItems: [image],
                                                     applicationActivities: nil)
         present(shareSheetVC, animated: true)
-}
+    }
     
     @IBAction func firstEmojiButtonTapped(_ sender: UIButton) {
         print("첫번쨰 버튼이 눌렸습니다.")
@@ -109,38 +110,21 @@ class DetailViewController: UIViewController {
     }
     
     func didPressLikeButton(_ button: UIButton) {
-
+        
         if (button.imageView?.image == UIImage(named: "like")) {
             button.setTitle("🔥", for: .normal)
         } else {
             button.setTitle("🥲", for: .normal)
         }
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
 
-//extension DetailViewController: UIActivityItemSource {
-//
-//    let items = [self]
-//    let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
-//    present
-//
-//
-//    func activityViewControllerPlaceholderItem(_ activityViewController: UIActivityViewController) -> Any {
-//        return "이게 돼?"
-//    }
-//
-//    func activityViewController(_ activityViewController: UIActivityViewController, itemForActivityType activityType: UIActivity.ActivityType?) -> Any? {
-//        return "진짜로?"
-//    }
-//}
+extension DetailViewController: UIGestureRecognizerDelegate {
+    func navigationBarHidden() {
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    func navigationSwipeBackMotion() {
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
+    }
+}
