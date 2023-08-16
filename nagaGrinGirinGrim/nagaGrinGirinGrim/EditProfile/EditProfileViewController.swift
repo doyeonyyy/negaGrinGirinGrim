@@ -81,41 +81,14 @@ class EditProfileViewController: UIViewController {
     }()
     
     
-    
-    
-    let userInfoBox: UIStackView = {
-        let userInfoBox = UIStackView()
-        userInfoBox.axis = .horizontal
-        userInfoBox.translatesAutoresizingMaskIntoConstraints = false
-        userInfoBox.layer.borderColor = UIColor.gray.cgColor
-        userInfoBox.layer.borderWidth = 1
-        
-        return userInfoBox
-    }()
-    
-    
- 
+    let userInfoList = ["이름","기분","소개","기념일"]
 
-    
-    let userInfoTitle: UILabel = {
-        let userInfoTitle = UILabel()
-        userInfoTitle.text = "이름"
-        userInfoTitle.textColor = UIColor.black
-        userInfoTitle.backgroundColor = UIColor.white
-        userInfoTitle.translatesAutoresizingMaskIntoConstraints = false
-return userInfoTitle
-    }()
+
   
-
+        
+ 
     
-    let userInfoTextField : UITextField = {
-        let userInfotextField = UITextField()
-        userInfotextField.placeholder = "Enter Here"
-        userInfotextField.backgroundColor = UIColor.white
-        userInfotextField.translatesAutoresizingMaskIntoConstraints = false
-        return userInfotextField
-    }()
-    
+   
 
     
     
@@ -148,11 +121,11 @@ extension EditProfileViewController{
         bodyContainer.addSubview(otherButtonView)
         profilePictureView.addSubview(profileImage)
         profilePictureView.addSubview(profilImageEditButton)
-        userInfoView.addSubview(userInfoBox)
-        userInfoBox.addSubview(userInfoTitle)
-        userInfoBox.addSubview(userInfoTextField)
+//        userInfoView.addSubview(userInfoBox)
+//        userInfoBox.addSubview(userInfoTitle)
+//        userInfoBox.addSubview(userInfoTextField)
 
-
+        useInfoList()
 
         setLayout()
     }
@@ -206,24 +179,24 @@ extension EditProfileViewController{
             
         ])
         
-        NSLayoutConstraint.activate([
-            userInfoBox.leadingAnchor.constraint(equalTo: userInfoView.leadingAnchor, constant: 10),
-            userInfoBox.trailingAnchor.constraint(equalTo: userInfoView.trailingAnchor, constant: -10),
-            userInfoBox.topAnchor.constraint(equalTo: userInfoView.topAnchor, constant: 10),
-            userInfoBox.heightAnchor.constraint(equalToConstant: 25)
-        ])
-        
-        NSLayoutConstraint.activate([
-            userInfoTitle.leadingAnchor.constraint(equalTo: userInfoBox.leadingAnchor, constant: 0),
-            userInfoTitle.widthAnchor.constraint(equalToConstant: 100),
-            userInfoTitle.centerYAnchor.constraint(equalTo: userInfoBox.centerYAnchor)
-        ])
-        
-        NSLayoutConstraint.activate([
-            userInfoTextField.leadingAnchor.constraint(equalTo: userInfoTitle.trailingAnchor,constant: 10),
-            userInfoTextField.trailingAnchor.constraint(equalTo: userInfoBox.trailingAnchor, constant: 0)
-        ])
-        
+//        NSLayoutConstraint.activate([
+//            userInfoBox.leadingAnchor.constraint(equalTo: userInfoView.leadingAnchor, constant: 10),
+//            userInfoBox.trailingAnchor.constraint(equalTo: userInfoView.trailingAnchor, constant: -10),
+//            userInfoBox.topAnchor.constraint(equalTo: userInfoView.topAnchor, constant: 10),
+//            userInfoBox.heightAnchor.constraint(equalToConstant: 25)
+//        ])
+//
+//        NSLayoutConstraint.activate([
+//            userInfoTitle.leadingAnchor.constraint(equalTo: userInfoBox.leadingAnchor, constant: 0),
+//            userInfoTitle.widthAnchor.constraint(equalToConstant: 100),
+//            userInfoTitle.centerYAnchor.constraint(equalTo: userInfoBox.centerYAnchor)
+//        ])
+//
+//        NSLayoutConstraint.activate([
+//            userInfoTextField.leadingAnchor.constraint(equalTo: userInfoTitle.trailingAnchor,constant: 10),
+//            userInfoTextField.trailingAnchor.constraint(equalTo: userInfoBox.trailingAnchor, constant: 0)
+//        ])
+//
         
         
         NSLayoutConstraint.activate([
@@ -239,6 +212,43 @@ extension EditProfileViewController{
     
 //MARK: method
 extension EditProfileViewController{
+    
+    func useInfoList (){
+        for info in userInfoList {
+            let userInfoBox: UIStackView = {
+                let userInfoBox = UIStackView()
+                userInfoBox.axis = .horizontal
+                userInfoBox.translatesAutoresizingMaskIntoConstraints = false
+                userInfoBox.layer.borderColor = UIColor.gray.cgColor
+                userInfoBox.layer.borderWidth = 1
+                
+                return userInfoBox
+            }()
+            
+            let userInfoTitle: UILabel = {
+                let userInfoTitle = UILabel()
+                userInfoTitle.text = info
+                userInfoTitle.textColor = UIColor.black
+                userInfoTitle.backgroundColor = UIColor.white
+                userInfoTitle.translatesAutoresizingMaskIntoConstraints = false
+                return userInfoTitle
+            }()
+            
+            
+            let userInfoTextField : UITextField = {
+                let userInfotextField = UITextField()
+                userInfotextField.placeholder = "Enter Here"
+                userInfotextField.backgroundColor = UIColor.white
+                userInfotextField.translatesAutoresizingMaskIntoConstraints = false
+                return userInfotextField
+            }()
+            userInfoBox.addArrangedSubview(userInfoTitle)
+            userInfoBox.addArrangedSubview(userInfoTextField)
+            userInfoView.addArrangedSubview(userInfoBox)
+        }
+    }
+    
+    
     @objc private func buttonPressed(_ sender: Any) {
         if let button = sender as? UIBarButtonItem {
             switch button.tag {
