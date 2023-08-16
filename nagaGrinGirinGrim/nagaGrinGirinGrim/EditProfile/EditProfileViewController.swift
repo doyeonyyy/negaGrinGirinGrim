@@ -7,9 +7,13 @@ import UIKit
 
 class EditProfileViewController: UIViewController {
     // MARK: Properties
-    var dataSourceArray: [String] = []
+    
+    var userInfoTitles: [String] = ["이름", "나이", "직업"]
+    
+ 
     
     // MARK: UI
+    
     
     lazy var leftButton: UIBarButtonItem = {
         let leftButton = UIBarButtonItem(title: "취소", style: .plain, target: self, action:  #selector(buttonPressed(_:)))
@@ -34,6 +38,7 @@ class EditProfileViewController: UIViewController {
         bodyContainer.layer.borderWidth = 1.0
         return bodyContainer
     }()
+
     
     let profilePictureView: UIStackView = {
         let profilePictureView = UIStackView()
@@ -66,57 +71,52 @@ class EditProfileViewController: UIViewController {
     
     
     
-    let userInfoView: UIView = {
-        let userInfoView = UIView()
+    let userInfoView: UIStackView = {
+        let userInfoView = UIStackView()
+        userInfoView.axis = .vertical
         userInfoView.translatesAutoresizingMaskIntoConstraints = false
         userInfoView.backgroundColor = UIColor(hex: "cbf3f0")
         //        userInfoView.layer.borderWidth = 1.0
         return userInfoView
     }()
     
-    let userInfoCollectionView : UICollectionView = {
-        let flowlayOut = UICollectionViewFlowLayout()
-        flowlayOut.scrollDirection = .vertical
-        flowlayOut.minimumInteritemSpacing = 10     // Adjust the spacing between columns
-        flowlayOut.minimumLineSpacing = 10  // Adjust the spacing between rows
+    
+    
+    
+    let userInfoBox: UIStackView = {
+        let userInfoBox = UIStackView()
+        userInfoBox.axis = .horizontal
+        userInfoBox.translatesAutoresizingMaskIntoConstraints = false
+        userInfoBox.layer.borderColor = UIColor.gray.cgColor
+        userInfoBox.layer.borderWidth = 1
         
-        // Calculate the item size based on the desired number of rows and columns
-        let numberOfColumns: CGFloat = 2
-        let itemWidth = (UIScreen.main.bounds.width - (numberOfColumns - 1) * flowlayOut.minimumInteritemSpacing) / numberOfColumns
-        flowlayOut.itemSize = CGSize(width: itemWidth, height: itemWidth) // Make square cells
-        
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowlayOut)
-        collectionView.backgroundColor = UIColor(hex:"bde0fe")
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        return userInfoBox
+    }()
+    
+    
+ 
+
+    
+    let userInfoTitle: UILabel = {
+        let userInfoTitle = UILabel()
+        userInfoTitle.text = "이름"
+        userInfoTitle.textColor = UIColor.black
+        userInfoTitle.backgroundColor = UIColor.white
+        userInfoTitle.translatesAutoresizingMaskIntoConstraints = false
+return userInfoTitle
+    }()
   
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
-        return collectionView
+
+    
+    let userInfoTextField : UITextField = {
+        let userInfotextField = UITextField()
+        userInfotextField.placeholder = "Enter Here"
+        userInfotextField.backgroundColor = UIColor.white
+        userInfotextField.translatesAutoresizingMaskIntoConstraints = false
+        return userInfotextField
     }()
     
-    let titleLabel : UILabel = {
-        let titleLabel = UILabel()
-        titleLabel.text = "제목"
-        titleLabel.backgroundColor = UIColor.blue
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        return titleLabel
-    }()
-    
-    let inputTextField : UITextField = {
-        let textField = UITextField()
-        textField.placeholder = "Enter Here"
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        return textField
-    }()
-    
-//    let sendButton : UIButton = {
-//        let sendButton = UIButton()
-//        sendButton.setTitle("Send", for: .normal)
-//        sendButton.setTitleColor(.systemBlue, for: .normal)
-//        sendButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-////        button.addTarget(self, action: #selector(selectBtn), for: .touchUpInside)
-//        sendButton.translatesAutoresizingMaskIntoConstraints = false
-//        return sendButton
-//    }()
+
     
     
     let otherButtonView: UIView = {
@@ -132,8 +132,7 @@ class EditProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dataSourceArray = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6"]
-        configeUI()
+           configeUI()
         
     }
 }
@@ -149,12 +148,12 @@ extension EditProfileViewController{
         bodyContainer.addSubview(otherButtonView)
         profilePictureView.addSubview(profileImage)
         profilePictureView.addSubview(profilImageEditButton)
-        userInfoView.addSubview(userInfoCollectionView)
-//        chatcollectionView.dataSource = self
-//            chatcollectionView.delegate = self
-        userInfoCollectionView.addSubview(titleLabel)
-        userInfoCollectionView.addSubview(inputTextField)
-//        userInfoCollectionView.addSubview(sendButton)
+        userInfoView.addSubview(userInfoBox)
+        userInfoBox.addSubview(userInfoTitle)
+        userInfoBox.addSubview(userInfoTextField)
+
+
+
         setLayout()
     }
     
@@ -207,32 +206,24 @@ extension EditProfileViewController{
             
         ])
         
-        
-        //컬렉션뷰
         NSLayoutConstraint.activate([
-            userInfoCollectionView.leadingAnchor.constraint(equalTo: userInfoView.leadingAnchor,constant: 0),
-            userInfoCollectionView.trailingAnchor.constraint(equalTo: userInfoView.trailingAnchor,constant: 0),
-            userInfoCollectionView.topAnchor.constraint(equalTo: userInfoView.topAnchor,constant: 0),
-            userInfoCollectionView.bottomAnchor.constraint(equalTo: userInfoView.bottomAnchor,constant: 0),
-            
+            userInfoBox.leadingAnchor.constraint(equalTo: userInfoView.leadingAnchor, constant: 10),
+            userInfoBox.trailingAnchor.constraint(equalTo: userInfoView.trailingAnchor, constant: -10),
+            userInfoBox.topAnchor.constraint(equalTo: userInfoView.topAnchor, constant: 10),
+            userInfoBox.heightAnchor.constraint(equalToConstant: 25)
         ])
         
         NSLayoutConstraint.activate([
-            titleLabel.trailingAnchor.constraint(equalTo: userInfoView.trailingAnchor,constant: 0),
-            titleLabel.topAnchor.constraint(equalTo: userInfoView.topAnchor,constant: 0),
-            titleLabel.bottomAnchor.constraint(equalTo: userInfoView.bottomAnchor,constant: 0),
-            titleLabel.widthAnchor.constraint(equalToConstant: 100)
+            userInfoTitle.leadingAnchor.constraint(equalTo: userInfoBox.leadingAnchor, constant: 0),
+            userInfoTitle.widthAnchor.constraint(equalToConstant: 100),
+            userInfoTitle.centerYAnchor.constraint(equalTo: userInfoBox.centerYAnchor)
         ])
         
+        NSLayoutConstraint.activate([
+            userInfoTextField.leadingAnchor.constraint(equalTo: userInfoTitle.trailingAnchor,constant: 10),
+            userInfoTextField.trailingAnchor.constraint(equalTo: userInfoBox.trailingAnchor, constant: 0)
+        ])
         
-       
-//        NSLayoutConstraint.activate([
-//            sendButton.trailingAnchor.constraint(equalTo: userInfoView.trailingAnchor,constant: 0),
-//            sendButton.topAnchor.constraint(equalTo: userInfoView.topAnchor,constant: 0),
-//            sendButton.bottomAnchor.constraint(equalTo: userInfoView.bottomAnchor,constant: 0),
-//            sendButton.widthAnchor.constraint(equalToConstant: 100)
-//        ])
-//
         
         
         NSLayoutConstraint.activate([
@@ -244,27 +235,8 @@ extension EditProfileViewController{
         ])
     }
 }
-
-extension EditProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataSourceArray.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
-              
-        if let label = cell.contentView.subviews.first as? UILabel {
-              label.text = dataSourceArray[indexPath.item]
-          }
-          
-          // 셀의 배경색 설정
-          cell.backgroundColor = .white
-          
-          return cell
-    }
     
     
-}
 //MARK: method
 extension EditProfileViewController{
     @objc private func buttonPressed(_ sender: Any) {

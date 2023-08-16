@@ -12,10 +12,10 @@ let cellID = "cell"
 class CollectionViewTry : UIViewController{
     
     //MARK: properties
-    let collectionView : UICollectionView = {
+    let collectionViewSEP : UICollectionView = {
         let flowlayout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero , collectionViewLayout: flowlayout)
-//        flowlayout.scrollDirection = .horizontal
+        flowlayout.scrollDirection = .horizontal //세로 세팅
         
         return cv
     }()
@@ -23,20 +23,20 @@ class CollectionViewTry : UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.dataSource = self
-        collectionView.delegate = self
+        collectionViewSEP.dataSource = self
+        collectionViewSEP.delegate = self
         
-        view.addSubview(collectionView)
+        view.addSubview(collectionViewSEP)
         
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionViewSEP.translatesAutoresizingMaskIntoConstraints = false
         
-        collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-        collectionView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-        collectionView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        collectionView.backgroundColor = .yellow
+        collectionViewSEP.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        collectionViewSEP.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        collectionViewSEP.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        collectionViewSEP.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        collectionViewSEP.backgroundColor = .yellow
       
-        collectionView.register(DemoCell.self, forCellWithReuseIdentifier: cellID)
+        collectionViewSEP.register(DemoCell.self, forCellWithReuseIdentifier: cellID)
     }
 }
 
@@ -72,7 +72,5 @@ extension CollectionViewTry:UICollectionViewDelegateFlowLayout{
         return 0
     }
    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        return UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-//    }
+//
 }
