@@ -7,12 +7,16 @@
 import Foundation
 import UIKit
 
-
+protocol AddingDataForCell: AnyObject {
+    func addingDataForCell(_ title: String)
+}
 
 let post = UserDefaults.standard
 
 
 class WritingViewController: UIViewController {
+    
+    weak var delegate: AddingDataForCell?
     
     var postTitles:[String] = []
     var postContents:[String] = []
@@ -49,6 +53,8 @@ class WritingViewController: UIViewController {
         postTitles.append(postTitle ?? "제목 없음")
         postDates.append(postDate)
         postContents.append(postContent ?? "내용 없음")
+        
+        delegate?.addingDataForCell(postTitle ?? "제목 없음")
         
         print(postTitle ?? "제목 없음")
         print(postDates)
@@ -112,12 +118,4 @@ extension WritingViewController: UIImagePickerControllerDelegate, UINavigationCo
         dismiss(animated: true, completion: nil)
     }
 }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
