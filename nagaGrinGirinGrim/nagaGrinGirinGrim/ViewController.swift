@@ -18,12 +18,7 @@ class ViewController: UIViewController {
     }
     @IBAction func detailSegueAct(_ sender: Any) {
         let detailViewControllerID = UIStoryboard(name: "DetailStoryboard", bundle: .none).instantiateViewController(identifier: "detailViewControllerID") as! DetailViewController
-        
-        let backButton = UIBarButtonItem(title: "뒤돌아가기", style: .plain, target: self, action: nil)
-        navigationItem.backBarButtonItem = backButton
-        
         navigationController?.pushViewController(detailViewControllerID, animated: true)
-        
     }
     @IBAction func pofileSegueAct(_ sender: Any) {
         let profileViewControllerID = UIStoryboard(name: "ProfileStoryboard", bundle: .none).instantiateViewController(identifier: "profileViewControllerID") as! ProfileViewController
