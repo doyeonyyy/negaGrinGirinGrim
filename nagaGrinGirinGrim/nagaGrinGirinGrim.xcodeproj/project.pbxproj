@@ -14,6 +14,7 @@
 		63A531C42A89E4D1001DFF71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63A531C22A89E4D1001DFF71 /* Main.storyboard */; };
 		63A531C62A89E4D2001DFF71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63A531C52A89E4D2001DFF71 /* Assets.xcassets */; };
 		63A531C92A89E4D2001DFF71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63A531C72A89E4D2001DFF71 /* LaunchScreen.storyboard */; };
+		960C7B482A8E024300AD0B6D /* UserInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960C7B472A8E024300AD0B6D /* UserInfoData.swift */; };
 		96E73D542A8CB64200901756 /* WritingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E73D522A8CB64200901756 /* WritingStoryboard.storyboard */; };
 		96E73D552A8CB64200901756 /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E73D532A8CB64200901756 /* WritingViewController.swift */; };
 		C069E5A42A8C6B47001C11A8 /* MyDiaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C069E5A32A8C6B47001C11A8 /* MyDiaryTableViewCell.swift */; };
@@ -44,6 +45,7 @@
 		63A531C52A89E4D2001DFF71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63A531C82A89E4D2001DFF71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63A531CA2A89E4D2001DFF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		960C7B472A8E024300AD0B6D /* UserInfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoData.swift; sourceTree = "<group>"; };
 		96E73D522A8CB64200901756 /* WritingStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WritingStoryboard.storyboard; sourceTree = "<group>"; };
 		96E73D532A8CB64200901756 /* WritingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
 		C069E5A32A8C6B47001C11A8 /* MyDiaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDiaryTableViewCell.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		63A531BB2A89E4D1001DFF71 /* nagaGrinGirinGrim */ = {
 			isa = PBXGroup;
 			children = (
+				960C7B462A8E021C00AD0B6D /* EditProfile */,
 				63A531BC2A89E4D1001DFF71 /* AppDelegate.swift */,
 				63A531BE2A89E4D1001DFF71 /* SceneDelegate.swift */,
 				63A531C02A89E4D1001DFF71 /* ViewController.swift */,
@@ -122,6 +125,14 @@
 				96E73D532A8CB64200901756 /* WritingViewController.swift */,
 			);
 			path = nagaGrinGirinGrim;
+			sourceTree = "<group>";
+		};
+		960C7B462A8E021C00AD0B6D /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				960C7B472A8E024300AD0B6D /* UserInfoData.swift */,
+			);
+			path = EditProfile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				960C7B482A8E024300AD0B6D /* UserInfoData.swift in Sources */,
 				1F954FE72A8C7783004A1360 /* CellCustom.swift in Sources */,
 				DC7881A02A8A06AA00FAFBD8 /* EditProfileViewController.swift in Sources */,
 				63A531C12A89E4D1001DFF71 /* ViewController.swift in Sources */,
