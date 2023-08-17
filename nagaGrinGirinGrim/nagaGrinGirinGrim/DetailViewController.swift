@@ -14,6 +14,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     
     @IBOutlet weak var detailTitleLabel: UILabel!
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var editButton: UIButton!
     
     @IBOutlet weak var detailDateLabel: UILabel!
@@ -78,28 +79,37 @@ class DetailViewController: UIViewController {
         "2023년 8월 16일"
     ]
     
+    var imageIndex = 0
     var currentImageIndex = 0
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureUI()
-        editButton.setImage(UIImage(systemName: "ellipsis.circle"), for: .normal)
-//        navigationBarHidden()
-        navigationSwipeBackMotion()
+        setupUI()
+        setupView()
+        postedImage.isUserInteractionEnabled = true
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipe))
+        swipeLeft.direction = .left
+        postedImage.addGestureRecognizer(swipeLeft)
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipe))
+        swipeRight.direction = .right
+        postedImage.addGestureRecognizer(swipeRight)
+        
+    }
+    
+    func setupView() {
         pageControl.numberOfPages = postImgNames.count
+        pageControl.currentPage = 0
+        pageControl.currentPageIndicatorTintColor = .black
+        pageControl.pageIndicatorTintColor = .lightGray
     }
     
-    func configureUI() {
-        configureProfileImage()
-        configureImage()
-        setNavigationBarItem()
-        configureButton()
+    func setupUI() {
+        setupImages()
+        setupNavigationBarItem()
+        setupReactionButtons()
         populateData()
-    }
-    
-    func setMaxImage() {
-        guard pageControl.numberOfPages <= 10 else { print("10개 이상은 안될듯요"); return }
+        setupButtons()
     }
     
     func populateData() {
@@ -109,18 +119,17 @@ class DetailViewController: UIViewController {
         detailDateLabel.font = UIFont(name: detailDateLabel.font.fontName, size: 12)
     }
     
-    func configureProfileImage() {
+    func setupImages() {
+        // 프로필
         profileImage.image = UIImage(named: "earth")
-    }
-    
-    func configureImage() {
+        
+        // 포스트 이미지
         postedImage.image = UIImage(named: postImgNames[currentImageIndex])
-//        currentImageIndex = (currentImageIndex + 1) % imageName.count
-        postedImage.backgroundColor = .red
-        postedImage.layer.cornerRadius = 25
+        postedImage.backgroundColor = .black
+        postedImage.layer.cornerRadius = 15
     }
     
-    func configureButton() {
+    func setupReactionButtons() {
         firstEmoji.layer.cornerRadius = 10
         firstEmoji.setTitle("🫠", for: .normal)
         firstEmoji.backgroundColor = .red
@@ -138,21 +147,25 @@ class DetailViewController: UIViewController {
         fourthEmoji.backgroundColor = .green
     }
     
+    func setupButtons() {
+        editButton.setImage(UIImage(systemName: "ellipsis.circle"), for: .normal)
+        editButton.setTitle("", for: .normal)
+    }
+    
     @IBAction func pageChanged(_ sender: UIPageControl) {
         postedImage.image = UIImage(named: postImgNames[sender.currentPage])
     }
     
-    
-    func setNavigationBarItem() {
+    func setupNavigationBarItem() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "ellipsis"),
-                                                                 style: .plain, target: self,
+                                                                 style: .plain,
+                                                                 target: self,
                                                                  action: #selector(shareButtonTapped))
     }
     
     @objc func shareButtonTapped() {
         print("오른쪽 버튼이 눌렸습니다.")
         guard let image = postedImage.image else { return }
-        
         let shareSheetVC = UIActivityViewController(activityItems: [image],
                                                     applicationActivities: nil)
         present(shareSheetVC, animated: true)
@@ -178,14 +191,27 @@ class DetailViewController: UIViewController {
     @objc func editButtonTapped() {
         print("수정 버튼이 눌렸습니다.")
     }
-}
-
-extension DetailViewController: UIGestureRecognizerDelegate {
-    func navigationBarHidden() {
-        self.navigationController?.navigationBar.isHidden = true
-    }
     
-    func navigationSwipeBackMotion() {
-        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
+    // 너무 긴데... 이건 수정해보자
+    @objc func respondToSwipe(_ gesture: UIGestureRecognizer) {
+        
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            switch swipeGesture.direction {
+            case .left:
+                print("왼쪽으로 이동")
+                imageIndex = (imageIndex + 1) % postImgNames.count
+                postedImage.image = UIImage(named: postImgNames[imageIndex])
+
+            case .right:
+                print("오른쪽으로 이동")
+                imageIndex = (imageIndex - 1 + postImgNames.count) % postImgNames.count
+                postedImage.image = UIImage(named: postImgNames[imageIndex])
+
+            default:
+                print("오류 발생")
+            }
+            postedImage.image = UIImage(named: postImgNames[imageIndex])
+            pageControl.currentPage = imageIndex
+        }
     }
 }
