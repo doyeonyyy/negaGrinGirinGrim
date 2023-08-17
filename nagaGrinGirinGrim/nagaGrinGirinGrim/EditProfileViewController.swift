@@ -13,7 +13,6 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
     var userInfoTitles: [String] = ["이름", "나이", "직업"]
     
     
-    
     // MARK: UI
     
     let imageView = UIImageView()
@@ -523,5 +522,3 @@ extension EditProfileViewController{
           dismiss(animated: true, completion: nil)
       }
 }
-
-

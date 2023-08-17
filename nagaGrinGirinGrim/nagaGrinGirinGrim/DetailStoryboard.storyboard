@@ -8,6 +8,40 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Item-->
+        <scene sceneID="Bij-HA-dO3">
+            <objects>
+                <navigationController id="Qo8-L8-s0G" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="8wm-lE-eMH"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0AK-db-yH4">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="caq-ZW-8Ci"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Bm-ZC-yX5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-705" y="-6"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="U9Y-bg-Xas">
+            <objects>
+                <tabBarController id="9hM-PV-4dw" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2GZ-ke-E5e">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Qo8-L8-s0G" kind="relationship" relationship="viewControllers" id="Aa1-6a-ckM"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GPT-uZ-X10" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1598" y="-6"/>
+        </scene>
         <!--Detail View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
@@ -137,6 +171,7 @@
                             <constraint firstItem="Smc-Qg-HXi" firstAttribute="top" secondItem="dbG-Vn-7Cb" secondAttribute="bottom" constant="5" id="vF4-l1-6SD"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="gJR-HP-efX"/>
                     <connections>
                         <outlet property="detailBodyLabel" destination="HAs-dJ-oZA" id="gm7-KM-bzO"/>
                         <outlet property="detailDateLabel" destination="bYO-dQ-JwM" id="RlA-KP-p4N"/>

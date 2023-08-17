@@ -14,18 +14,17 @@
 		63A531C42A89E4D1001DFF71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63A531C22A89E4D1001DFF71 /* Main.storyboard */; };
 		63A531C62A89E4D2001DFF71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63A531C52A89E4D2001DFF71 /* Assets.xcassets */; };
 		63A531C92A89E4D2001DFF71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63A531C72A89E4D2001DFF71 /* LaunchScreen.storyboard */; };
-		960C7B482A8E024300AD0B6D /* UserInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960C7B472A8E024300AD0B6D /* UserInfoData.swift */; };
 		96E73D542A8CB64200901756 /* WritingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E73D522A8CB64200901756 /* WritingStoryboard.storyboard */; };
 		96E73D552A8CB64200901756 /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E73D532A8CB64200901756 /* WritingViewController.swift */; };
 		C069E5A42A8C6B47001C11A8 /* MyDiaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C069E5A32A8C6B47001C11A8 /* MyDiaryTableViewCell.swift */; };
-		C069E5D92A8CE42E001C11A8 /* CollectionViewTry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C069E5D82A8CE42E001C11A8 /* CollectionViewTry.swift */; };
-		C069E5DB2A8CE455001C11A8 /* CollectionViewTry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C069E5DA2A8CE455001C11A8 /* CollectionViewTry.storyboard */; };
 		C069E5DD2A8CE46D001C11A8 /* EditProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C069E5DC2A8CE46D001C11A8 /* EditProfileStoryboard.storyboard */; };
 		C069E5DF2A8CE487001C11A8 /* UserInfoCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C069E5DE2A8CE487001C11A8 /* UserInfoCollectionView.swift */; };
 		C069E5E12A8CE497001C11A8 /* UIcolor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C069E5E02A8CE497001C11A8 /* UIcolor.swift */; };
 		C069E5E32A8CE4A4001C11A8 /* NavigationTapbar_top.swift in Sources */ = {isa = PBXBuildFile; fileRef = C069E5E22A8CE4A4001C11A8 /* NavigationTapbar_top.swift */; };
 		C069E5E52A8CE4FE001C11A8 /* Edit+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C069E5E42A8CE4FE001C11A8 /* Edit+Layout.swift */; };
 		C069E5E72A8CE50B001C11A8 /* DomoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C069E5E62A8CE50B001C11A8 /* DomoCell.swift */; };
+		DC0C05902A8EDF7500964925 /* CollectionViewTry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0C058F2A8EDF7400964925 /* CollectionViewTry.swift */; };
+		DC0C05922A8EDF7800964925 /* UserInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0C05912A8EDF7800964925 /* UserInfoData.swift */; };
 		DC78819A2A8A062600FAFBD8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7881992A8A062600FAFBD8 /* DetailViewController.swift */; };
 		DC78819C2A8A064100FAFBD8 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78819B2A8A064100FAFBD8 /* MainPageViewController.swift */; };
 		DC78819E2A8A069400FAFBD8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78819D2A8A069400FAFBD8 /* ProfileViewController.swift */; };
@@ -33,6 +32,7 @@
 		DC7881A42A8A078300FAFBD8 /* DetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC7881A32A8A078300FAFBD8 /* DetailStoryboard.storyboard */; };
 		DC7881A62A8A079D00FAFBD8 /* MainPageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC7881A52A8A079D00FAFBD8 /* MainPageStoryboard.storyboard */; };
 		DC7881A82A8A07AF00FAFBD8 /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC7881A72A8A07AF00FAFBD8 /* ProfileStoryboard.storyboard */; };
+		DCD579132A8E535D005B3001 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD579122A8E535D005B3001 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,18 +45,18 @@
 		63A531C52A89E4D2001DFF71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63A531C82A89E4D2001DFF71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63A531CA2A89E4D2001DFF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		960C7B472A8E024300AD0B6D /* UserInfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoData.swift; sourceTree = "<group>"; };
 		96E73D522A8CB64200901756 /* WritingStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WritingStoryboard.storyboard; sourceTree = "<group>"; };
 		96E73D532A8CB64200901756 /* WritingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
 		C069E5A32A8C6B47001C11A8 /* MyDiaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDiaryTableViewCell.swift; sourceTree = "<group>"; };
-		C069E5D82A8CE42E001C11A8 /* CollectionViewTry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewTry.swift; sourceTree = "<group>"; };
-		C069E5DA2A8CE455001C11A8 /* CollectionViewTry.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CollectionViewTry.storyboard; sourceTree = "<group>"; };
 		C069E5DC2A8CE46D001C11A8 /* EditProfileStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditProfileStoryboard.storyboard; sourceTree = "<group>"; };
 		C069E5DE2A8CE487001C11A8 /* UserInfoCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoCollectionView.swift; sourceTree = "<group>"; };
 		C069E5E02A8CE497001C11A8 /* UIcolor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIcolor.swift; sourceTree = "<group>"; };
 		C069E5E22A8CE4A4001C11A8 /* NavigationTapbar_top.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTapbar_top.swift; sourceTree = "<group>"; };
 		C069E5E42A8CE4FE001C11A8 /* Edit+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Edit+Layout.swift"; sourceTree = "<group>"; };
 		C069E5E62A8CE50B001C11A8 /* DomoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomoCell.swift; sourceTree = "<group>"; };
+		DC0C058E2A8EDF7300964925 /* CollectionViewTry.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CollectionViewTry.storyboard; sourceTree = "<group>"; };
+		DC0C058F2A8EDF7400964925 /* CollectionViewTry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTry.swift; sourceTree = "<group>"; };
+		DC0C05912A8EDF7800964925 /* UserInfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoData.swift; sourceTree = "<group>"; };
 		DC7881992A8A062600FAFBD8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DC78819B2A8A064100FAFBD8 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		DC78819D2A8A069400FAFBD8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +64,7 @@
 		DC7881A32A8A078300FAFBD8 /* DetailStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailStoryboard.storyboard; sourceTree = "<group>"; };
 		DC7881A52A8A079D00FAFBD8 /* MainPageStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainPageStoryboard.storyboard; sourceTree = "<group>"; };
 		DC7881A72A8A07AF00FAFBD8 /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
+		DCD579122A8E535D005B3001 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +97,6 @@
 		63A531BB2A89E4D1001DFF71 /* nagaGrinGirinGrim */ = {
 			isa = PBXGroup;
 			children = (
-				960C7B462A8E021C00AD0B6D /* EditProfile */,
 				63A531BC2A89E4D1001DFF71 /* AppDelegate.swift */,
 				63A531BE2A89E4D1001DFF71 /* SceneDelegate.swift */,
 				63A531C02A89E4D1001DFF71 /* ViewController.swift */,
@@ -121,18 +121,12 @@
 				C069E5A32A8C6B47001C11A8 /* MyDiaryTableViewCell.swift */,
 				96E73D522A8CB64200901756 /* WritingStoryboard.storyboard */,
 				96E73D532A8CB64200901756 /* WritingViewController.swift */,
+				DCD579122A8E535D005B3001 /* Data.swift */,
+				DC0C058E2A8EDF7300964925 /* CollectionViewTry.storyboard */,
+				DC0C058F2A8EDF7400964925 /* CollectionViewTry.swift */,
+				DC0C05912A8EDF7800964925 /* UserInfoData.swift */,
 			);
 			path = nagaGrinGirinGrim;
-			sourceTree = "<group>";
-		};
-		960C7B462A8E021C00AD0B6D /* EditProfile */ = {
-			isa = PBXGroup;
-			children = (
-				C069E5DA2A8CE455001C11A8 /* CollectionViewTry.storyboard */,
-				C069E5D82A8CE42E001C11A8 /* CollectionViewTry.swift */,
-				960C7B472A8E024300AD0B6D /* UserInfoData.swift */,
-			);
-			path = EditProfile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,7 +188,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				96E73D542A8CB64200901756 /* WritingStoryboard.storyboard in Resources */,
-				C069E5DB2A8CE455001C11A8 /* CollectionViewTry.storyboard in Resources */,
 				DC7881A62A8A079D00FAFBD8 /* MainPageStoryboard.storyboard in Resources */,
 				63A531C92A89E4D2001DFF71 /* LaunchScreen.storyboard in Resources */,
 				63A531C62A89E4D2001DFF71 /* Assets.xcassets in Resources */,
@@ -212,14 +205,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				960C7B482A8E024300AD0B6D /* UserInfoData.swift in Sources */,
 				1F954FE72A8C7783004A1360 /* CellCustom.swift in Sources */,
 				DC7881A02A8A06AA00FAFBD8 /* EditProfileViewController.swift in Sources */,
 				63A531C12A89E4D1001DFF71 /* ViewController.swift in Sources */,
 				C069E5E52A8CE4FE001C11A8 /* Edit+Layout.swift in Sources */,
+				DC0C05922A8EDF7800964925 /* UserInfoData.swift in Sources */,
 				C069E5A42A8C6B47001C11A8 /* MyDiaryTableViewCell.swift in Sources */,
-				C069E5D92A8CE42E001C11A8 /* CollectionViewTry.swift in Sources */,
 				C069E5E12A8CE497001C11A8 /* UIcolor.swift in Sources */,
+				DC0C05902A8EDF7500964925 /* CollectionViewTry.swift in Sources */,
+				DCD579132A8E535D005B3001 /* Data.swift in Sources */,
 				DC78819C2A8A064100FAFBD8 /* MainPageViewController.swift in Sources */,
 				C069E5DF2A8CE487001C11A8 /* UserInfoCollectionView.swift in Sources */,
 				96E73D552A8CB64200901756 /* WritingViewController.swift in Sources */,
