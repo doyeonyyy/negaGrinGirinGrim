@@ -42,6 +42,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="등록"/>
+                                <connections>
+                                    <action selector="postContents:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Byg-IL-lM2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yzm-2M-KCT">
                                 <rect key="frame" x="315" y="377" width="47" height="33"/>
@@ -74,7 +77,11 @@
                     <connections>
                         <outlet property="clickAdd" destination="Yzm-2M-KCT" id="ia3-GD-a87"/>
                         <outlet property="clickCancel" destination="Wge-L0-vaP" id="z0t-tx-7Ga"/>
+                        <outlet property="clickPost" destination="HdV-Ql-25p" id="WWH-4f-0Jq"/>
+                        <outlet property="datePicker" destination="LnC-nl-gHC" id="hEX-YE-Uja"/>
                         <outlet property="imageView" destination="Ii3-Hz-Rt0" id="PnI-d2-egX"/>
+                        <outlet property="postContent" destination="qlo-9q-miq" id="ayn-fu-23S"/>
+                        <outlet property="postTitle" destination="z1U-3j-AkH" id="IHK-9s-zIj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

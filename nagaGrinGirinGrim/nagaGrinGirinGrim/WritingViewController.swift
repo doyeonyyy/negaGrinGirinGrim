@@ -7,8 +7,24 @@
 import Foundation
 import UIKit
 
+
+
+let post = UserDefaults.standard
+
+
 class WritingViewController: UIViewController {
     
+    var postTitles:[String] = []
+    var postContents:[String] = []
+    var postImgNames:[String] = []
+    var postDates:[String] = []
+    
+    
+
+    @IBOutlet weak var postTitle: UITextField!
+    @IBOutlet weak var postContent: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var clickPost: UIButton!
     @IBOutlet weak var clickCancel: UIButton!
     @IBOutlet weak var clickAdd: UIButton!
     
@@ -19,6 +35,36 @@ class WritingViewController: UIViewController {
         setupViews()
         addPhotos()
         self.view.addSubview(self.clickCancel)
+    }
+    
+    @IBAction func postContents(_ sender: Any) {
+        print("등록버튼을 눌렀습니다.")
+        
+        let postTitle = postTitle.text
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy년 MM월 dd일"
+        let postDate = dateFormatter.string(from: self.datePicker.date)
+        let postContent = postContent.text
+        
+        postTitles.append(postTitle ?? "제목 없음")
+        postDates.append(postDate)
+        postContents.append(postContent ?? "내용 없음")
+        
+        print(postTitle ?? "제목 없음")
+        print(postDates)
+        print(postContent ?? "내용 없음")
+    
+        UserDefaults.standard.set(postTitles, forKey: "postTitles")
+        UserDefaults.standard.set(postDates, forKey: "postDate")
+        UserDefaults.standard.set(postContents, forKey: "postContents")
+
+        
+        let test1 = UserDefaults.standard.array(forKey: "postTitles") as! [String]
+        print(test1)
+        let test2 = UserDefaults.standard.array(forKey: "postDate") as! [String]
+        print(test2)
+        let test3 = UserDefaults.standard.array(forKey: "postContents") as! [String]
+        print(test3)
     }
     
     @IBAction func takeBack(_ sender: Any) {
