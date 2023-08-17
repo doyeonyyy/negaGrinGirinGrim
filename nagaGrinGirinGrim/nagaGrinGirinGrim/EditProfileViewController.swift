@@ -7,7 +7,7 @@ import UIKit
 
 
 
-class EditProfileViewController: UIViewController {
+class EditProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     // MARK: Properties
     
     var userInfoTitles: [String] = ["이름", "나이", "직업"]
@@ -15,6 +15,8 @@ class EditProfileViewController: UIViewController {
     
     
     // MARK: UI
+    
+    let imageView = UIImageView()
     
     
     lazy var leftButton: UIBarButtonItem = {
@@ -68,9 +70,9 @@ class EditProfileViewController: UIViewController {
         profilImageEditButton.setTitle("사진 수정", for: .normal)
         profilImageEditButton.setTitleColor(UIColor(hex: "187afe"), for: .normal)
         profilImageEditButton.titleLabel?.font = UIFont.systemFont(ofSize: 15)
-        
         //        profilImageEditButton.backgroundColor = UIColor.white
         profilImageEditButton.translatesAutoresizingMaskIntoConstraints = false
+        profilImageEditButton.addTarget(self, action: #selector(openAlbum), for: .touchUpInside)
         return profilImageEditButton
     }()
     
@@ -486,6 +488,25 @@ extension EditProfileViewController{
             }
         }
     }
+    
+    @objc func openAlbum(){
+        print("사진첩 열렸다!")
+        let imagePicker = UIImagePickerController()
+             imagePicker.delegate = self
+             imagePicker.sourceType = .photoLibrary
+             present(imagePicker, animated: true, completion: nil)
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+          if let selectedImage = info[.originalImage] as? UIImage {
+              profileImage.image = selectedImage
+          }
+          
+          dismiss(animated: true, completion: nil)
+      }
+      
+      func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+          dismiss(animated: true, completion: nil)
+      }
 }
 
 
