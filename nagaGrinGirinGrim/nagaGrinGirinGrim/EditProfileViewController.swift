@@ -49,17 +49,18 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         profilePictureView.axis = .vertical
         profilePictureView.translatesAutoresizingMaskIntoConstraints = false
         //        profilePictureView.backgroundColor = UIColor(hex: "ff9f1c")
-        profilePictureView.layer.borderColor = UIColor.gray.cgColor
-        profilePictureView.layer.borderWidth = 1.0
+//        profilePictureView.layer.borderColor = UIColor.gray.cgColor
+//        profilePictureView.layer.borderWidth = 1.0
         return profilePictureView
     }()
     
     let profileImage: UIImageView = {
         let profileImage = UIImageView()
-        profileImage.image = UIImage(systemName: "scribble")
+        profileImage.image = UIImage(named: "dangdangs")
         profileImage.backgroundColor = UIColor.white
         profileImage.translatesAutoresizingMaskIntoConstraints = false
-        profileImage.layer.cornerRadius = 50
+        profileImage.layer.cornerRadius = profileImage.frame.width / 2
+        profileImage.layer.masksToBounds = true
         profileImage.layer.borderColor = UIColor.gray.cgColor
         profileImage.layer.borderWidth = 1.0
         return profileImage
@@ -83,6 +84,11 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         userInfoView.axis = .vertical
         userInfoView.translatesAutoresizingMaskIntoConstraints = false
         userInfoView.backgroundColor = UIColor(hex: "cbf3f0")
+        userInfoView.layer.borderColor = UIColor.gray.cgColor
+        userInfoView.layer.borderWidth = 1
+        userInfoView.layer.cornerRadius = 10
+                                          
+                                          
       return userInfoView
     }()
     
@@ -256,6 +262,11 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         configeUI()
         
     }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        profileImage.layer.cornerRadius = profileImage.frame.width / 2
+    }
+
 }
 
 //MARK: configure UI
@@ -287,10 +298,13 @@ extension EditProfileViewController{
         userInfoBox5.addSubview(userInfoTextField5)
         otherButtonView.addSubview(otherButton1)
         otherButtonView.addSubview(otherButton2)
+    
         
         
         setLayout()
     }
+    
+  
     
     func setLayout(){
         
@@ -300,7 +314,7 @@ extension EditProfileViewController{
         let bodyContainerHeight = screenHeight * 0.65
         let childrenHeight = bodyContainerHeight * 0.3
         let userInfoTitleSize = 80
-        let imageSize = childrenHeight * 0.5
+        let imageSize = childrenHeight * 0.6
         let buttonSize = childrenHeight * 0.2
         
    
@@ -327,6 +341,7 @@ extension EditProfileViewController{
        
         NSLayoutConstraint.activate([
             profileImage.centerXAnchor.constraint(equalTo: profilePictureView.centerXAnchor),
+
             profileImage.centerYAnchor.constraint(equalTo: profilePictureView.centerYAnchor),
             profileImage.widthAnchor.constraint(equalToConstant: imageSize),
             profileImage.heightAnchor.constraint(equalToConstant: imageSize),
@@ -336,7 +351,7 @@ extension EditProfileViewController{
         NSLayoutConstraint.activate([
             profilImageEditButton.centerXAnchor.constraint(equalTo: profilePictureView.centerXAnchor),
             profilImageEditButton.heightAnchor.constraint(equalToConstant: buttonSize),
-            profilImageEditButton.bottomAnchor.constraint(equalTo: profilePictureView.bottomAnchor,constant: -5)
+            profilImageEditButton.bottomAnchor.constraint(equalTo: profilePictureView.bottomAnchor,constant: 0)
             
         ])
         

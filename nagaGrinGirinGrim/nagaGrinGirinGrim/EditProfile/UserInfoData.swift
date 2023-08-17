@@ -19,7 +19,7 @@ let userInfoData = UserInfo(
     name: "kia kim",
     mood: "Help me",
     introduction: "I love my Job!",
-    anniversaryTitle: "생일",
-    anniversary: "September 1st"
+    anniversaryTitle: nil,
+    anniversary: nil
 )
 
