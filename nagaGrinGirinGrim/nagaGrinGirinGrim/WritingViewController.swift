@@ -27,7 +27,7 @@ class WritingViewController: UIViewController {
     }
     
     func setupViews() {
-        clickAdd.setTitle("사진", for: .normal)
+//        clickAdd.setTitle("사진", for: .normal)
         clickAdd.addTarget(self, action: #selector(uploadPhoto), for: .touchUpInside)
         
         view.addSubview(imageView)
