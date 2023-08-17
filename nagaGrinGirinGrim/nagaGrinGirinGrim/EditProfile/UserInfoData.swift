@@ -16,7 +16,7 @@ struct UserInfo {
 let userInfoData = UserInfo(
     profilePicture: "https://ca.slack-edge.com/T043597JK8V-U05D6G5MADS-484937bd3678-512",
     userName: "@에너자이조",
-    name: "kia kim",
+    name: "Dangdangs",
     mood: "Help me",
     introduction: "I love my Job!",
     anniversaryTitle: nil,

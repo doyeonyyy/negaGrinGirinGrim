@@ -22,7 +22,7 @@
 		C069E5DB2A8CE455001C11A8 /* CollectionViewTry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C069E5DA2A8CE455001C11A8 /* CollectionViewTry.storyboard */; };
 		C069E5DD2A8CE46D001C11A8 /* EditProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C069E5DC2A8CE46D001C11A8 /* EditProfileStoryboard.storyboard */; };
 		C069E5DF2A8CE487001C11A8 /* UserInfoCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C069E5DE2A8CE487001C11A8 /* UserInfoCollectionView.swift */; };
-		C069E5E12A8CE497001C11A8 /* UIcolor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C069E5E02A8CE497001C11A8 /* UIcolor.swift */; };
+		C069E5E12A8CE497001C11A8 /* UIcolor+CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C069E5E02A8CE497001C11A8 /* UIcolor+CALayer.swift */; };
 		C069E5E32A8CE4A4001C11A8 /* NavigationTapbar_top.swift in Sources */ = {isa = PBXBuildFile; fileRef = C069E5E22A8CE4A4001C11A8 /* NavigationTapbar_top.swift */; };
 		C069E5E52A8CE4FE001C11A8 /* Edit+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C069E5E42A8CE4FE001C11A8 /* Edit+Layout.swift */; };
 		C069E5E72A8CE50B001C11A8 /* DomoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C069E5E62A8CE50B001C11A8 /* DomoCell.swift */; };
@@ -53,7 +53,7 @@
 		C069E5DA2A8CE455001C11A8 /* CollectionViewTry.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CollectionViewTry.storyboard; sourceTree = "<group>"; };
 		C069E5DC2A8CE46D001C11A8 /* EditProfileStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditProfileStoryboard.storyboard; sourceTree = "<group>"; };
 		C069E5DE2A8CE487001C11A8 /* UserInfoCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoCollectionView.swift; sourceTree = "<group>"; };
-		C069E5E02A8CE497001C11A8 /* UIcolor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIcolor.swift; sourceTree = "<group>"; };
+		C069E5E02A8CE497001C11A8 /* UIcolor+CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIcolor+CALayer.swift"; sourceTree = "<group>"; };
 		C069E5E22A8CE4A4001C11A8 /* NavigationTapbar_top.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTapbar_top.swift; sourceTree = "<group>"; };
 		C069E5E42A8CE4FE001C11A8 /* Edit+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Edit+Layout.swift"; sourceTree = "<group>"; };
 		C069E5E62A8CE50B001C11A8 /* DomoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomoCell.swift; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 				C069E5E62A8CE50B001C11A8 /* DomoCell.swift */,
 				C069E5E42A8CE4FE001C11A8 /* Edit+Layout.swift */,
 				C069E5E22A8CE4A4001C11A8 /* NavigationTapbar_top.swift */,
-				C069E5E02A8CE497001C11A8 /* UIcolor.swift */,
+				C069E5E02A8CE497001C11A8 /* UIcolor+CALayer.swift */,
 				C069E5DE2A8CE487001C11A8 /* UserInfoCollectionView.swift */,
 				C069E5DC2A8CE46D001C11A8 /* EditProfileStoryboard.storyboard */,
 				DC78819F2A8A06AA00FAFBD8 /* EditProfileViewController.swift */,
@@ -219,7 +219,7 @@
 				C069E5E52A8CE4FE001C11A8 /* Edit+Layout.swift in Sources */,
 				C069E5A42A8C6B47001C11A8 /* MyDiaryTableViewCell.swift in Sources */,
 				C069E5D92A8CE42E001C11A8 /* CollectionViewTry.swift in Sources */,
-				C069E5E12A8CE497001C11A8 /* UIcolor.swift in Sources */,
+				C069E5E12A8CE497001C11A8 /* UIcolor+CALayer.swift in Sources */,
 				DC78819C2A8A064100FAFBD8 /* MainPageViewController.swift in Sources */,
 				C069E5DF2A8CE487001C11A8 /* UserInfoCollectionView.swift in Sources */,
 				96E73D552A8CB64200901756 /* WritingViewController.swift in Sources */,
