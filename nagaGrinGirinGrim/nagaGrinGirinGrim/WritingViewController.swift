@@ -7,27 +7,22 @@
 import Foundation
 import UIKit
 
-
-
 let post = UserDefaults.standard
-
 
 class WritingViewController: UIViewController {
     
-    var postTitles:[String] = []
-    var postContents:[String] = []
-    var postImgNames:[String] = []
-    var postDates:[String] = []
-    
-    
-
+    var postTitles: [String] = []
+    var postContents: [String] = []
+    var postDates: [String] = []
+    var postImgNames: [String] = []
+    var postImgURLs: [String] = []
+  
     @IBOutlet weak var postTitle: UITextField!
     @IBOutlet weak var postContent: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var clickPost: UIButton!
     @IBOutlet weak var clickCancel: UIButton!
     @IBOutlet weak var clickAdd: UIButton!
-    
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
@@ -42,29 +37,54 @@ class WritingViewController: UIViewController {
         
         let postTitle = postTitle.text
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy년 MM월 dd일"
+//        dateFormatter.dateFormat = "yyyy년 MM월 dd일"
+        dateFormatter.dateStyle = .long
         let postDate = dateFormatter.string(from: self.datePicker.date)
         let postContent = postContent.text
+        let postImg = imageView.image
+        
+        if let data = postImg?.pngData() {
+            let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+            let url = documents.appendingPathComponent("postImg.png")
+            
+            postImgURLs.append(url.absoluteString)
+            UserDefaults.standard.set(postImgURLs, forKey: "postImageURLs")
+            
+            do {
+                try data.write(to: url)
+                UserDefaults.standard.set(url, forKey: "image")
+            } catch {
+                print("등록된 사진이 없음")
+            }
+        }
         
         postTitles.append(postTitle ?? "제목 없음")
         postDates.append(postDate)
         postContents.append(postContent ?? "내용 없음")
         
         print(postTitle ?? "제목 없음")
-        print(postDates)
         print(postContent ?? "내용 없음")
-    
+        
         UserDefaults.standard.set(postTitles, forKey: "postTitles")
-        UserDefaults.standard.set(postDates, forKey: "postDate")
+        UserDefaults.standard.set(postDates, forKey: "postDates")
         UserDefaults.standard.set(postContents, forKey: "postContents")
 
-        
+        let test0 = UserDefaults.standard.array(forKey: "postImgURLs") as! [String]
         let test1 = UserDefaults.standard.array(forKey: "postTitles") as! [String]
-        print(test1)
-        let test2 = UserDefaults.standard.array(forKey: "postDate") as! [String]
-        print(test2)
+        let test2 = UserDefaults.standard.array(forKey: "postDates") as! [String]
         let test3 = UserDefaults.standard.array(forKey: "postContents") as! [String]
+        
+        print("test0 값은 -- : \(test0)")
+        print(test1)
+        print(test2)
         print(test3)
+        
+        test0.forEach { urlString in
+            let url = URL(string: urlString)!
+            let data = try! Data(contentsOf: url)
+            let imageLoaded = UIImage(data: data)
+            print("image -- \(imageLoaded)")
+        }
     }
     
     @IBAction func takeBack(_ sender: Any) {

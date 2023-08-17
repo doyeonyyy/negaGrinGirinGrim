@@ -46,14 +46,6 @@
                                     <action selector="postContents:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Byg-IL-lM2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yzm-2M-KCT">
-                                <rect key="frame" x="315" y="377" width="47" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <imageReference key="image" image="plus.circle.fill" catalog="system" symbolScale="large"/>
-                                </buttonConfiguration>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="제목" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z1U-3j-AkH">
                                 <rect key="frame" x="31" y="429" width="130" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -70,6 +62,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yzm-2M-KCT">
+                                <rect key="frame" x="308" y="376" width="47" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="plus.circle.fill" catalog="system" symbolScale="large"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -79,7 +79,7 @@
                         <outlet property="clickCancel" destination="Wge-L0-vaP" id="z0t-tx-7Ga"/>
                         <outlet property="clickPost" destination="HdV-Ql-25p" id="WWH-4f-0Jq"/>
                         <outlet property="datePicker" destination="LnC-nl-gHC" id="hEX-YE-Uja"/>
-                        <outlet property="imageView" destination="Ii3-Hz-Rt0" id="PnI-d2-egX"/>
+                        <outlet property="imageView" destination="Ii3-Hz-Rt0" id="Gj9-g9-c9f"/>
                         <outlet property="postContent" destination="qlo-9q-miq" id="ayn-fu-23S"/>
                         <outlet property="postTitle" destination="z1U-3j-AkH" id="IHK-9s-zIj"/>
                     </connections>
