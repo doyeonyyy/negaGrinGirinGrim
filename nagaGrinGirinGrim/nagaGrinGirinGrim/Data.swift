@@ -14,11 +14,6 @@ let userData = UserData()
 
 class UserData {
     
-    
-    func setUserDefaults() {
-        defaults.set(, forKey: <#T##String#>)
-    }
-    
     struct User {
         var userName: String!
         var profilePicture: String!
