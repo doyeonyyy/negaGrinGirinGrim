@@ -25,9 +25,10 @@
 		C069E5E72A8CE50B001C11A8 /* DomoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C069E5E62A8CE50B001C11A8 /* DomoCell.swift */; };
 		DC0C05902A8EDF7500964925 /* CollectionViewTry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0C058F2A8EDF7400964925 /* CollectionViewTry.swift */; };
 		DC0C05922A8EDF7800964925 /* UserInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0C05912A8EDF7800964925 /* UserInfoData.swift */; };
+		DC0C05942A8EEEE000964925 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0C05932A8EEEE000964925 /* TabBarController.swift */; };
+		DC0C05962A8EF34400964925 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0C05952A8EF34400964925 /* ProfileViewController.swift */; };
 		DC78819A2A8A062600FAFBD8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7881992A8A062600FAFBD8 /* DetailViewController.swift */; };
 		DC78819C2A8A064100FAFBD8 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78819B2A8A064100FAFBD8 /* MainPageViewController.swift */; };
-		DC78819E2A8A069400FAFBD8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78819D2A8A069400FAFBD8 /* ProfileViewController.swift */; };
 		DC7881A02A8A06AA00FAFBD8 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78819F2A8A06AA00FAFBD8 /* EditProfileViewController.swift */; };
 		DC7881A42A8A078300FAFBD8 /* DetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC7881A32A8A078300FAFBD8 /* DetailStoryboard.storyboard */; };
 		DC7881A62A8A079D00FAFBD8 /* MainPageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC7881A52A8A079D00FAFBD8 /* MainPageStoryboard.storyboard */; };
@@ -57,9 +58,10 @@
 		DC0C058E2A8EDF7300964925 /* CollectionViewTry.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CollectionViewTry.storyboard; sourceTree = "<group>"; };
 		DC0C058F2A8EDF7400964925 /* CollectionViewTry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTry.swift; sourceTree = "<group>"; };
 		DC0C05912A8EDF7800964925 /* UserInfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoData.swift; sourceTree = "<group>"; };
+		DC0C05932A8EEEE000964925 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		DC0C05952A8EF34400964925 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = ../../../../swift_house/negaGrinGirinGrim/nagaGrinGirinGrim/nagaGrinGirinGrim/ProfileViewController.swift; sourceTree = "<group>"; };
 		DC7881992A8A062600FAFBD8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DC78819B2A8A064100FAFBD8 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
-		DC78819D2A8A069400FAFBD8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DC78819F2A8A06AA00FAFBD8 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		DC7881A32A8A078300FAFBD8 /* DetailStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailStoryboard.storyboard; sourceTree = "<group>"; };
 		DC7881A52A8A079D00FAFBD8 /* MainPageStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainPageStoryboard.storyboard; sourceTree = "<group>"; };
@@ -106,7 +108,6 @@
 				63A531CA2A89E4D2001DFF71 /* Info.plist */,
 				DC7881992A8A062600FAFBD8 /* DetailViewController.swift */,
 				DC78819B2A8A064100FAFBD8 /* MainPageViewController.swift */,
-				DC78819D2A8A069400FAFBD8 /* ProfileViewController.swift */,
 				1F954FE62A8C7783004A1360 /* CellCustom.swift */,
 				DC7881A32A8A078300FAFBD8 /* DetailStoryboard.storyboard */,
 				DC7881A52A8A079D00FAFBD8 /* MainPageStoryboard.storyboard */,
@@ -125,6 +126,8 @@
 				DC0C058E2A8EDF7300964925 /* CollectionViewTry.storyboard */,
 				DC0C058F2A8EDF7400964925 /* CollectionViewTry.swift */,
 				DC0C05912A8EDF7800964925 /* UserInfoData.swift */,
+				DC0C05932A8EEEE000964925 /* TabBarController.swift */,
+				DC0C05952A8EF34400964925 /* ProfileViewController.swift */,
 			);
 			path = nagaGrinGirinGrim;
 			sourceTree = "<group>";
@@ -214,13 +217,14 @@
 				C069E5E12A8CE497001C11A8 /* UIcolor.swift in Sources */,
 				DC0C05902A8EDF7500964925 /* CollectionViewTry.swift in Sources */,
 				DCD579132A8E535D005B3001 /* Data.swift in Sources */,
+				DC0C05962A8EF34400964925 /* ProfileViewController.swift in Sources */,
 				DC78819C2A8A064100FAFBD8 /* MainPageViewController.swift in Sources */,
+				DC0C05942A8EEEE000964925 /* TabBarController.swift in Sources */,
 				C069E5DF2A8CE487001C11A8 /* UserInfoCollectionView.swift in Sources */,
 				96E73D552A8CB64200901756 /* WritingViewController.swift in Sources */,
 				63A531BD2A89E4D1001DFF71 /* AppDelegate.swift in Sources */,
 				DC78819A2A8A062600FAFBD8 /* DetailViewController.swift in Sources */,
 				C069E5E72A8CE50B001C11A8 /* DomoCell.swift in Sources */,
-				DC78819E2A8A069400FAFBD8 /* ProfileViewController.swift in Sources */,
 				63A531BF2A89E4D1001DFF71 /* SceneDelegate.swift in Sources */,
 				C069E5E32A8CE4A4001C11A8 /* NavigationTapbar_top.swift in Sources */,
 			);
