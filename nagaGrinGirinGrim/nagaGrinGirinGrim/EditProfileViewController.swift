@@ -575,9 +575,27 @@ extension EditProfileViewController{
             case 1:
                 navigationController?.popViewController(animated: true)
             case 2:
-                if let collectionViewController = UIStoryboard(name: "CollectionViewTry", bundle: nil).instantiateViewController(withIdentifier: "CollectionViewTry") as? CollectionViewTry {
-                    navigationController?.pushViewController(collectionViewController, animated: true)
-                }
+                let id = userInfoTextField0.text ?? "enerz2zo"
+                let name = userInfoTextField1.text ?? "에너자이조"
+                let mood = userInfoTextField2.text ?? "😃"
+                let introduction = userInfoTextField3.text ?? "안녕하세요."
+                let titleOfAnni = userInfoTextField4.text ?? "생일"
+                let anni = userInfoTextField5.text ?? "nil"
+                
+                defaults.set(id, forKey: "userName")
+                defaults.set(name, forKey: "name")
+                defaults.set(mood, forKey: "mood")
+                defaults.set(introduction, forKey: "introduction")
+                defaults.set(titleOfAnni, forKey: "anniversaryTitle")
+                defaults.set(anni, forKey: "anniversary")
+                
+                
+                print(defaults.string(forKey: "userName")!)
+                print(defaults.string(forKey: "name")!)
+                print(defaults.string(forKey: "mood")!)
+                print(defaults.string(forKey: "introduction")!)
+                print(defaults.string(forKey: "anniversaryTitle")!)
+                print(defaults.string(forKey: "anniversary")!)
             default:
                 print("error")
             }
