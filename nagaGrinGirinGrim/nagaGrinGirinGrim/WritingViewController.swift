@@ -15,6 +15,7 @@ class WritingViewController: UIViewController {
     @IBOutlet weak var clickPost: UIButton!
     @IBOutlet weak var clickCancel: UIButton!
     @IBOutlet weak var clickAdd: UIButton!
+    @IBOutlet weak var clickCamera: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
@@ -22,6 +23,16 @@ class WritingViewController: UIViewController {
         setupViews()
         addPhotos()
         self.view.addSubview(self.clickCancel)
+    }
+    
+    @IBAction func cameraOn(_ sender: UIButton) {
+        let camera = UIImagePickerController()
+        camera.sourceType = .camera
+        camera.allowsEditing = true
+        camera.cameraDevice = .rear
+        camera.cameraCaptureMode = .photo
+        camera.delegate = self
+        present(camera, animated: true, completion: nil)
     }
     
     @IBAction func postContents(_ sender: Any) {

@@ -70,6 +70,15 @@
                                     <action selector="postContents:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Byg-IL-lM2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gg-wi-8rf">
+                                <rect key="frame" x="303" y="333" width="56" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="camera.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="cameraOn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="E7D-mb-v5V"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -77,6 +86,7 @@
                     <tabBarItem key="tabBarItem" title="포스트 작성" image="pencil.line" catalog="system" id="nuC-wD-5yf"/>
                     <connections>
                         <outlet property="clickAdd" destination="Yzm-2M-KCT" id="ia3-GD-a87"/>
+                        <outlet property="clickCamera" destination="7gg-wi-8rf" id="CZl-yE-hKe"/>
                         <outlet property="clickCancel" destination="Wge-L0-vaP" id="z0t-tx-7Ga"/>
                         <outlet property="clickPost" destination="HdV-Ql-25p" id="WWH-4f-0Jq"/>
                         <outlet property="datePicker" destination="LnC-nl-gHC" id="hEX-YE-Uja"/>
@@ -87,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="941" y="-37"/>
+            <point key="canvasLocation" x="939.69465648854953" y="-37.323943661971832"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hhT-8v-zqz">
@@ -114,6 +124,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera.fill" catalog="system" width="128" height="93"/>
         <image name="pencil.line" catalog="system" width="128" height="98"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
