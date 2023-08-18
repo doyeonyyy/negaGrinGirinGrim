@@ -4,6 +4,7 @@ import UIKit
 class WritingViewController: UIViewController {
     
 //    var postImgURLs: [String] = []
+    let userData = UserData.shared
   
     @IBOutlet weak var clickCancel: UIButton!
     @IBOutlet weak var postTitle: UITextField!
@@ -39,6 +40,9 @@ class WritingViewController: UIViewController {
         defaults.set(userData.postTitles, forKey: "postTitles")
         defaults.set(userData.postDates, forKey: "postDates")
         defaults.set(userData.postContents, forKey: "postContents")
+        print(defaults.array(forKey: "postTitles")!.count)
+//        let mainPageStoryboardID = UIStoryboard(name: "Main", bundle: .none).instantiateViewController(identifier: "mainPageViewControllerID") as! MainPageViewController
+//        navigationController?.pushViewController(mainPageStoryboardID, animated: false)
     }
     
     @IBAction func takeBack(_ sender: Any) {

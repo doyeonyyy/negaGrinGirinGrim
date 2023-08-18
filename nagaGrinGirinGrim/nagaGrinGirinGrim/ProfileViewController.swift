@@ -13,6 +13,7 @@ import Foundation
 // 프로필 화면을 그리는 ViewController
 // 데이터 이용: UserDefaults 값이 nil인 경우 UserData()의 dummy data 이용
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    let userData = UserData.shared
     
     // cell 개수 반환
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

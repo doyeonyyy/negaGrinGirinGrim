@@ -5,15 +5,7 @@
 
 import UIKit
 
-
-
 class EditProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    // MARK: Properties
-    
-
-    
-    
-    // MARK: UI
     
     let imageView = UIImageView()
     
