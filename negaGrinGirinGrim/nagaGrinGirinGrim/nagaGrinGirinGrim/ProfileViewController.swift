@@ -75,14 +75,12 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // 프로필 편집 화면으로 이동
     @IBAction func goToEdit(_ sender: Any) {
-        let editProfileViewControllerID = UIStoryboard(name: "EditProfileStoryboard", bundle: .none).instantiateViewController(identifier: "editProfileViewControllerID") as! EditProfileViewController
-//        editProfileViewControllerID.leftButton.tintColor = .black
-//        editProfileViewControllerID.rightButton.tintColor = .black
-//        navigationController?.pushViewController(editProfileViewControllerID, animated: true)
+        let editProfileViewControllerID = UIStoryboard(name: "EditProfileStoryboard", bundle: .none).instantiateViewController(identifier: "editProfileViewControllerID") as! EditProfileViewController)
         navigationController?.pushViewController(editProfileViewControllerID, animated: true)
     }
     
     // 스토리보드의 View들
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var profileCard: UIView!
     @IBOutlet weak var profileBox: UIView!
     @IBOutlet weak var myDiaryTable: UITableView!
