@@ -43,7 +43,7 @@ class WritingViewController: UIViewController {
         let postContent = postContent.text
         let postImg = imageView.image
         
-        if let data = postImg?.pngData() {
+        if  let data = postImg?.pngData() {
             let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
             let url = documents.appendingPathComponent("postImg.png")
             
@@ -65,14 +65,17 @@ class WritingViewController: UIViewController {
         print(postTitle ?? "제목 없음")
         print(postContent ?? "내용 없음")
         
+        
+        UserDefaults.standard.set(postImgNames, forKey: "postImgNames")
         UserDefaults.standard.set(postTitles, forKey: "postTitles")
         UserDefaults.standard.set(postDates, forKey: "postDates")
         UserDefaults.standard.set(postContents, forKey: "postContents")
 
-        let test0 = UserDefaults.standard.array(forKey: "postImgURLs") as! [String]
-        let test1 = UserDefaults.standard.array(forKey: "postTitles") as! [String]
-        let test2 = UserDefaults.standard.array(forKey: "postDates") as! [String]
-        let test3 = UserDefaults.standard.array(forKey: "postContents") as! [String]
+
+        let test0 = UserDefaults.standard.array(forKey: "postImageURLs") as! [String]
+        let test1 = UserDefaults.standard.array(forKey: "postTitles") as? [String]
+        let test2 = UserDefaults.standard.array(forKey: "postDates") as? [String]
+        let test3 = UserDefaults.standard.array(forKey: "postContents") as? [String]
         
         print("test0 값은 -- : \(test0)")
         print(test1)
@@ -132,12 +135,3 @@ extension WritingViewController: UIImagePickerControllerDelegate, UINavigationCo
         dismiss(animated: true, completion: nil)
     }
 }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
