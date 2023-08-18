@@ -10,8 +10,7 @@ import UIKit
 class EditProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     // MARK: Properties
     
-    var userInfoTitles: [String] = ["이름", "나이", "직업"]
-    
+
     
     
     // MARK: UI
@@ -107,19 +106,21 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         let userInfoTitle = UILabel()
         userInfoTitle.text = "ID"
         userInfoTitle.textColor = UIColor.black
+        userInfoTitle.font = UIFont.boldSystemFont(ofSize: 17)
         //        userInfoTitle.backgroundColor = UIColor.white
         userInfoTitle.translatesAutoresizingMaskIntoConstraints = false
         return userInfoTitle
     }()
-    let userInfoTextField0 : UITextField = {
+        let userInfoTextField0 : UITextField = {
         let userInfotextField = UITextField()
         userInfotextField.placeholder = "사용자 ID"
+        userInfotextField.font = UIFont.boldSystemFont(ofSize: 20)
         userInfotextField.text = userInfoData.userName
         userInfotextField.translatesAutoresizingMaskIntoConstraints = false
         userInfotextField.frame.size.width = 180
         userInfotextField.frame.size.height = 35
         userInfotextField.layer.addBorder([.bottom], color: UIColor.gray, width: 0.5)
-       return userInfotextField
+        return userInfotextField
     }()
     
     let userInfoBox1: UIStackView = {
