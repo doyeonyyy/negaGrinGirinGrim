@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "7824B585-5ABE-4721-B8A2-B37DBDDB86F8"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "01DA405B-05BB-476C-84FD-73FDFEBA6824"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "nagaGrinGirinGrim/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "01DA405B-05BB-476C-84FD-73FDFEBA6824 - 63d118e97865d51b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "nagaGrinGirinGrim.ViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; nagaGrinGirinGrim.ViewController"
+                  moduleName = "nagaGrinGirinGrim"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bo-bo/Desktop/swift_house/nagaGrinGirinGrim/nagaGrinGirinGrim/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "31">
+               </Location>
+               <Location
+                  uuid = "01DA405B-05BB-476C-84FD-73FDFEBA6824 - e8d5ca5d70a6497a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "nagaGrinGirinGrim.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; nagaGrinGirinGrim.ViewController"
+                  moduleName = "nagaGrinGirinGrim"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bo-bo/Desktop/swift_house/nagaGrinGirinGrim/nagaGrinGirinGrim/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "117">
+               </Location>
+               <Location
+                  uuid = "01DA405B-05BB-476C-84FD-73FDFEBA6824 - 96cdb0c7705cb0a0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "nagaGrinGirinGrim.ViewController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;nagaGrinGirinGrim.ViewController&gt;"
+                  moduleName = "nagaGrinGirinGrim"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bo-bo/Desktop/swift_house/nagaGrinGirinGrim/nagaGrinGirinGrim/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  uuid = "01DA405B-05BB-476C-84FD-73FDFEBA6824 - 4d70c22b25ca5983"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "nagaGrinGirinGrim.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;nagaGrinGirinGrim.ViewController&gt;"
+                  moduleName = "nagaGrinGirinGrim"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bo-bo/Desktop/swift_house/nagaGrinGirinGrim/nagaGrinGirinGrim/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "74">
+               </Location>
+               <Location
+                  uuid = "01DA405B-05BB-476C-84FD-73FDFEBA6824 - 32126f795a55cdc9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "nagaGrinGirinGrim.ViewController.__deallocating_deinit"
+                  moduleName = "nagaGrinGirinGrim"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bo-bo/Desktop/swift_house/nagaGrinGirinGrim/nagaGrinGirinGrim/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
