@@ -1,29 +1,24 @@
 //
-//  DetailViewController.swift
+//  Data.swift
 //  nagaGrinGirinGrim
 //
-//  Created by 보경 on 2023/08/14.
+//  Created by 보경 on 2023/08/17.
 //
 
-import UIKit
+import Foundation
 
-class DetailViewController: UIViewController {
+class UserData {
+    struct User {
+        var userName: String!
+        var profilePicture: String!
+        var name: String!
+        var mood: String!
+        var introduction : String!
+        var titleOfAnniversary : String!
+        var anniversary : String!
+    }
     
-    @IBOutlet weak var postedImage: UIImageView!
-    @IBOutlet weak var profileImage: UIImageView!
-    @IBOutlet weak var pageControl: UIPageControl!
-    
-    @IBOutlet weak var detailTitleLabel: UILabel!
-    @IBOutlet weak var editButton: UIButton!
-    
-    @IBOutlet weak var detailDateLabel: UILabel!
-    @IBOutlet weak var detailBodyLabel: UILabel!
-    
-    @IBOutlet weak var firstEmoji: UIButton!
-    @IBOutlet weak var secondEmoji: UIButton!
-    @IBOutlet weak var thirdEmoji: UIButton!
-    @IBOutlet weak var fourthEmoji: UIButton!
-    
+    // dummy data
     var postTitles = [
         "식목일",
         "비 온 뒤 무지개",
@@ -62,7 +57,7 @@ class DetailViewController: UIViewController {
         "heart",
         "earth",
         "modernart",
-        "yoonseul",
+        "yoonseul"
     ]
 
     var postDates = [
@@ -78,114 +73,6 @@ class DetailViewController: UIViewController {
         "2023년 8월 16일"
     ]
     
-    var currentImageIndex = 0
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        configureUI()
-        editButton.setImage(UIImage(systemName: "ellipsis.circle"), for: .normal)
-//        navigationBarHidden()
-        navigationSwipeBackMotion()
-        pageControl.numberOfPages = postImgNames.count
-    }
-    
-    func configureUI() {
-        configureProfileImage()
-        configureImage()
-        setNavigationBarItem()
-        configureButton()
-        populateData()
-    }
-    
-    func setMaxImage() {
-        guard pageControl.numberOfPages <= 10 else { print("10개 이상은 안될듯요"); return }
-    }
-    
-    func populateData() {
-        detailTitleLabel.text = postTitles[0]
-        detailBodyLabel.text = postContents[0]
-        detailDateLabel.text = postDates[0]
-        detailDateLabel.font = UIFont(name: detailDateLabel.font.fontName, size: 12)
-    }
-    
-    func configureProfileImage() {
-        profileImage.image = UIImage(named: "earth")
-    }
-    
-    func configureImage() {
-        postedImage.image = UIImage(named: postImgNames[currentImageIndex])
-//        currentImageIndex = (currentImageIndex + 1) % imageName.count
-        postedImage.backgroundColor = .red
-        postedImage.layer.cornerRadius = 25
-    }
-    
-    func configureButton() {
-        firstEmoji.layer.cornerRadius = 10
-        firstEmoji.setTitle("🫠", for: .normal)
-        firstEmoji.backgroundColor = .red
-        
-        secondEmoji.layer.cornerRadius = 10
-        secondEmoji.setTitle("🔥", for: .normal)
-        secondEmoji.backgroundColor = .orange
-        
-        thirdEmoji.layer.cornerRadius = 10
-        thirdEmoji.setTitle("❤️", for: .normal)
-        thirdEmoji.backgroundColor = .yellow
-        
-        fourthEmoji.layer.cornerRadius = 10
-        fourthEmoji.setTitle("⭐️", for: .normal)
-        fourthEmoji.backgroundColor = .green
-    }
-    
-    @IBAction func pageChanged(_ sender: UIPageControl) {
-        postedImage.image = UIImage(named: postImgNames[sender.currentPage])
-    }
-    
-    
-    func setNavigationBarItem() {
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "ellipsis"),
-                                                                 style: .plain, target: self,
-                                                                 action: #selector(shareButtonTapped))
-    }
-    
-    @objc func shareButtonTapped() {
-        print("오른쪽 버튼이 눌렸습니다.")
-        guard let image = postedImage.image else { return }
-        
-        let shareSheetVC = UIActivityViewController(activityItems: [image],
-                                                    applicationActivities: nil)
-        present(shareSheetVC, animated: true)
-    }
-    
-    @IBAction func firstEmojiButtonTapped(_ sender: UIButton) {
-        print("첫번쨰 버튼이 눌렸습니다.")
-    }
-    
-    @IBAction func secondEmojiButtonTapped(_ sender: UIButton) {
-        print("두번쨰 버튼이 눌렸습니다.")
-    }
-    
-    
-    @IBAction func thirdEmojiButtonTapped(_ sender: UIButton) {
-        print("세번쨰 버튼이 눌렸습니다.")
-    }
-    
-    @IBAction func fourthEmojiButtonTapped(_ sender: UIButton) {
-        print("네번쨰 버튼이 눌렸습니다.")
-    }
-    
-    @objc func editButtonTapped() {
-        print("수정 버튼이 눌렸습니다.")
-    }
-}
-
-extension DetailViewController: UIGestureRecognizerDelegate {
-    func navigationBarHidden() {
-        self.navigationController?.navigationBar.isHidden = true
-    }
-    
-    func navigationSwipeBackMotion() {
-        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
-    }
+    // 설정값이 없거나 nil일 때 불러올 프로필 데이터
+    let profile = User(userName: "enerz2zer", profilePicture: "https://ca.slack-edge.com/T043597JK8V-U05D6G5MADS-484937bd3678-512", name: "에너자이조", mood: "🔥", introduction: "열쩡👍열쩡👍열쩡👍", titleOfAnniversary: "2조 결성일!", anniversary: "2023/07/31")
 }
