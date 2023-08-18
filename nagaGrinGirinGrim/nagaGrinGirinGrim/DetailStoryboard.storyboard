@@ -8,6 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+<<<<<<< Updated upstream
         <!--Detail View Controller-->
         <scene sceneID="4Jm-SO-gyr">
             <objects>
@@ -37,10 +38,63 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="N10-gq-VhY"/>
                                             <constraint firstAttribute="width" secondItem="uUK-ci-ieC" secondAttribute="height" multiplier="1:1" id="NkR-An-int"/>
+=======
+        <!--Item-->
+        <scene sceneID="Bij-HA-dO3">
+            <objects>
+                <navigationController id="Qo8-L8-s0G" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="8wm-lE-eMH"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0AK-db-yH4">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rIu-Pw-DAw" kind="relationship" relationship="rootViewController" id="CyN-KP-eh3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Bm-ZC-yX5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-705" y="-6"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="U9Y-bg-Xas">
+            <objects>
+                <tabBarController id="9hM-PV-4dw" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2GZ-ke-E5e">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Qo8-L8-s0G" kind="relationship" relationship="viewControllers" id="Aa1-6a-ckM"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GPT-uZ-X10" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1598" y="-6"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="XKo-Ul-COm">
+            <objects>
+                <viewController storyboardIdentifier="detailViewControllerID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rIu-Pw-DAw" customClass="DetailViewController" customModule="nagaGrinGirinGrim" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9W3-t6-sYL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BFL-MI-4UY" userLabel="Profile Stack View">
+                                <rect key="frame" x="8" y="103" width="377" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6g-GN-9BN">
+                                        <rect key="frame" x="0.0" y="5" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="9TW-67-zac"/>
+                                            <constraint firstAttribute="width" secondItem="V6g-GN-9BN" secondAttribute="height" multiplier="1:1" id="aqC-QM-u4Y"/>
+>>>>>>> Stashed changes
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                     </button>
+<<<<<<< Updated upstream
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="3gS-RB-ceH" firstAttribute="leading" secondItem="AxC-lV-oUz" secondAttribute="trailing" constant="5" id="HTW-3L-ebU"/>
@@ -63,10 +117,47 @@
                                         <rect key="frame" x="138.66666666666666" y="314" width="115.66666666666666" height="26"/>
                                         <connections>
                                             <action selector="pageChanged:" destination="ho4-CW-64w" eventType="valueChanged" id="Sfr-9q-7HB"/>
+=======
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QRp-Rn-pW5">
+                                        <rect key="frame" x="35" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="QRp-Rn-pW5" secondAttribute="height" multiplier="1:1" id="ZCc-f8-ddq"/>
+                                            <constraint firstAttribute="width" constant="40" id="kUv-Yv-0yc"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51a-sp-GTP">
+                                        <rect key="frame" x="80" y="0.0" width="297" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="51a-sp-GTP" firstAttribute="leading" secondItem="QRp-Rn-pW5" secondAttribute="trailing" constant="5" id="6FK-3X-4Bc"/>
+                                    <constraint firstAttribute="bottom" secondItem="51a-sp-GTP" secondAttribute="bottom" id="9bA-SC-sZY"/>
+                                    <constraint firstItem="51a-sp-GTP" firstAttribute="top" secondItem="BFL-MI-4UY" secondAttribute="top" id="WVR-76-39V"/>
+                                </constraints>
+                            </stackView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="scrollableAxes" translatesAutoresizingMaskIntoConstraints="NO" id="RFx-qv-mFH" userLabel="Image Scroll View">
+                                <rect key="frame" x="0.0" y="153" width="393" height="289"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rah-e2-biO">
+                                        <rect key="frame" x="5" y="0.0" width="383" height="350"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="350" id="8Iu-Xt-sdD"/>
+                                            <constraint firstAttribute="width" constant="350" id="NrF-t7-Nav"/>
+                                        </constraints>
+                                    </imageView>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="oxV-bE-4HN">
+                                        <rect key="frame" x="138.66666666666666" y="314" width="115.66666666666666" height="26"/>
+                                        <connections>
+                                            <action selector="pageChanged:" destination="rIu-Pw-DAw" eventType="valueChanged" id="owS-rC-dqS"/>
+>>>>>>> Stashed changes
                                         </connections>
                                     </pageControl>
                                 </subviews>
                                 <constraints>
+<<<<<<< Updated upstream
                                     <constraint firstItem="41u-xh-bPO" firstAttribute="top" secondItem="a85-vW-qKe" secondAttribute="top" id="06h-8v-neY"/>
                                     <constraint firstAttribute="bottom" secondItem="41u-xh-bPO" secondAttribute="bottom" id="4h9-Ie-nsm"/>
                                     <constraint firstItem="41u-xh-bPO" firstAttribute="leading" secondItem="a85-vW-qKe" secondAttribute="leading" id="7io-b3-fyA"/>
@@ -82,6 +173,52 @@
                                         <rect key="frame" x="0.0" y="0.0" width="377" height="20.333333333333332"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wl-Ek-Iso">
+=======
+                                    <constraint firstItem="Rah-e2-biO" firstAttribute="leading" secondItem="RFx-qv-mFH" secondAttribute="leading" constant="5" id="6Pf-yh-lA0"/>
+                                    <constraint firstAttribute="trailing" secondItem="Rah-e2-biO" secondAttribute="trailing" constant="5" id="6fW-L0-10x"/>
+                                    <constraint firstItem="Rah-e2-biO" firstAttribute="bottom" secondItem="oxV-bE-4HN" secondAttribute="bottom" constant="10" id="LfN-uN-8EW"/>
+                                    <constraint firstItem="oxV-bE-4HN" firstAttribute="centerX" secondItem="RFx-qv-mFH" secondAttribute="centerX" id="c7C-5O-eas"/>
+                                    <constraint firstAttribute="bottom" secondItem="Rah-e2-biO" secondAttribute="bottom" id="k6w-ce-WZB"/>
+                                    <constraint firstItem="Rah-e2-biO" firstAttribute="top" secondItem="RFx-qv-mFH" secondAttribute="top" id="q2E-XI-MHi"/>
+                                </constraints>
+                            </scrollView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uv2-VW-xH4" userLabel="Message Stack View">
+                                <rect key="frame" x="8" y="450" width="377" height="115"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KD6-kJ-KvH">
+                                        <rect key="frame" x="0.0" y="0.0" width="377" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EnL-Dk-7Xl">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="thh-so-foM"/>
+                                                    <constraint firstAttribute="height" constant="30" id="zdJ-1e-mCr"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <connections>
+                                                    <action selector="reactionButtonClicked:" destination="rIu-Pw-DAw" eventType="touchUpInside" id="aXz-W6-0Gb"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5S-bE-yw2">
+                                                <rect key="frame" x="125" y="0.0" width="252" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="EnL-Dk-7Xl" firstAttribute="top" secondItem="KD6-kJ-KvH" secondAttribute="top" id="7zM-yE-K0X"/>
+                                            <constraint firstItem="EnL-Dk-7Xl" firstAttribute="leading" secondItem="KD6-kJ-KvH" secondAttribute="leading" id="NEw-2u-FGp"/>
+                                            <constraint firstItem="M5S-bE-yw2" firstAttribute="top" secondItem="KD6-kJ-KvH" secondAttribute="top" id="Odl-a2-znS"/>
+                                            <constraint firstAttribute="trailing" secondItem="M5S-bE-yw2" secondAttribute="trailing" id="nKn-kE-a80"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hu6-Nn-nxJ">
+                                        <rect key="frame" x="0.0" y="38" width="377" height="20.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fl2-hQ-Mcs">
+>>>>>>> Stashed changes
                                                 <rect key="frame" x="0.0" y="0.0" width="377" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -89,20 +226,31 @@
                                             </label>
                                         </subviews>
                                     </stackView>
+<<<<<<< Updated upstream
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giM-7d-mDf">
                                         <rect key="frame" x="0.0" y="28.333333333333371" width="377" height="20.333333333333329"/>
+=======
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zix-bD-Uaz">
+                                        <rect key="frame" x="0.0" y="66.333333333333371" width="377" height="20.333333333333329"/>
+>>>>>>> Stashed changes
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+<<<<<<< Updated upstream
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7Z-pg-JnK">
                                         <rect key="frame" x="0.0" y="56.666666666666636" width="377" height="20.333333333333336"/>
+=======
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZL-Ir-hvK">
+                                        <rect key="frame" x="0.0" y="94.666666666666629" width="377" height="20.333333333333329"/>
+>>>>>>> Stashed changes
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
+<<<<<<< Updated upstream
                                     <constraint firstAttribute="trailing" secondItem="Xk0-SY-mfm" secondAttribute="trailing" id="26U-Om-Wov"/>
                                     <constraint firstAttribute="trailing" secondItem="giM-7d-mDf" secondAttribute="trailing" id="2rm-2U-Ech"/>
                                     <constraint firstAttribute="trailing" secondItem="E7Z-pg-JnK" secondAttribute="trailing" id="xZF-zN-OkL"/>
@@ -141,11 +289,67 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
                                             <action selector="fourthEmojiButtonTapped:" destination="ho4-CW-64w" eventType="touchUpInside" id="Z9e-3c-vFj"/>
+=======
+                                    <constraint firstAttribute="trailing" secondItem="hu6-Nn-nxJ" secondAttribute="trailing" id="Ls1-7Z-xKV"/>
+                                    <constraint firstAttribute="trailing" secondItem="KD6-kJ-KvH" secondAttribute="trailing" id="Uhv-eN-wb5"/>
+                                    <constraint firstAttribute="trailing" secondItem="zix-bD-Uaz" secondAttribute="trailing" id="gkQ-4F-YLW"/>
+                                    <constraint firstAttribute="trailing" secondItem="mZL-Ir-hvK" secondAttribute="trailing" id="pQr-Dl-8NB"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YEB-Bb-6GY" userLabel="Emoji Button Stack View">
+                                <rect key="frame" x="94.666666666666686" y="714" width="204" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZU0-7y-T50">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ZU0-7y-T50" secondAttribute="height" multiplier="1:1" id="Kr3-zg-d4v"/>
+                                            <constraint firstAttribute="width" constant="45" id="cam-TE-lnU"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="EmojiButtonTapped:" destination="rIu-Pw-DAw" eventType="touchUpInside" id="vcS-Ww-Y25"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5g-ge-esX">
+                                        <rect key="frame" x="52.999999999999986" y="0.0" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Z5g-ge-esX" secondAttribute="height" multiplier="1:1" id="61i-mK-MRQ"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="EmojiButtonTapped:" destination="rIu-Pw-DAw" eventType="touchUpInside" id="EMZ-8L-xzN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTZ-u5-kjd">
+                                        <rect key="frame" x="106" y="0.0" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="uTZ-u5-kjd" secondAttribute="height" multiplier="1:1" id="0IK-lI-IT5"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="EmojiButtonTapped:" destination="rIu-Pw-DAw" eventType="touchUpInside" id="xx8-ay-oyh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pm4-RT-erb">
+                                        <rect key="frame" x="159" y="0.0" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Pm4-RT-erb" secondAttribute="height" multiplier="1:1" id="EQI-Ac-gGh"/>
+                                            <constraint firstAttribute="width" constant="45" id="W8Z-NZ-ULI"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="EmojiButtonTapped:" destination="rIu-Pw-DAw" eventType="touchUpInside" id="I9j-a3-Bry"/>
+>>>>>>> Stashed changes
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                         </subviews>
+<<<<<<< Updated upstream
                         <viewLayoutGuide key="safeArea" id="Cud-sZ-BlB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -183,6 +387,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDc-i5-A8q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-150.38167938931298" y="-41.549295774647888"/>
+=======
+                        <viewLayoutGuide key="safeArea" id="SFf-EI-Kag"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uv2-VW-xH4" firstAttribute="leading" secondItem="SFf-EI-Kag" secondAttribute="leading" constant="8" id="3Y7-vJ-PQQ"/>
+                            <constraint firstItem="BFL-MI-4UY" firstAttribute="top" secondItem="SFf-EI-Kag" secondAttribute="top" id="5AJ-D3-Mfs"/>
+                            <constraint firstItem="YEB-Bb-6GY" firstAttribute="centerX" secondItem="9W3-t6-sYL" secondAttribute="centerX" id="700-dF-jxc"/>
+                            <constraint firstItem="RFx-qv-mFH" firstAttribute="trailing" secondItem="SFf-EI-Kag" secondAttribute="trailing" id="8f3-nk-87h"/>
+                            <constraint firstItem="BFL-MI-4UY" firstAttribute="leading" secondItem="SFf-EI-Kag" secondAttribute="leading" constant="8" id="BY1-DT-iAl"/>
+                            <constraint firstItem="uv2-VW-xH4" firstAttribute="top" secondItem="RFx-qv-mFH" secondAttribute="bottom" constant="8" id="MU0-Fb-lC1"/>
+                            <constraint firstItem="SFf-EI-Kag" firstAttribute="bottom" secondItem="YEB-Bb-6GY" secondAttribute="bottom" constant="10" id="Okt-E9-2sU"/>
+                            <constraint firstItem="SFf-EI-Kag" firstAttribute="trailing" secondItem="BFL-MI-4UY" secondAttribute="trailing" constant="8" id="Tjz-Jh-oTo"/>
+                            <constraint firstItem="RFx-qv-mFH" firstAttribute="leading" secondItem="SFf-EI-Kag" secondAttribute="leading" id="gtM-pv-IuI"/>
+                            <constraint firstItem="Rah-e2-biO" firstAttribute="centerX" secondItem="SFf-EI-Kag" secondAttribute="centerX" id="h44-7i-80d"/>
+                            <constraint firstItem="SFf-EI-Kag" firstAttribute="bottom" secondItem="RFx-qv-mFH" secondAttribute="bottom" constant="327" id="mbz-wR-g3Y"/>
+                            <constraint firstItem="SFf-EI-Kag" firstAttribute="trailing" secondItem="uv2-VW-xH4" secondAttribute="trailing" constant="8" id="sFS-b3-Lms"/>
+                            <constraint firstItem="RFx-qv-mFH" firstAttribute="width" secondItem="9W3-t6-sYL" secondAttribute="width" id="uqs-ee-pVt"/>
+                            <constraint firstItem="RFx-qv-mFH" firstAttribute="top" secondItem="BFL-MI-4UY" secondAttribute="bottom" constant="10" id="z6d-rh-auX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="uhh-ba-SBn"/>
+                    <connections>
+                        <outlet property="detailBodyLabel" destination="mZL-Ir-hvK" id="g40-Jv-nYh"/>
+                        <outlet property="detailDateLabel" destination="zix-bD-Uaz" id="1Ly-VZ-4Lq"/>
+                        <outlet property="detailTitleLabel" destination="fl2-hQ-Mcs" id="8pe-LH-gwp"/>
+                        <outlet property="emojiTracker" destination="M5S-bE-yw2" id="hQm-ff-wPf"/>
+                        <outlet property="firstEmoji" destination="ZU0-7y-T50" id="AZd-3h-uve"/>
+                        <outlet property="fourthEmoji" destination="Pm4-RT-erb" id="GDu-8K-33H"/>
+                        <outlet property="pageControl" destination="oxV-bE-4HN" id="Gi8-AB-5Te"/>
+                        <outlet property="postedImage" destination="Rah-e2-biO" id="YJg-GN-GCy"/>
+                        <outlet property="profileImage" destination="QRp-Rn-pW5" id="GCL-8j-FnE"/>
+                        <outlet property="reactionButton" destination="EnL-Dk-7Xl" id="rxB-OD-gEA"/>
+                        <outlet property="secondEmoji" destination="Z5g-ge-esX" id="PQ6-DM-mMh"/>
+                        <outlet property="thirdEmoji" destination="uTZ-u5-kjd" id="jMA-E2-Xk2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TCw-W6-pjr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1" y="-6"/>
+>>>>>>> Stashed changes
         </scene>
     </scenes>
     <resources>

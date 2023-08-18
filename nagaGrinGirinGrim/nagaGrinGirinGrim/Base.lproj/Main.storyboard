@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="v4h-px-fyY">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -85,7 +85,37 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chR-JP-XW6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< Updated upstream
             <point key="canvasLocation" x="-401" y="-103"/>
+=======
+            <point key="canvasLocation" x="-440" y="-118"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="2x3-aF-9Pp">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="qOT-nY-czd" customClass="TabBarController" customModule="nagaGrinGirinGrim" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="nia-iR-lLr"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zQH-vh-V6V">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tabBarAppearance key="scrollEdgeAppearance">
+                            <color key="selectionIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tabBarAppearance>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Xv5-5h-3GO" kind="relationship" relationship="viewControllers" id="oVm-gd-XcE"/>
+                        <segue destination="hxN-iX-IPI" kind="relationship" relationship="viewControllers" id="wtE-CK-eRr"/>
+                        <segue destination="a3R-ky-HVf" kind="relationship" relationship="viewControllers" id="LJV-P3-CXN"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="QBn-Er-eoI"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9N5-1v-zhP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="474" y="-118"/>
+>>>>>>> Stashed changes
         </scene>
     </scenes>
     <resources>
