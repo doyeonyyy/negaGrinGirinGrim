@@ -8,8 +8,7 @@
 import UIKit
 import Foundation
 
-let defaults = UserDefaults.standard
-let userData = UserData()
+
 
 
 // 프로필 화면을 그리는 ViewController
@@ -18,7 +17,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // cell 개수 반환
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let postTitles = defaults.array(forKey: "postTitles") as? [String] ?? userData.postTitles
+//        let postTitles = defaults.array(forKey: "postTitles") as? [String] ?? userData.postTitles
+        let postTitles = userData.postTitles
         return postTitles.count
     }
     
@@ -35,19 +35,27 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         // cell card 인스턴스 생성 및 꾸미기
         let card = cell.cellCard
         card!.layer.cornerRadius = 30
-        card!.backgroundColor = .white
+        card!.backgroundColor = UIColor(cgColor: CGColor(red: 255, green: 255, blue: 255, alpha: 0.5))
         card!.layer.shadowOffset = CGSize(width: 0, height: 0)
         card!.layer.shadowOpacity = 0.3
         card!.layer.shadowRadius = 10
         
-        let postTitles = defaults.array(forKey: "postTitles") as? [String] ?? userData.postTitles
-        let postContents = defaults.array(forKey: "postTitles") as? [String] ?? userData.postContents
-        let postImgNames = defaults.array(forKey: "postTitles") as? [String] ?? userData.postImgNames
-        let postDates = defaults.array(forKey: "postTitles") as? [String] ?? userData.postDates
+        // 레이아웃 잡을 동안은 dummy data를 적용하겠습니다!
+//        let postTitles = defaults.array(forKey: "postTitles") as? [String] ?? userData.postTitles
+//        let postContents = defaults.array(forKey: "postTitles") as? [String] ?? userData.postContents
+//        let postImgNames = defaults.array(forKey: "postTitles") as? [String] ?? userData.postImgNames
+//        let postDates = defaults.array(forKey: "postTitles") as? [String] ?? userData.postDates
+        let postTitles = userData.postTitles
+        let postContents = userData.postContents
+        let postImgNames = userData.postImgNames
+        let postDates = userData.postDates
         
         cell.titleLable.text = postTitles[indexPath.row]
+        cell.titleLable.layer.opacity = 1
         cell.descriptLabel.text = postContents[indexPath.row]
+        cell.descriptLabel.layer.opacity = 1
         cell.dateLabel.text = postDates[indexPath.row]
+        cell.dateLabel.layer.opacity = 1
         cell.postImage.image = UIImage(named: postImgNames[indexPath.row])
         cell.postImage.layer.cornerRadius = 30
         cell.postImage.layer.opacity = 0.5
@@ -57,8 +65,10 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
+    
+
     // cell 높이 지정
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {100}
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {200}
     
     // cell header
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -137,11 +147,15 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let index = indexPath.row
         defaults.set(index, forKey: "current")
+        
+        // let index = Userdefaults.standard.integer(forKey: "current") as! Int
+        // let postTitles = Userdefaults.standard.array(forKey: "postTitles") as! [String]
+        // label.text = postTitles[index]
+        
         let detailViewControllerID = UIStoryboard(name: "DetailStoryboard", bundle: .none).instantiateViewController(identifier: "detailViewControllerID") as! DetailViewController
         self.navigationController?.isNavigationBarHidden = false
         navigationController?.pushViewController(detailViewControllerID, animated: true)
-        print(defaults.integer(forKey: "current"))
+        print("current: \(defaults.integer(forKey: "current"))")
     }
 }
-
 
