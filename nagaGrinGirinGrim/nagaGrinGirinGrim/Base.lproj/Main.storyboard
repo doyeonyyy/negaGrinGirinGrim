@@ -136,7 +136,6 @@
                         </tabBarAppearance>
                     </tabBar>
                     <connections>
-                        <outlet property="tabBarCon" destination="zQH-vh-V6V" id="uLh-AL-Wo7"/>
                         <segue destination="Xv5-5h-3GO" kind="relationship" relationship="viewControllers" id="oVm-gd-XcE"/>
                         <segue destination="hxN-iX-IPI" kind="relationship" relationship="viewControllers" id="wtE-CK-eRr"/>
                         <segue destination="a3R-ky-HVf" kind="relationship" relationship="viewControllers" id="LJV-P3-CXN"/>

@@ -14,12 +14,12 @@
 		63A531C42A89E4D1001DFF71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63A531C22A89E4D1001DFF71 /* Main.storyboard */; };
 		63A531C62A89E4D2001DFF71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63A531C52A89E4D2001DFF71 /* Assets.xcassets */; };
 		63A531C92A89E4D2001DFF71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63A531C72A89E4D2001DFF71 /* LaunchScreen.storyboard */; };
+		967FD09C2A8FA5FC0017BC3F /* UIcolor+CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967FD09B2A8FA5FC0017BC3F /* UIcolor+CALayer.swift */; };
 		96E73D542A8CB64200901756 /* WritingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E73D522A8CB64200901756 /* WritingStoryboard.storyboard */; };
 		96E73D552A8CB64200901756 /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E73D532A8CB64200901756 /* WritingViewController.swift */; };
 		C069E5A42A8C6B47001C11A8 /* MyDiaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C069E5A32A8C6B47001C11A8 /* MyDiaryTableViewCell.swift */; };
 		C069E5DD2A8CE46D001C11A8 /* EditProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C069E5DC2A8CE46D001C11A8 /* EditProfileStoryboard.storyboard */; };
 		C069E5DF2A8CE487001C11A8 /* UserInfoCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C069E5DE2A8CE487001C11A8 /* UserInfoCollectionView.swift */; };
-		C069E5E12A8CE497001C11A8 /* UIcolor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C069E5E02A8CE497001C11A8 /* UIcolor.swift */; };
 		C069E5E32A8CE4A4001C11A8 /* NavigationTapbar_top.swift in Sources */ = {isa = PBXBuildFile; fileRef = C069E5E22A8CE4A4001C11A8 /* NavigationTapbar_top.swift */; };
 		C069E5E52A8CE4FE001C11A8 /* Edit+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C069E5E42A8CE4FE001C11A8 /* Edit+Layout.swift */; };
 		C069E5E72A8CE50B001C11A8 /* DomoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C069E5E62A8CE50B001C11A8 /* DomoCell.swift */; };
@@ -45,12 +45,12 @@
 		63A531C52A89E4D2001DFF71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63A531C82A89E4D2001DFF71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63A531CA2A89E4D2001DFF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		967FD09B2A8FA5FC0017BC3F /* UIcolor+CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIcolor+CALayer.swift"; sourceTree = "<group>"; };
 		96E73D522A8CB64200901756 /* WritingStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WritingStoryboard.storyboard; sourceTree = "<group>"; };
 		96E73D532A8CB64200901756 /* WritingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
 		C069E5A32A8C6B47001C11A8 /* MyDiaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDiaryTableViewCell.swift; sourceTree = "<group>"; };
 		C069E5DC2A8CE46D001C11A8 /* EditProfileStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditProfileStoryboard.storyboard; sourceTree = "<group>"; };
 		C069E5DE2A8CE487001C11A8 /* UserInfoCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoCollectionView.swift; sourceTree = "<group>"; };
-		C069E5E02A8CE497001C11A8 /* UIcolor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIcolor.swift; sourceTree = "<group>"; };
 		C069E5E22A8CE4A4001C11A8 /* NavigationTapbar_top.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTapbar_top.swift; sourceTree = "<group>"; };
 		C069E5E42A8CE4FE001C11A8 /* Edit+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Edit+Layout.swift"; sourceTree = "<group>"; };
 		C069E5E62A8CE50B001C11A8 /* DomoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomoCell.swift; sourceTree = "<group>"; };
@@ -113,7 +113,6 @@
 				C069E5E62A8CE50B001C11A8 /* DomoCell.swift */,
 				C069E5E42A8CE4FE001C11A8 /* Edit+Layout.swift */,
 				C069E5E22A8CE4A4001C11A8 /* NavigationTapbar_top.swift */,
-				C069E5E02A8CE497001C11A8 /* UIcolor.swift */,
 				C069E5DE2A8CE487001C11A8 /* UserInfoCollectionView.swift */,
 				C069E5DC2A8CE46D001C11A8 /* EditProfileStoryboard.storyboard */,
 				DC78819F2A8A06AA00FAFBD8 /* EditProfileViewController.swift */,
@@ -125,6 +124,7 @@
 				DC0C058F2A8EDF7400964925 /* CollectionViewTry.swift */,
 				DC0C05912A8EDF7800964925 /* UserInfoData.swift */,
 				DCD318CF2A8F126C00964631 /* ProfileViewController.swift */,
+				967FD09B2A8FA5FC0017BC3F /* UIcolor+CALayer.swift */,
 			);
 			path = nagaGrinGirinGrim;
 			sourceTree = "<group>";
@@ -212,13 +212,13 @@
 				C069E5E52A8CE4FE001C11A8 /* Edit+Layout.swift in Sources */,
 				DC0C05922A8EDF7800964925 /* UserInfoData.swift in Sources */,
 				C069E5A42A8C6B47001C11A8 /* MyDiaryTableViewCell.swift in Sources */,
-				C069E5E12A8CE497001C11A8 /* UIcolor.swift in Sources */,
 				DC0C05902A8EDF7500964925 /* CollectionViewTry.swift in Sources */,
 				DCD579132A8E535D005B3001 /* Data.swift in Sources */,
 				DC78819C2A8A064100FAFBD8 /* MainPageViewController.swift in Sources */,
 				C069E5DF2A8CE487001C11A8 /* UserInfoCollectionView.swift in Sources */,
 				96E73D552A8CB64200901756 /* WritingViewController.swift in Sources */,
 				63A531BD2A89E4D1001DFF71 /* AppDelegate.swift in Sources */,
+				967FD09C2A8FA5FC0017BC3F /* UIcolor+CALayer.swift in Sources */,
 				DC78819A2A8A062600FAFBD8 /* DetailViewController.swift in Sources */,
 				C069E5E72A8CE50B001C11A8 /* DomoCell.swift in Sources */,
 				63A531BF2A89E4D1001DFF71 /* SceneDelegate.swift in Sources */,
