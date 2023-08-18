@@ -6,8 +6,14 @@
 //
 
 import Foundation
+import UIKit
+
+
+let defaults = UserDefaults.standard
+let userData = UserData()
 
 class UserData {
+    
     struct User {
         var userName: String!
         var profilePicture: String!
@@ -75,4 +81,24 @@ class UserData {
     
     // 설정값이 없거나 nil일 때 불러올 프로필 데이터
     let profile = User(userName: "enerz2zer", profilePicture: "https://ca.slack-edge.com/T043597JK8V-U05D6G5MADS-484937bd3678-512", name: "에너자이조", mood: "🔥", introduction: "열쩡👍열쩡👍열쩡👍", titleOfAnniversary: "2조 결성일!", anniversary: "2023/07/31")
+}
+
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
+    }
+}
+
+func loadImage() {
+    var image: UIImageView!
+    let url = URL(string: "url")
+    image.load(url: url!)
 }

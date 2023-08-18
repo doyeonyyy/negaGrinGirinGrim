@@ -129,10 +129,14 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zQH-vh-V6V">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tabBarAppearance key="scrollEdgeAppearance">
+                            <color key="selectionIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tabBarAppearance>
                     </tabBar>
                     <connections>
-                        <outlet property="tabBar" destination="zQH-vh-V6V" id="adI-Pj-aDM"/>
+                        <outlet property="tabBarCon" destination="zQH-vh-V6V" id="uLh-AL-Wo7"/>
                         <segue destination="Xv5-5h-3GO" kind="relationship" relationship="viewControllers" id="oVm-gd-XcE"/>
                         <segue destination="hxN-iX-IPI" kind="relationship" relationship="viewControllers" id="wtE-CK-eRr"/>
                         <segue destination="a3R-ky-HVf" kind="relationship" relationship="viewControllers" id="LJV-P3-CXN"/>
