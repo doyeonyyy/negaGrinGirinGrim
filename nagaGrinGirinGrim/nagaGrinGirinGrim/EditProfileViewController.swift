@@ -38,8 +38,8 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         bodyContainer.axis = .vertical
         bodyContainer.translatesAutoresizingMaskIntoConstraints = false
         //        bodyContainer.backgroundColor = UIColor.yellow
-        //        bodyContainer.layer.borderColor = UIColor.gray.cgColor
-        //        bodyContainer.layer.borderWidth = 1.0
+//                bodyContainer.layer.borderColor = UIColor.gray.cgColor
+//                bodyContainer.layer.borderWidth = 1.0
         return bodyContainer
     }()
     
@@ -48,7 +48,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         let profilePictureView = UIStackView()
         profilePictureView.axis = .vertical
         profilePictureView.translatesAutoresizingMaskIntoConstraints = false
-        //        profilePictureView.backgroundColor = UIColor(hex: "ff9f1c")
+//        profilePictureView.backgroundColor = UIColor(hex: "ff9f1c")
         //        profilePictureView.layer.borderColor = UIColor.gray.cgColor
         //        profilePictureView.layer.borderWidth = 1.0
         return profilePictureView
@@ -75,7 +75,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         profilImageEditButton.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         //        profilImageEditButton.backgroundColor = UIColor.white
         profilImageEditButton.translatesAutoresizingMaskIntoConstraints = false
-        profilImageEditButton.addTarget(self, action: #selector(openAlbum), for: .touchUpInside)
+        profilImageEditButton.addTarget(EditProfileViewController.self, action: #selector(openAlbum), for: .touchUpInside)
         return profilImageEditButton
     }()
     
@@ -89,9 +89,37 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
 //        userInfoView.layer.borderColor = UIColor.gray.cgColor
 //        userInfoView.layer.borderWidth = 1
 //        userInfoView.layer.cornerRadius = 10
-        
-        
         return userInfoView
+    }()
+    
+    let userInfoBox0: UIStackView = {
+        let userInfoBox = UIStackView()
+        userInfoBox.axis = .horizontal
+        userInfoBox.translatesAutoresizingMaskIntoConstraints = false
+        // border try
+        userInfoBox.frame.size.width = 280
+        userInfoBox.frame.size.height = 35
+//        userInfoBox.layer.addBorder([.bottom], color: UIColor.gray, width: 1.0)
+        return userInfoBox
+    }()
+    
+    let userInfoTitle0: UILabel = {
+        let userInfoTitle = UILabel()
+        userInfoTitle.text = "ID"
+        userInfoTitle.textColor = UIColor.black
+        //        userInfoTitle.backgroundColor = UIColor.white
+        userInfoTitle.translatesAutoresizingMaskIntoConstraints = false
+        return userInfoTitle
+    }()
+    let userInfoTextField0 : UITextField = {
+        let userInfotextField = UITextField()
+        userInfotextField.placeholder = "사용자 ID"
+        userInfotextField.text = userInfoData.userName
+        userInfotextField.translatesAutoresizingMaskIntoConstraints = false
+        userInfotextField.frame.size.width = 180
+        userInfotextField.frame.size.height = 35
+        userInfotextField.layer.addBorder([.bottom], color: UIColor.gray, width: 0.5)
+       return userInfotextField
     }()
     
     let userInfoBox1: UIStackView = {
@@ -102,10 +130,9 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         userInfoBox.frame.size.width = 280
         userInfoBox.frame.size.height = 35
 //        userInfoBox.layer.addBorder([.bottom], color: UIColor.gray, width: 1.0)
-        
-        
         return userInfoBox
     }()
+    
     let userInfoTitle1: UILabel = {
         let userInfoTitle = UILabel()
         userInfoTitle.text = "이름"
@@ -122,8 +149,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         userInfotextField.frame.size.width = 180
         userInfotextField.frame.size.height = 35
         userInfotextField.layer.addBorder([.bottom], color: UIColor.gray, width: 0.5)
-        
-        return userInfotextField
+       return userInfotextField
     }()
     
     let userInfoBox2: UIStackView = {
@@ -238,6 +264,17 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         return userInfotextField
     }()
     
+    private func setupDatePicker(){
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .dateAndTime
+        datePicker.preferredDatePickerStyle = .inline
+        datePicker.locale = Locale(identifier: "ko-KR")
+        //값이 변할때마다 동작을 설정
+        datePicker.addTarget(self, action: #selector(dateChange), for: .valueChanged)
+        userInfoTextField5.inputView = datePicker
+        //TextField에 오늘 날짜로 표시되게 설정
+        userInfoTextField5.text = dateFormat(date: Date())
+    }
     
     
     
@@ -245,7 +282,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         let otherButtonView = UIStackView()
         otherButtonView.axis = .vertical
         otherButtonView.translatesAutoresizingMaskIntoConstraints = false
-        //        otherButtonView.backgroundColor = UIColor(hex: "2ec4b6")
+//                otherButtonView.backgroundColor = UIColor(hex: "2ec4b6")
         //        otherButtonView.layer.borderColor = UIColor.gray.cgColor
         //        otherButtonView.layer.borderWidth = 1.0
         return otherButtonView
@@ -278,7 +315,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         super.viewDidLoad()
         
         configeUI()
-        
+        setupDatePicker()
     }
     //    override func viewDidLayoutSubviews() {
     //        super.viewDidLayoutSubviews()
@@ -299,6 +336,9 @@ extension EditProfileViewController{
         bodyContainer.addSubview(otherButtonView)
         profilePictureView.addSubview(profileImage)
         profilePictureView.addSubview(profilImageEditButton)
+        userInfoView.addSubview(userInfoBox0)
+        userInfoBox0.addSubview(userInfoTitle0)
+        userInfoBox0.addSubview(userInfoTextField0)
         userInfoView.addSubview(userInfoBox1)
         userInfoBox1.addSubview(userInfoTitle1)
         userInfoBox1.addSubview(userInfoTextField1)
@@ -313,6 +353,7 @@ extension EditProfileViewController{
         userInfoBox4.addSubview(userInfoTextField4)
         userInfoView.addSubview(userInfoBox5)
         userInfoBox5.addSubview(userInfoTitle5)
+    
         userInfoBox5.addSubview(userInfoTextField5)
         otherButtonView.addSubview(otherButton1)
         otherButtonView.addSubview(otherButton2)
@@ -329,7 +370,7 @@ extension EditProfileViewController{
         let screenWidth = UIScreen.main.bounds.width
         let screenHeight = UIScreen.main.bounds.height
         let bodyContainerWidth = screenWidth * 0.8
-        let bodyContainerHeight = screenHeight * 0.65
+        let bodyContainerHeight = screenHeight * 0.7
         let childrenHeight = bodyContainerHeight * 0.3
         let userInfoTitleSize = 80
         let imageSize = childrenHeight * 0.6
@@ -379,11 +420,31 @@ extension EditProfileViewController{
             userInfoView.heightAnchor.constraint(equalToConstant: bodyContainerHeight * 0.45)
             
         ])
+        //Box0
+        NSLayoutConstraint.activate([
+            userInfoBox0.leadingAnchor.constraint(equalTo: userInfoView.leadingAnchor, constant: 10),
+            userInfoBox0.trailingAnchor.constraint(equalTo: userInfoView.trailingAnchor, constant: -10),
+            userInfoBox0.topAnchor.constraint(equalTo: userInfoView.topAnchor, constant: 10),
+            userInfoBox0.heightAnchor.constraint(equalToConstant: 35)
+        ])
+        NSLayoutConstraint.activate([
+            userInfoTitle0.leadingAnchor.constraint(equalTo: userInfoBox0.leadingAnchor, constant: 0),
+            userInfoTitle0.widthAnchor.constraint(equalToConstant: CGFloat(userInfoTitleSize)),
+            userInfoTitle0.centerYAnchor.constraint(equalTo: userInfoBox0.centerYAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            userInfoTextField0.leadingAnchor.constraint(equalTo: userInfoTitle0.trailingAnchor,constant: 10),
+            userInfoTextField0.trailingAnchor.constraint(equalTo: userInfoBox0.trailingAnchor, constant: 0),
+            userInfoTextField0.centerYAnchor.constraint(equalTo: userInfoBox0.centerYAnchor)
+            
+        ])
+        
         //Box1
         NSLayoutConstraint.activate([
             userInfoBox1.leadingAnchor.constraint(equalTo: userInfoView.leadingAnchor, constant: 10),
             userInfoBox1.trailingAnchor.constraint(equalTo: userInfoView.trailingAnchor, constant: -10),
-            userInfoBox1.topAnchor.constraint(equalTo: userInfoView.topAnchor, constant: 10),
+            userInfoBox1.topAnchor.constraint(equalTo: userInfoBox0.bottomAnchor, constant: 10),
             userInfoBox1.heightAnchor.constraint(equalToConstant: 35)
         ])
         
@@ -484,21 +545,22 @@ extension EditProfileViewController{
         
         
         NSLayoutConstraint.activate([
-            otherButtonView.leadingAnchor.constraint(equalTo: bodyContainer.leadingAnchor,constant: 0),
-            otherButtonView.trailingAnchor.constraint(equalTo: bodyContainer.trailingAnchor,constant: 0),
+            otherButtonView.leadingAnchor.constraint(equalTo: bodyContainer.leadingAnchor,constant: 10),
+            otherButtonView.trailingAnchor.constraint(equalTo: bodyContainer.trailingAnchor,constant: -10),
             otherButtonView.topAnchor.constraint(equalTo: userInfoView.bottomAnchor,constant: 30),
-            otherButtonView.heightAnchor.constraint(equalToConstant: bodyContainerHeight * 0.1)
+            otherButtonView.bottomAnchor.constraint(equalTo: bodyContainer.bottomAnchor, constant: 0)
             
         ])
         
         NSLayoutConstraint.activate([
             otherButton1.leadingAnchor.constraint(equalTo: otherButtonView.leadingAnchor, constant: 0),
             otherButton1.trailingAnchor.constraint(equalTo: otherButtonView.trailingAnchor, constant: 0),
+            otherButton1.bottomAnchor.constraint(equalTo: otherButton2.topAnchor, constant: 0)
         ])
         NSLayoutConstraint.activate([
             otherButton2.leadingAnchor.constraint(equalTo: otherButtonView.leadingAnchor, constant: 0),
             otherButton2.trailingAnchor.constraint(equalTo: otherButtonView.trailingAnchor, constant: 0),
-            otherButton2.topAnchor.constraint(equalTo: otherButton1.bottomAnchor, constant: 5)
+            otherButton2.bottomAnchor.constraint(equalTo: otherButtonView.bottomAnchor, constant: 0)
         ])
     }
 }
@@ -538,6 +600,19 @@ extension EditProfileViewController{
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func dateChange(_ sender: UIDatePicker){
+        //값이 변하면 DatePicker에서 날짜를 받아와 textField에 삽입
+        userInfoTextField5.text = dateFormat(date: sender.date)
+    }
+    
+    private func dateFormat(date:Date) -> String {
+        //
+        let formtter = DateFormatter()
+        formtter.dateFormat = "yyyy / MM / dd"
+        
+        return formtter.string(from: date)
     }
 }
 

@@ -111,11 +111,8 @@
 				DC7881A32A8A078300FAFBD8 /* DetailStoryboard.storyboard */,
 				DC7881A52A8A079D00FAFBD8 /* MainPageStoryboard.storyboard */,
 				DC7881A72A8A07AF00FAFBD8 /* ProfileStoryboard.storyboard */,
-				C069E5E62A8CE50B001C11A8 /* DomoCell.swift */,
 				C069E5E42A8CE4FE001C11A8 /* Edit+Layout.swift */,
 				C069E5E22A8CE4A4001C11A8 /* NavigationTapbar_top.swift */,
-				C069E5E02A8CE497001C11A8 /* UIcolor+CALayer.swift */,
-				C069E5DE2A8CE487001C11A8 /* UserInfoCollectionView.swift */,
 				C069E5DC2A8CE46D001C11A8 /* EditProfileStoryboard.storyboard */,
 				DC78819F2A8A06AA00FAFBD8 /* EditProfileViewController.swift */,
 				C069E5A32A8C6B47001C11A8 /* MyDiaryTableViewCell.swift */,
@@ -131,6 +128,9 @@
 				C069E5DA2A8CE455001C11A8 /* CollectionViewTry.storyboard */,
 				C069E5D82A8CE42E001C11A8 /* CollectionViewTry.swift */,
 				960C7B472A8E024300AD0B6D /* UserInfoData.swift */,
+				C069E5DE2A8CE487001C11A8 /* UserInfoCollectionView.swift */,
+				C069E5E62A8CE50B001C11A8 /* DomoCell.swift */,
+				C069E5E02A8CE497001C11A8 /* UIcolor+CALayer.swift */,
 			);
 			path = EditProfile;
 			sourceTree = "<group>";
