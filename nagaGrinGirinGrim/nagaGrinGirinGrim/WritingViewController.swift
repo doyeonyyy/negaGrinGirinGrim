@@ -50,6 +50,15 @@ class WritingViewController: UIViewController {
             }
         }
         
+        // 대신 사용할 더미 이미지 이름 (Assets 폴더에 있는 이미지 이름)
+        let dummyImageName = "heart"
+
+            // 더미 이미지 가져오기
+            if let dummyImage = UIImage(named: dummyImageName) {
+                imageView.contentMode = .scaleAspectFit
+                imageView.image = dummyImage
+            }
+        
         postTitles.append(postTitle ?? "제목 없음")
         postDates.append(postDate)
         postContents.append(postContent ?? "내용 없음")
@@ -80,7 +89,13 @@ class WritingViewController: UIViewController {
             let imageLoaded = UIImage(data: data)
             print("image -- \(imageLoaded)")
         }
-    }
+        
+        if let navigationController = self.navigationController {
+                navigationController.popToRootViewController(animated: true)
+            } else {
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     
     @IBAction func takeBack(_ sender: Any) {
         self.dismiss(animated: true)
@@ -88,7 +103,6 @@ class WritingViewController: UIViewController {
     }
     
     func setupViews() {
-//        clickAdd.setTitle("사진", for: .normal)
         clickAdd.addTarget(self, action: #selector(uploadPhoto), for: .touchUpInside)
         
         view.addSubview(imageView)
