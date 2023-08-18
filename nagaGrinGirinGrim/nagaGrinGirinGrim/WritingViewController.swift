@@ -1,13 +1,5 @@
-//
-//  WritingViewController.swift
-//  nagaGrinGirinGrim
-//
-//  Created by 보경 on 2023/08/14.
-//
 import Foundation
 import UIKit
-
-let post = UserDefaults.standard
 
 class WritingViewController: UIViewController {
     
