@@ -3,17 +3,13 @@ import UIKit
 
 class WritingViewController: UIViewController {
     
-    var postTitles: [String] = []
-    var postContents: [String] = []
-    var postDates: [String] = []
-    var postImgNames: [String] = []
-    var postImgURLs: [String] = []
+//    var postImgURLs: [String] = []
   
+    @IBOutlet weak var clickCancel: UIButton!
     @IBOutlet weak var postTitle: UITextField!
     @IBOutlet weak var postContent: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var clickPost: UIButton!
-    @IBOutlet weak var clickCancel: UIButton!
     @IBOutlet weak var clickAdd: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     
@@ -29,62 +25,26 @@ class WritingViewController: UIViewController {
         
         let postTitle = postTitle.text
         let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "yyyy년 MM월 dd일"
         dateFormatter.dateStyle = .long
         let postDate = dateFormatter.string(from: self.datePicker.date)
         let postContent = postContent.text
-        let postImg = imageView.image
+        let postImg = "heart"
         
-        if  let data = postImg?.pngData() {
-            let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-            let url = documents.appendingPathComponent("postImg.png")
-            
-            postImgURLs.append(url.absoluteString)
-            UserDefaults.standard.set(postImgURLs, forKey: "postImageURLs")
-            
-            do {
-                try data.write(to: url)
-                UserDefaults.standard.set(url, forKey: "image")
-            } catch {
-                print("등록된 사진이 없음")
-            }
-        }
-        
-        postTitles.append(postTitle ?? "제목 없음")
-        postDates.append(postDate)
-        postContents.append(postContent ?? "내용 없음")
-        
-        print(postTitle ?? "제목 없음")
-        print(postContent ?? "내용 없음")
-        
-        
-        UserDefaults.standard.set(postImgNames, forKey: "postImgNames")
-        UserDefaults.standard.set(postTitles, forKey: "postTitles")
-        UserDefaults.standard.set(postDates, forKey: "postDates")
-        UserDefaults.standard.set(postContents, forKey: "postContents")
+        userData.postTitles.append(postTitle ?? "제목 없음")
+        userData.postDates.append(postDate)
+        userData.postContents.append(postContent ?? "내용 없음")
+        userData.postImgNames.append(postImg)
 
-
-        let test0 = UserDefaults.standard.array(forKey: "postImageURLs") as! [String]
-        let test1 = UserDefaults.standard.array(forKey: "postTitles") as? [String]
-        let test2 = UserDefaults.standard.array(forKey: "postDates") as? [String]
-        let test3 = UserDefaults.standard.array(forKey: "postContents") as? [String]
-        
-        print("test0 값은 -- : \(test0)")
-        print(test1)
-        print(test2)
-        print(test3)
-        
-        test0.forEach { urlString in
-            let url = URL(string: urlString)!
-            let data = try! Data(contentsOf: url)
-            let imageLoaded = UIImage(data: data)
-            print("image -- \(imageLoaded)")
-        }
+        defaults.set(userData.postImgNames, forKey: "postImgNames")
+        defaults.set(userData.postTitles, forKey: "postTitles")
+        defaults.set(userData.postDates, forKey: "postDates")
+        defaults.set(userData.postContents, forKey: "postContents")
     }
     
     @IBAction func takeBack(_ sender: Any) {
         self.dismiss(animated: true)
-        clickCancel.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
+        let mainPageStoryboardID = UIStoryboard(name: "Main", bundle: .none).instantiateViewController(identifier: "mainPageViewControllerID") as! MainPageViewController
+        navigationController?.pushViewController(mainPageStoryboardID, animated: false)
     }
     
     func setupViews() {
@@ -109,9 +69,6 @@ class WritingViewController: UIViewController {
         // imagePicker.allowsEditing = true
         present(imagePicker, animated: true)
     }
-    @objc func buttonPressed(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
 }
 
 extension WritingViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -127,3 +84,28 @@ extension WritingViewController: UIImagePickerControllerDelegate, UINavigationCo
         dismiss(animated: true, completion: nil)
     }
 }
+
+
+// 추후 적용
+
+//        if  let data = postImg?.pngData() {
+//            let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+//            let url = documents.appendingPathComponent("postImg.png")
+//
+//            postImgURLs.append(url.absoluteString)
+//            UserDefaults.standard.set(postImgURLs, forKey: "postImageURLs")
+//
+//            do {
+//                try data.write(to: url)
+//                UserDefaults.standard.set(url, forKey: "image")
+//            } catch {
+//                print("등록된 사진이 없음")
+//            }
+//        }
+//let test0 = UserDefaults.standard.array(forKey: "postImageURLs") as! [String]
+//        test0.forEach { urlString in
+//            let url = URL(string: urlString)!
+//            let data = try! Data(contentsOf: url)
+//            let imageLoaded = UIImage(data: data)
+//            print("image -- \(imageLoaded)")
+//        }

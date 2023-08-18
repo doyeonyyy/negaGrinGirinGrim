@@ -59,6 +59,9 @@ class MainPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // naviagation bar hidden
+        self.navigationController?.isNavigationBarHidden = true
+        
         mainCollectionView.dataSource = self
         mainCollectionView.delegate = self
         
@@ -101,7 +104,6 @@ extension MainPageViewController: UICollectionViewDelegateFlowLayout{
     let interItemSpacing: CGFloat = 10
     let padding: CGFloat = 16
     let width = (collectionView.bounds.width - interItemSpacing * 3 - padding * 2) / 3
-    print(width)
     let height = width * 1.5
     return CGSize(width: width, height: height)
     }

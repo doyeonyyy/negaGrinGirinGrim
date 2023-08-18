@@ -573,6 +573,7 @@ extension EditProfileViewController{
         if let button = sender as? UIBarButtonItem {
             switch button.tag {
             case 1:
+                self.navigationController?.isNavigationBarHidden = true
                 navigationController?.popViewController(animated: true)
             case 2:
                 let id = userInfoTextField0.text ?? "enerz2zo"
@@ -596,6 +597,9 @@ extension EditProfileViewController{
                 print(defaults.string(forKey: "introduction")!)
                 print(defaults.string(forKey: "anniversaryTitle")!)
                 print(defaults.string(forKey: "anniversary")!)
+                
+                self.navigationController?.isNavigationBarHidden = true
+                navigationController?.popViewController(animated: true)
             default:
                 print("error")
             }

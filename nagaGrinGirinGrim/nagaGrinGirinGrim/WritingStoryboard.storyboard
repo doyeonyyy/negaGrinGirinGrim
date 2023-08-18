@@ -89,28 +89,6 @@
             </objects>
             <point key="canvasLocation" x="1191.6030534351144" y="-37.323943661971832"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="hhT-8v-zqz">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="1b8-1Z-2pS" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fZK-Eq-5QI">
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <tabBarAppearance key="scrollEdgeAppearance">
-                            <color key="selectionIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </tabBarAppearance>
-                    </tabBar>
-                    <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="viewControllers" id="0VH-Xf-mCJ"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lcw-wF-jBJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="264.8854961832061" y="-37.323943661971832"/>
-        </scene>
     </scenes>
     <resources>
         <image name="pencil.line" catalog="system" width="128" height="98"/>

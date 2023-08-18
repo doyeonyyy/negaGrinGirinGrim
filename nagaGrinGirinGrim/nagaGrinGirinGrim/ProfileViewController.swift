@@ -10,7 +10,6 @@ import Foundation
 
 
 
-
 // 프로필 화면을 그리는 ViewController
 // 데이터 이용: UserDefaults 값이 nil인 경우 UserData()의 dummy data 이용
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -86,7 +85,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // 프로필 편집 화면으로 이동
     @IBAction func goToEdit(_ sender: Any) {
-        let editProfileViewControllerID = UIStoryboard(name: "EditProfileStoryboard", bundle: .none).instantiateViewController(identifier: "editProfileViewControllerID") as! EditProfileViewController
+        self.navigationController?.isNavigationBarHidden = false
+        let editProfileViewControllerID = UIStoryboard(name: "Main", bundle: .none).instantiateViewController(identifier: "editProfileViewControllerID") as! EditProfileViewController
         navigationController?.pushViewController(editProfileViewControllerID, animated: true)
     }
     
@@ -151,10 +151,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         // let index = Userdefaults.standard.integer(forKey: "current") as! Int
         // let postTitles = Userdefaults.standard.array(forKey: "postTitles") as! [String]
         // label.text = postTitles[index]
-        
-        let detailViewControllerID = UIStoryboard(name: "DetailStoryboard", bundle: .none).instantiateViewController(identifier: "detailViewControllerID") as! DetailViewController
-        self.navigationController?.isNavigationBarHidden = false
-        navigationController?.pushViewController(detailViewControllerID, animated: true)
+    
         print("current: \(defaults.integer(forKey: "current"))")
     }
 }
