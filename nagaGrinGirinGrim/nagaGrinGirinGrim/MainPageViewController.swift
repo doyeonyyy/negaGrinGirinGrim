@@ -39,17 +39,7 @@ class MainPageViewController: UIViewController {
     
  
     
-    
-    @IBAction func cameraButton(_ sender: UIButton) {
-        let camera = UIImagePickerController()
-        camera.sourceType = .camera
-        camera.allowsEditing = true
-        camera.cameraDevice = .rear
-        camera.cameraCaptureMode = .photo
-        camera.delegate = self
-        present(camera, animated: true, completion: nil)
-    }
-    
+   
     
     @IBOutlet weak var mainCollectionView: UICollectionView!
     
@@ -62,6 +52,8 @@ class MainPageViewController: UIViewController {
         mainCollectionView.dataSource = self
         mainCollectionView.delegate = self
         
+        postTitles = UserDefaults.standard.stringArray(forKey: "postTitles") ?? []
+        mainCollectionView.reloadData()
 /*--------------------------컬렉션뷰 레이아웃---------------------------*/
         if let flowlayout = mainCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
         flowlayout.estimatedItemSize = .zero
@@ -89,8 +81,8 @@ extension MainPageViewController: UICollectionViewDelegate, UICollectionViewData
                 
                 cell.postTitles.text = title
                 cell.postImgNames.image = UIImage(named: imageName)
+
         
-             
         return cell
     }
     
@@ -100,8 +92,7 @@ extension MainPageViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     let interItemSpacing: CGFloat = 10
     let padding: CGFloat = 16
-    let width = (collectionView.bounds.width - interItemSpacing * 3 - padding * 2) / 3
-    print(width)
+    let width = (collectionView.bounds.width - interItemSpacing * 3 - padding * 2) / 2
     let height = width * 1.5
     return CGSize(width: width, height: height)
     }
@@ -113,8 +104,3 @@ extension MainPageViewController: UIImagePickerControllerDelegate & UINavigation
         picker.dismiss(animated: true, completion: nil)
     }
 }
-
-// class CellCustom: UICollectionViewCell {
-//     @IBOutlet weak var postImgNames: UIImageView!
-//     @IBOutlet weak var postTitles: UILabel!
-//}
