@@ -9,6 +9,7 @@ import UIKit
 
 
 class CellCustom: UICollectionViewCell {
+    @IBOutlet weak var postCard: UIView!
     @IBOutlet weak var postImgNames: UIImageView!
     @IBOutlet weak var postTitles: UILabel!
 }
