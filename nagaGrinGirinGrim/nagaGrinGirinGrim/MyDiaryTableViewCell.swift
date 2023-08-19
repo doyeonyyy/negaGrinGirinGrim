@@ -10,6 +10,7 @@ import UIKit
 class MyDiaryTableViewCell: UITableViewCell {
 
 
+    @IBOutlet weak var imgWrap: UIView!
     @IBOutlet weak var cellCard: UIView!
     @IBOutlet weak var postImage: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!

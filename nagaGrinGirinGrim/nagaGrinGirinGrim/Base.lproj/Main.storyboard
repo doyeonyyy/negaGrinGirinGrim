@@ -405,7 +405,7 @@
                                     <action selector="goToEdit:" destination="Exo-UO-IrU" eventType="touchUpInside" id="nHM-4V-Fld"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ocW-w1-kJZ" customClass="ProfileViewContruller">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ocW-w1-kJZ" customClass="ProfileViewContruller">
                                 <rect key="frame" x="0.0" y="143" width="393" height="709"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -424,14 +424,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="자기소개는 여기에 나옵니다" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9sa-Nc-Bdl">
-                                                    <rect key="frame" x="147" y="43" width="196" height="35"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <color key="textColor" systemColor="labelColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="🎂 기념일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCT-ka-TR5">
                                                     <rect key="frame" x="147" y="86" width="197" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -457,6 +449,14 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="자기소개는 여기에 나옵니다" translatesAutoresizingMaskIntoConstraints="NO" id="9sa-Nc-Bdl">
+                                                    <rect key="frame" x="148" y="43" width="196" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                                    <color key="textColor" systemColor="labelColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         </view>
@@ -467,26 +467,26 @@
                                     </accessibility>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="200" id="4OF-Vc-I0B" customClass="MyDiaryTableViewCell" customModule="nagaGrinGirinGrim" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="220" width="393" height="200"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="149" id="4OF-Vc-I0B" customClass="MyDiaryTableViewCell" customModule="nagaGrinGirinGrim" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="220" width="393" height="149"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4OF-Vc-I0B" id="ieY-vQ-XsY">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="149"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" id="0mM-Mj-FeD">
-                                                    <rect key="frame" x="0.0" y="11" width="393" height="128"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="149"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="fRk-g9-UMg">
-                                                            <rect key="frame" x="0.0" y="-36" width="393" height="200"/>
+                                                            <rect key="frame" x="8" y="0.0" width="377" height="138"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 </view>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sTu-FR-ME5">
-                                                    <rect key="frame" x="20" y="9" width="353" height="168"/>
+                                                    <rect key="frame" x="20" y="9" width="353" height="115"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="내용 입니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WvA-qP-sPa">
@@ -505,9 +505,9 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="제목 입니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmG-1E-Jfv">
-                                                            <rect key="frame" x="78" y="17" width="196" height="21"/>
+                                                            <rect key="frame" x="34" y="17" width="283" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -522,6 +522,7 @@
                                             <outlet property="cellCard" destination="sTu-FR-ME5" id="9eA-2W-ecD"/>
                                             <outlet property="dateLabel" destination="bk9-8P-PRB" id="Jq7-hC-XA7"/>
                                             <outlet property="descriptLabel" destination="WvA-qP-sPa" id="8i4-4V-lEB"/>
+                                            <outlet property="imgWrap" destination="0mM-Mj-FeD" id="KXU-l7-NR5"/>
                                             <outlet property="postImage" destination="fRk-g9-UMg" id="iy6-9c-rDV"/>
                                             <outlet property="titleLable" destination="WmG-1E-Jfv" id="6oq-DV-9ov"/>
                                             <segue destination="YCm-kk-XfO" kind="show" id="gyc-Zv-e8X"/>
@@ -551,7 +552,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TrH-HF-9ha" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="608" y="525"/>
+            <point key="canvasLocation" x="606.87022900763361" y="524.64788732394368"/>
         </scene>
         <!--포스트 작성-->
         <scene sceneID="Mpi-UP-xHN">
@@ -694,7 +695,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mwQ-Xy-5Lu"/>
+        <segue reference="gyc-Zv-e8X"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>

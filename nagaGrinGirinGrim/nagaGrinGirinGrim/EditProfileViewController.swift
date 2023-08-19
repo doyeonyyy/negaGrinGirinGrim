@@ -579,7 +579,7 @@ extension EditProfileViewController{
                 defaults.set(name, forKey: "name")
                 defaults.set(mood, forKey: "mood")
                 defaults.set(introduction, forKey: "introduction")
-                defaults.set(titleOfAnni, forKey: "anniversaryTitle")
+                defaults.set(titleOfAnni, forKey: "titleOfAnniversary")
                 defaults.set(anni, forKey: "anniversary")
                 
                 
