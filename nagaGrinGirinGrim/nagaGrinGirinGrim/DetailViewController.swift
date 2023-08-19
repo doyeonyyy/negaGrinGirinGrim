@@ -83,10 +83,11 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.navigationController?.isNavigationBarHidden = false
         configureUI()
         editButton.setImage(UIImage(systemName: "ellipsis.circle"), for: .normal)
-//        navigationBarHidden()
-        navigationSwipeBackMotion()
+        navigationBarHidden()
+//        navigationSwipeBackMotion()
         pageControl.numberOfPages = postImgNames.count
     }
     
@@ -142,6 +143,9 @@ class DetailViewController: UIViewController {
         postedImage.image = UIImage(named: postImgNames[sender.currentPage])
     }
     
+    @IBAction func backAct(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
     
     func setNavigationBarItem() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "ellipsis"),
@@ -185,7 +189,7 @@ extension DetailViewController: UIGestureRecognizerDelegate {
         self.navigationController?.navigationBar.isHidden = true
     }
     
-    func navigationSwipeBackMotion() {
-        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
-    }
+//    func navigationSwipeBackMotion() {
+//        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
+//    }
 }
