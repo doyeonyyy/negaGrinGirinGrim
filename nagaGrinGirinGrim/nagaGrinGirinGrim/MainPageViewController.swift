@@ -10,44 +10,37 @@ import UIKit
 class MainPageViewController: UIViewController {
     
     let userData = UserData.shared
-    
-    
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var mainCollectionView: UICollectionView!
-    
     @IBAction func resetUserDefaultsValue(_ sender: Any) {
         userData.resetDefaults()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadPostData()
-        print(defaults.array(forKey: "postTitles")!.count)
         
         view.addSubview(collectionView)
         // naviagation bar hidden
         self.navigationController?.isNavigationBarHidden = true
         
-        mainCollectionView.dataSource = self
-        mainCollectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.delegate = self
         
         
 /*--------------------------컬렉션뷰 레이아웃---------------------------*/
-        if let flowlayout = mainCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+        if let flowlayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
         flowlayout.estimatedItemSize = .zero
             
         }
-        mainCollectionView.contentInset = UIEdgeInsets(top: 8, left: 5, bottom: 8, right: 5)
+        collectionView.contentInset = UIEdgeInsets(top: 8, left: 5, bottom: 8, right: 5)
 /*-------------------------------------------------------------------*/
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         collectionView.reloadData()
+        
         print("view will appear")
         print(defaults.array(forKey: "postTitles")!.count)
     }
 }
-
 
 extension MainPageViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
@@ -55,12 +48,14 @@ extension MainPageViewController: UICollectionViewDelegate, UICollectionViewData
         return defaults.array(forKey: "postTitles")!.count
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellCustom", for: indexPath) as?
                 CellCustom else {
             return UICollectionViewCell()
         }
-        
+        func connectData() {
+        }
         let postTitles = (defaults.array(forKey: "postTitles") ?? userData.postTitles)
         let postImgNames = (defaults.array(forKey: "postImgNames") ?? userData.postImgNames)
                 
@@ -80,47 +75,12 @@ extension MainPageViewController: UICollectionViewDelegate, UICollectionViewData
         cell.postCard.layer.shadowOffset = CGSize(width: 0, height: 0)
         cell.postCard.layer.shadowOpacity = 0.3
         cell.postCard.layer.shadowRadius = 10
-        
-        
-             
+
         return cell
     }
-    
-    func loadPostData() {
-        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellCustom", for: indexPath) as?
-                    CellCustom else {
-                return UICollectionViewCell()
-            }
-            
-            let postTitles = (defaults.array(forKey: "postTitles") ?? userData.postTitles)
-            let postImgNames = (defaults.array(forKey: "postImgNames") ?? userData.postImgNames)
-                    
-            cell.postTitles.text = postTitles[indexPath.item] as? String
-            cell.postImgNames.image = UIImage(named: postImgNames[indexPath.item] as! String)
-            
-            // cell 꾸미기
-            cell.layer.cornerRadius = 30
-            cell.backgroundColor = .white
-            cell.layer.shadowOffset = CGSize(width: 5, height: 5)
-            cell.layer.shadowOpacity = 0.6
-            cell.layer.shadowRadius = 20
-            
-            // postCard 꾸미기
-            cell.postCard.layer.cornerRadius = 30
-            cell.postCard.backgroundColor = UIColor(cgColor: CGColor(red: 255, green: 255, blue: 255, alpha: 0.5))
-            cell.postCard.layer.shadowOffset = CGSize(width: 0, height: 0)
-            cell.postCard.layer.shadowOpacity = 0.3
-            cell.postCard.layer.shadowRadius = 10
-            
-            
-                 
-            return cell
-        }
-    }
-    
-    
 }
+
+
 /*------------------- 컬렉션뷰 레이아웃 ----------------*/
 extension MainPageViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

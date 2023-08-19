@@ -105,30 +105,6 @@
                                             <segue destination="YCm-kk-XfO" kind="show" id="mwQ-Xy-5Lu"/>
                                         </connections>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0Eu-3i-raK">
-                                        <rect key="frame" x="89.666666666666671" y="194" width="182" height="129"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qJu-kT-oaj">
-                                            <rect key="frame" x="0.0" y="0.0" width="182" height="129"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="RiK-WW-Upw">
-                                        <rect key="frame" x="89.666666666666671" y="333" width="182" height="129"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="lQh-wQ-3Sn">
-                                            <rect key="frame" x="0.0" y="0.0" width="182" height="129"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zFa-Sh-2zx">
-                                        <rect key="frame" x="89.666666666666671" y="472" width="182" height="129"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5SJ-In-OJ7">
-                                            <rect key="frame" x="0.0" y="0.0" width="182" height="129"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
                                 </cells>
                                 <connections>
                                     <outlet property="dataSource" destination="r2g-hZ-UAm" id="W7R-vQ-9Kj"/>
@@ -178,7 +154,6 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="XlO-l2-MER" id="03K-Tk-Fpc"/>
-                        <outlet property="mainCollectionView" destination="XlO-l2-MER" id="BY1-hT-UAj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tdq-pl-CFH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -695,7 +670,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gyc-Zv-e8X"/>
+        <segue reference="mwQ-Xy-5Lu"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
