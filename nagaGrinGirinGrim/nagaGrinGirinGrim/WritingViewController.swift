@@ -8,7 +8,9 @@ class WritingViewController: UIViewController {
   
     @IBOutlet weak var clickCancel: UIButton!
     @IBOutlet weak var postTitle: UITextField!
-    @IBOutlet weak var postContent: UITextField!
+    
+//    @IBOutlet weak var postContent: UITextField!
+    @IBOutlet weak var postContent: UITextView!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var clickPost: UIButton!
     @IBOutlet weak var clickAdd: UIButton!
@@ -46,9 +48,7 @@ class WritingViewController: UIViewController {
     }
     
     @IBAction func takeBack(_ sender: Any) {
-        self.dismiss(animated: true)
-        let mainPageStoryboardID = UIStoryboard(name: "Main", bundle: .none).instantiateViewController(identifier: "mainPageViewControllerID") as! MainPageViewController
-        navigationController?.pushViewController(mainPageStoryboardID, animated: false)
+        navigationController?.popViewController(animated: true)
     }
     
     func setupViews() {
@@ -73,6 +73,11 @@ class WritingViewController: UIViewController {
         // imagePicker.allowsEditing = true
         present(imagePicker, animated: true)
     }
+    
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    
 }
 
 extension WritingViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
