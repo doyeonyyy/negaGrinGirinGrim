@@ -23,7 +23,7 @@ class MainPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadPostData()
-        print(defaults.array(forKey: "postTitles")!.count)
+        print(defaults.array(forKey: "postTitles")?.count)
         
         view.addSubview(collectionView)
         // naviagation bar hidden

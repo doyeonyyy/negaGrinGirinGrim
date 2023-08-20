@@ -127,6 +127,7 @@ class DetailViewController: UIViewController {
                 pageControl.numberOfPages = postImageName.count
                 pageControl.hidesForSinglePage = true
             } else {
+                // 에러 처리 안되는 중...
                 let errorHandler = ErrorHandler()
                 errorHandler.displayError(for: .needtoReload)
             }
