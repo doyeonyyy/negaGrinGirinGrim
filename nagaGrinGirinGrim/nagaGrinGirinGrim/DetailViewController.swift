@@ -17,7 +17,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var addPostButton: UIButton!
     @IBOutlet weak var viewProfileButton: UIButton!
     
-//    @IBOutlet weak var informationStack: UIStackView!
+    @IBOutlet weak var containerView: UIView!
+    //    @IBOutlet weak var informationStack: UIStackView!
 //    @IBOutlet weak var reactionStack: UIStackView!
     
     @IBOutlet weak var postedImage: UIImageView!
@@ -40,7 +41,6 @@ class DetailViewController: UIViewController {
 // MARK: - 전역변수
     
     var reactionCollection: [String: Int] = [:]
-//    var totalReactionCount: [Int] = [0, 0, 0, 0]
     var firstReactionCount = 0
     var secondReactionCount = 0
     var thirdReactionCount = 0
@@ -52,12 +52,6 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         enableSwipe()
-//        hideReactionView()
-        
-        // 이모지 라벨 수치 변경
-//        let emojiCount = reactionCollection.values
-//        let calculate = emojiCount.reduce(0, {$0 + $1})
-//        emojiTracker.text = String(calculate) //String(emojiCount.reduce(0){$0 + $1})
                 
         // 이미지 뷰 클릭 액션
         let profileImageTapped = UITapGestureRecognizer(target: self, action: #selector(profileImageTapped))
@@ -71,25 +65,37 @@ class DetailViewController: UIViewController {
         setupImages()
         setupEmojiButtons()
         populateData()
-        setupButtons()
+        setupEdit()
         setupView()
     }
     
     func setupImages() {
-        setUpProfileImage()
+        setupProfile()
+        setupPostImage()
+        setupPageControl()
     }
     
-    func setUpProfileImage() {
+    func setupProfile() {
         profileImage.image = UIImage(named: userData.profile.profilePicture)
+        profileNameLabel.text = userData.profile.userName
         profileImage.backgroundColor = .black
         profileImage.layer.borderWidth = 0.25
         profileImage.layer.borderColor = UIColor.black.cgColor
         profileImage.layer.cornerRadius = 20
         profileImage.contentMode = .scaleAspectFit
-//        UIImage(named: defaults.array(forKey: "profileImage"))
+    }
+    
+    func setupPostImage() {
+        postedImage.layer.cornerRadius = 25
+        postedImage.layer.borderWidth = 0.5
+        postedImage.layer.borderColor = UIColor.black.cgColor
+    }
+    
+    func setupPageControl() {
+        pageControl.currentPageIndicatorTintColor = .yellow
+        pageControl.pageIndicatorTintColor = .lightGray
     }
 
-    
     func setupEmojiButtons() {
         let emojiSet = ["🫠","🔥","⭐️","❤️"]
         let buttons = [firstEmoji, secondEmoji, thirdEmoji, fourthEmoji]
@@ -100,44 +106,39 @@ class DetailViewController: UIViewController {
                 button?.layer.cornerRadius = 20
                 button?.layer.borderWidth = 1
                 button?.layer.borderColor = UIColor.gray.cgColor
-                button?.backgroundColor = .black
+                button?.backgroundColor = .white
                 button?.clipsToBounds = true
             }
         }
     }
     
     func populateData() {
-        // array로 저장을 했는데 그걸 부르는 방법을 모르겠다 ㅠㅠㅠ
         if let selectedIndexPath = defaults.value(forKey: "selectedIndexPath") as? Int {
             let postImageName = userData.postImgNames[selectedIndexPath]
             let postTitle = userData.postTitles[selectedIndexPath]
             let postDate = userData.postDates[selectedIndexPath]
             let postContent = userData.postContents[selectedIndexPath]
-            let contentCount = userData.postImgNames[selectedIndexPath].count
             
             postedImage.image = UIImage(named: postImageName)
             detailBodyLabel.text = postContent
             detailDateLabel.text = postDate
             detailTitleLabel.text = postTitle
-            pageControl.numberOfPages = contentCount
+            pageControl.numberOfPages = postImageName.count
+            pageControl.hidesForSinglePage = true
         }
     }
     
-    func setupButtons() {
+    func setupEdit() {
         editButton.setImage(UIImage(systemName: "ellipsis.circle"), for: .normal)
-        editButton.setTitle("", for: .normal)
     }
     
     func setupView() {
-//        pageControl.numberOfPages = userData.postImgNames.count
-        pageControl.currentPage = 0
-        pageControl.currentPageIndicatorTintColor = .yellow
-        pageControl.pageIndicatorTintColor = .lightGray
-//        topBarView.layer.cornerRadius = 20
-//        topBarView.backgroundColor = UIColor(cgColor: CGColor(red: 255, green: 255, blue: 255, alpha: 0.5))
-//        topBarView.layer.shadowOffset = CGSize(width: 0, height: 0)
-//        topBarView.layer.shadowOpacity = 0.6
-//        topBarView.layer.shadowRadius = 10
+        containerView.backgroundColor = UIColor(red: 255/255,
+                                                green: 232/255,
+                                                blue: 105/255,
+                                                alpha: 0.6)
+        containerView.layer.shadowRadius = 0
+        containerView.layer.cornerRadius = 20
     }
     
 //    func hideReactionView() {
@@ -164,7 +165,7 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func pageChanged(_ sender: UIPageControl) {
-        postedImage.image = UIImage(named: userData.postImgNames[sender.currentPage])
+//        postedImage.image = UIImage(named: userData.postImgNames[sender.currentPage])
     }
     
     @IBAction func backAct(_ sender: Any) {
@@ -181,14 +182,20 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func viewProfileButtonTapped(_ sender: UIButton) {
-        
+//        senderanimateButton(sender)
+        if let profileViewController = self.navigationController?.viewControllers.first(where: { $0 is ProfileViewController }) as? ProfileViewController {
+            self.navigationController?.pushViewController(profileViewController, animated: true)
+        }
+        let profileViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "profileViewControllerID") as! ProfileViewController
+        self.navigationController?.pushViewController(profileViewController, animated: true)
+
     }
     
     @IBAction func reactionButtonTapped(_ sender: UIButton) {
         print("반응 갯수를 확인합니다")
     }
     
-    @objc func shareButtonTapped() {
+    @IBAction func editButtonTapped(_ sender: UIButton) {
         print("오른쪽 버튼이 눌렸습니다.")
         guard let image = postedImage.image else { return }
         let shareSheetVC = UIActivityViewController(activityItems: [image],
@@ -197,13 +204,13 @@ class DetailViewController: UIViewController {
     }
     
     @objc func profileImageTapped() {
-        print("이미지가 눌렸습니다.")
         let ProfileViewControllerID = UIStoryboard(name: "Main", bundle: .none).instantiateViewController(identifier: "profileViewControllerID") as! ProfileViewController
         navigationController?.pushViewController(ProfileViewControllerID, animated: true)
     }
     
     @IBAction func EmojiButtonTapped(_ sender: UIButton) {
         let totalCount = reactionCollection.values.reduce(1, +)
+        sender.animateButton(sender)
         
         switch sender {
         case firstEmoji:
@@ -232,10 +239,18 @@ class DetailViewController: UIViewController {
             reactionCollection.updateValue(fourthReactionCount, forKey: reaction)
             reactionTracker.text = "\(totalCount)"
 
-        //에러 처리 필요
         default: print("에러가 발생했습니다.")
         }
     }
+    
+//    @objc func animateButton(_ viewToAnimate: UIView) {
+//        UIView.animate(withDuration: 0.15, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+//            viewToAnimate.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+//        }) { (_) in
+//            UIView.animate(withDuration: 0.15, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 2, options: .curveEaseIn, animations: {
+//                viewToAnimate.transform = CGAffineTransform(scaleX: 1, y: 1)}, completion: nil)
+//        }
+//    }
     
     @objc func respondToSwipe(_ gesture: UIGestureRecognizer) {
         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
@@ -253,8 +268,6 @@ class DetailViewController: UIViewController {
             default:
                 print("오류 발생")
             }
-            postedImage.image = UIImage(named: userData.postImgNames[imageIndex])
-            pageControl.currentPage = imageIndex
         }
     }
 }

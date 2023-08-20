@@ -48,6 +48,10 @@ extension MainPageViewController: UICollectionViewDelegate, UICollectionViewData
         return defaults.array(forKey: "postTitles")?.count ?? userData.postTitles.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        defaults.set(indexPath.item, forKey: "selectedIndexPath")
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellCustom", for: indexPath) as?
