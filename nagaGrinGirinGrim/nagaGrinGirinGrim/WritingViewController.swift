@@ -8,6 +8,8 @@ class WritingViewController: UIViewController {
   
     @IBOutlet weak var clickCancel: UIButton!
     @IBOutlet weak var postTitle: UITextField!
+    
+//    @IBOutlet weak var postContent: UITextField!
     @IBOutlet weak var postContent: UITextView!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var clickPost: UIButton!
@@ -41,11 +43,12 @@ class WritingViewController: UIViewController {
         defaults.set(userData.postDates, forKey: "postDates")
         defaults.set(userData.postContents, forKey: "postContents")
         print(defaults.array(forKey: "postTitles")!.count)
-        self.dismiss(animated: true)
+//        let mainPageStoryboardID = UIStoryboard(name: "Main", bundle: .none).instantiateViewController(identifier: "mainPageViewControllerID") as! MainPageViewController
+//        navigationController?.pushViewController(mainPageStoryboardID, animated: false)
     }
     
     @IBAction func takeBack(_ sender: Any) {
-        self.dismiss(animated: true)
+        navigationController?.popViewController(animated: true)
     }
     
     func setupViews() {
