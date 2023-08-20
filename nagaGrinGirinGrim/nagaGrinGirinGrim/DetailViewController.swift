@@ -193,6 +193,13 @@ class DetailViewController: UIViewController {
     
     @IBAction func reactionButtonTapped(_ sender: UIButton) {
         print("반응 갯수를 확인합니다")
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyBoard.instantiateViewController(withIdentifier: "DetailPopupID")
+        
+        if let reactionViewController = viewController.presentationController as? UISheetPresentationController {
+            reactionViewController.detents = [.medium()]
+        }
+        self.present(viewController, animated: true)
     }
     
     @IBAction func editButtonTapped(_ sender: UIButton) {
@@ -242,15 +249,6 @@ class DetailViewController: UIViewController {
         default: print("에러가 발생했습니다.")
         }
     }
-    
-//    @objc func animateButton(_ viewToAnimate: UIView) {
-//        UIView.animate(withDuration: 0.15, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
-//            viewToAnimate.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
-//        }) { (_) in
-//            UIView.animate(withDuration: 0.15, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 2, options: .curveEaseIn, animations: {
-//                viewToAnimate.transform = CGAffineTransform(scaleX: 1, y: 1)}, completion: nil)
-//        }
-//    }
     
     @objc func respondToSwipe(_ gesture: UIGestureRecognizer) {
         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
