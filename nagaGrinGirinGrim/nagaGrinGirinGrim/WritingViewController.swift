@@ -48,7 +48,11 @@ class WritingViewController: UIViewController {
     }
     
     @IBAction func takeBack(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        if self.presentingViewController != nil {
+             self.dismiss(animated: true)
+           } else if self.navigationController != nil {
+             self.navigationController?.popViewController(animated: true)
+           }
     }
     
     func setupViews() {
