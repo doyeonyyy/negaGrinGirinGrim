@@ -113,18 +113,23 @@ class DetailViewController: UIViewController {
     }
     
     func populateData() {
-        if let selectedIndexPath = defaults.value(forKey: "selectedIndexPath") as? Int {
-            let postImageName = userData.postImgNames[selectedIndexPath]
-            let postTitle = userData.postTitles[selectedIndexPath]
-            let postDate = userData.postDates[selectedIndexPath]
-            let postContent = userData.postContents[selectedIndexPath]
-            
-            postedImage.image = UIImage(named: postImageName)
-            detailBodyLabel.text = postContent
-            detailDateLabel.text = postDate
-            detailTitleLabel.text = postTitle
-            pageControl.numberOfPages = postImageName.count
-            pageControl.hidesForSinglePage = true
+        if let selectedIndexPath = defaults.value(forKey: "current") as? Int {
+            if selectedIndexPath >= 0 && selectedIndexPath < userData.postImgNames.count {
+                let postImageName = userData.postImgNames[selectedIndexPath]
+                let postTitle = userData.postTitles[selectedIndexPath]
+                let postDate = userData.postDates[selectedIndexPath]
+                let postContent = userData.postContents[selectedIndexPath]
+                
+                postedImage.image = UIImage(named: postImageName)
+                detailBodyLabel.text = postContent
+                detailDateLabel.text = postDate
+                detailTitleLabel.text = postTitle
+                pageControl.numberOfPages = postImageName.count
+                pageControl.hidesForSinglePage = true
+            } else {
+                let errorHandler = ErrorHandler()
+                errorHandler.displayError(for: .needtoReload)
+            }
         }
     }
     

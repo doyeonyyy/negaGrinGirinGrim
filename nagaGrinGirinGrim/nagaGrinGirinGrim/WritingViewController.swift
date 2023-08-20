@@ -45,6 +45,7 @@ class WritingViewController: UIViewController {
         print(defaults.array(forKey: "postTitles")!.count)
 //        let mainPageStoryboardID = UIStoryboard(name: "Main", bundle: .none).instantiateViewController(identifier: "mainPageViewControllerID") as! MainPageViewController
 //        navigationController?.pushViewController(mainPageStoryboardID, animated: false)
+        dismiss(animated: true)
     }
     
     @IBAction func takeBack(_ sender: Any) {
