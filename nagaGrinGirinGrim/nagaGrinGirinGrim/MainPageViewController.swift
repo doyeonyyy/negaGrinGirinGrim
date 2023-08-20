@@ -44,7 +44,7 @@ class MainPageViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         collectionView.reloadData()
         print("view will appear")
-        print(defaults.array(forKey: "postTitles")!.count)
+        print(defaults.array(forKey: "postTitles")?.count ?? userData.postTitles.count)
     }
 }
 
@@ -52,7 +52,11 @@ class MainPageViewController: UIViewController {
 extension MainPageViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return defaults.array(forKey: "postTitles")!.count
+        return defaults.array(forKey: "postTitles")?.count ?? userData.postTitles.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        defaults.set(indexPath.item, forKey: "selectedIndexPath")
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -66,6 +70,7 @@ extension MainPageViewController: UICollectionViewDelegate, UICollectionViewData
                 
         cell.postTitles.text = postTitles[indexPath.item] as? String
         cell.postImgNames.image = UIImage(named: postImgNames[indexPath.item] as! String)
+        print(postImgNames[indexPath.item])
         
         // cell 꾸미기
         cell.layer.cornerRadius = 30

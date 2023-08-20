@@ -16,6 +16,7 @@
 		63A531C92A89E4D2001DFF71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63A531C72A89E4D2001DFF71 /* LaunchScreen.storyboard */; };
 		967FD09C2A8FA5FC0017BC3F /* UIcolor+CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967FD09B2A8FA5FC0017BC3F /* UIcolor+CALayer.swift */; };
 		96E73D552A8CB64200901756 /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E73D532A8CB64200901756 /* WritingViewController.swift */; };
+		BDFDE0702A91EEAB006D0A52 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFDE06F2A91EEAB006D0A52 /* Extension.swift */; };
 		C069E5A42A8C6B47001C11A8 /* MyDiaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C069E5A32A8C6B47001C11A8 /* MyDiaryTableViewCell.swift */; };
 		C069E5DF2A8CE487001C11A8 /* UserInfoCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C069E5DE2A8CE487001C11A8 /* UserInfoCollectionView.swift */; };
 		C069E5E32A8CE4A4001C11A8 /* NavigationTapbar_top.swift in Sources */ = {isa = PBXBuildFile; fileRef = C069E5E22A8CE4A4001C11A8 /* NavigationTapbar_top.swift */; };
@@ -42,6 +43,7 @@
 		63A531CA2A89E4D2001DFF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		967FD09B2A8FA5FC0017BC3F /* UIcolor+CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIcolor+CALayer.swift"; sourceTree = "<group>"; };
 		96E73D532A8CB64200901756 /* WritingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
+		BDFDE06F2A91EEAB006D0A52 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		C069E5A32A8C6B47001C11A8 /* MyDiaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDiaryTableViewCell.swift; sourceTree = "<group>"; };
 		C069E5DE2A8CE487001C11A8 /* UserInfoCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoCollectionView.swift; sourceTree = "<group>"; };
 		C069E5E22A8CE4A4001C11A8 /* NavigationTapbar_top.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTapbar_top.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				63A531C72A89E4D2001DFF71 /* LaunchScreen.storyboard */,
 				63A531CA2A89E4D2001DFF71 /* Info.plist */,
 				DC7881992A8A062600FAFBD8 /* DetailViewController.swift */,
+				BDFDE06F2A91EEAB006D0A52 /* Extension.swift */,
 				DC78819B2A8A064100FAFBD8 /* MainPageViewController.swift */,
 				1F954FE62A8C7783004A1360 /* CellCustom.swift */,
 				C069E5E62A8CE50B001C11A8 /* DomoCell.swift */,
@@ -198,6 +201,7 @@
 				C069E5DF2A8CE487001C11A8 /* UserInfoCollectionView.swift in Sources */,
 				96E73D552A8CB64200901756 /* WritingViewController.swift in Sources */,
 				63A531BD2A89E4D1001DFF71 /* AppDelegate.swift in Sources */,
+				BDFDE0702A91EEAB006D0A52 /* Extension.swift in Sources */,
 				967FD09C2A8FA5FC0017BC3F /* UIcolor+CALayer.swift in Sources */,
 				DC78819A2A8A062600FAFBD8 /* DetailViewController.swift in Sources */,
 				C069E5E72A8CE50B001C11A8 /* DomoCell.swift in Sources */,
