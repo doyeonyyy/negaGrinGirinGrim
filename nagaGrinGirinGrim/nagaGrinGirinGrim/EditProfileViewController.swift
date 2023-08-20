@@ -107,7 +107,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         let userInfotextField = UITextField()
         userInfotextField.placeholder = "사용자 ID"
         userInfotextField.font = UIFont.boldSystemFont(ofSize: 20)
-        userInfotextField.text = userInfoData.userName
+        userInfotextField.text = defaults.string(forKey: "userName") ?? userData.profile.userName
         userInfotextField.translatesAutoresizingMaskIntoConstraints = false
         userInfotextField.frame.size.width = 180
         userInfotextField.frame.size.height = 35
@@ -137,7 +137,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
     let userInfoTextField1 : UITextField = {
         let userInfotextField = UITextField()
         userInfotextField.placeholder = "이름"
-        userInfotextField.text = userInfoData.name
+        userInfotextField.text = defaults.string(forKey: "name") ?? userData.profile.name
         userInfotextField.translatesAutoresizingMaskIntoConstraints = false
         userInfotextField.frame.size.width = 180
         userInfotextField.frame.size.height = 35
@@ -165,7 +165,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         let userInfotextField = UITextField()
         userInfotextField.placeholder = "기분"
         //        userInfotextField.backgroundColor = UIColor.white
-        userInfotextField.text = userInfoData.mood
+        userInfotextField.text = defaults.string(forKey: "mood") ?? userData.profile.mood
         userInfotextField.translatesAutoresizingMaskIntoConstraints = false
         userInfotextField.frame.size.width = 180
         userInfotextField.frame.size.height = 35
@@ -192,7 +192,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
     let userInfoTextField3 : UITextField = {
         let userInfotextField = UITextField()
         userInfotextField.placeholder = "소개"
-        userInfotextField.text = userInfoData.introduction
+        userInfotextField.text = defaults.string(forKey: "introduction") ?? userData.profile.introduction
         //        userInfotextField.backgroundColor = UIColor.white
         userInfotextField.translatesAutoresizingMaskIntoConstraints = false
         userInfotextField.frame.size.width = 180
@@ -220,7 +220,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
     let userInfoTextField4 : UITextField = {
         let userInfotextField = UITextField()
         userInfotextField.placeholder = "기념일"
-        userInfotextField.text = userInfoData.anniversaryTitle
+        userInfotextField.text = defaults.string(forKey: "titleOfAnniversary") ?? userData.profile.titleOfAnniversary
         //        userInfotextField.backgroundColor = UIColor.white
         userInfotextField.translatesAutoresizingMaskIntoConstraints = false
         userInfotextField.frame.size.width = 180
@@ -248,7 +248,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
     let userInfoTextField5 : UITextField = {
         let userInfotextField = UITextField()
         userInfotextField.placeholder = "날짜"
-        userInfotextField.text = userInfoData.anniversary
+        userInfotextField.text = defaults.string(forKey: "anniversary") ?? userData.profile.anniversary
         //        userInfotextField.backgroundColor = UIColor.white
         userInfotextField.translatesAutoresizingMaskIntoConstraints = false
         userInfotextField.frame.size.width = 180
@@ -558,7 +558,6 @@ extension EditProfileViewController{
     }
 }
 
-
 //MARK: method
 extension EditProfileViewController{
     @objc private func buttonPressed(_ sender: Any) {
@@ -583,12 +582,12 @@ extension EditProfileViewController{
                 defaults.set(anni, forKey: "anniversary")
                 
                 
-                print(defaults.string(forKey: "userName")!)
-                print(defaults.string(forKey: "name")!)
-                print(defaults.string(forKey: "mood")!)
-                print(defaults.string(forKey: "introduction")!)
-                print(defaults.string(forKey: "anniversaryTitle")!)
-                print(defaults.string(forKey: "anniversary")!)
+//                print(defaults.string(forKey: "userName")!)
+//                print(defaults.string(forKey: "name")!)
+//                print(defaults.string(forKey: "mood")!)
+//                print(defaults.string(forKey: "introduction")!)
+////                print(defaults.string(forKey: "anniversaryTitle")?)
+//                print(defaults.string(forKey: "anniversary")!)
                 
                 self.navigationController?.isNavigationBarHidden = true
                 navigationController?.popViewController(animated: true)

@@ -17,6 +17,7 @@ class MainPageViewController: UIViewController {
     
     @IBAction func resetUserDefaultsValue(_ sender: Any) {
         userData.resetDefaults()
+        mainCollectionView.reloadData()
     }
     
     override func viewDidLoad() {
@@ -56,7 +57,9 @@ extension MainPageViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        defaults.set(indexPath.item, forKey: "selectedIndexPath")
+//        defaults.set(indexPath.item, forKey: "selectedIndexPath")
+        let index = indexPath.item
+        defaults.set(index, forKey: "current")
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
