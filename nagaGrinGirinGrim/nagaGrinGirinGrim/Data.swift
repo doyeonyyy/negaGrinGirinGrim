@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 let defaults = UserDefaults.standard
+let userData = UserData.shared
 
 class UserData {
     static let shared = UserData()
