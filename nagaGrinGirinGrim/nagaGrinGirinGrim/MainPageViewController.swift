@@ -20,6 +20,7 @@ class MainPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //userData.resetDefaults()
         loadPostData()
         view.addSubview(collectionView)
         
@@ -85,6 +86,7 @@ extension MainPageViewController: UICollectionViewDelegate, UICollectionViewData
                     
             cell.postTitles.text = postTitles[indexPath.item] as? String
             cell.postImgNames.image = UIImage(named: postImgNames[indexPath.item] as! String)
+            // 어플 실행시 88번에서 fatal: out of range 발생 시 23번 line 주석을 한 번 풀고 실행 후 다시 23번 line을 주석처리하고 시뮬레이터를 재실행 해주세요
             
             // cell 꾸미기
             viewLayout(cell)
