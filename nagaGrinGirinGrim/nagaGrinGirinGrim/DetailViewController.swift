@@ -2,7 +2,7 @@
 //  DetailViewController.swift
 //  nagaGrinGirinGrim
 //
-//  Created by 보경 on 2023/08/14.
+//  Created by Jack Lee on 2023/08/14.
 //
 
 import UIKit
@@ -18,9 +18,6 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var viewProfileButton: UIButton!
     
     @IBOutlet weak var containerView: UIView!
-    //    @IBOutlet weak var informationStack: UIStackView!
-//    @IBOutlet weak var reactionStack: UIStackView!
-    
     @IBOutlet weak var postedImage: UIImageView!
     @IBOutlet weak var pageControl: UIPageControl!
 
@@ -84,9 +81,15 @@ class DetailViewController: UIViewController {
         profileImage.layer.cornerRadius = 20
         profileImage.contentMode = .scaleAspectFit
     }
+    func viewLayout(_ view: UIView) {
+        view.layer.cornerRadius = 30
+        view.layer.shadowOffset = CGSize(width: 0, height: 0)
+        view.layer.shadowOpacity = 0.2
+        view.layer.shadowRadius = 6
+    }
     
     func setupPostImage() {
-        postedImage.layer.cornerRadius = 25
+        viewLayout(postedImage)
         postedImage.layer.borderWidth = 0.5
         postedImage.layer.borderColor = UIColor.black.cgColor
     }
@@ -143,20 +146,8 @@ class DetailViewController: UIViewController {
                                                 green: 232/255,
                                                 blue: 105/255,
                                                 alpha: 0.6)
-        containerView.layer.shadowRadius = 0
-        containerView.layer.cornerRadius = 20
+        viewLayout(containerView)
     }
-    
-//    func hideReactionView() {
-//        if firstReactionCount > 0 {
-//            reactionStack.isHidden = false
-//            let stackViewHeightConstraint = NSLayoutConstraint(item: reactionStack!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 30)
-//            stackViewHeightConstraint.isActive = true
-//            stackViewHeightConstraint.constant = 80
-//        } else {
-//            reactionStack.isHidden = true
-//        }
-//    }
     
     func enableSwipe() {
         postedImage.isUserInteractionEnabled = true

@@ -1,3 +1,10 @@
+//
+//  ProfileViewController.swift
+//  nagaGrinGirinGrim
+//
+//  Created by t2023-m0047 on 2023/08/14.
+//
+
 import Foundation
 import UIKit
 
@@ -8,8 +15,6 @@ class WritingViewController: UIViewController {
   
     @IBOutlet weak var clickCancel: UIButton!
     @IBOutlet weak var postTitle: UITextField!
-    
-//    @IBOutlet weak var postContent: UITextField!
     @IBOutlet weak var postContent: UITextView!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var clickPost: UIButton!
@@ -24,8 +29,6 @@ class WritingViewController: UIViewController {
     }
     
     @IBAction func postContents(_ sender: Any) {
-        print("등록버튼을 눌렀습니다.")
-        
         let postTitle = postTitle.text
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .long
@@ -37,14 +40,12 @@ class WritingViewController: UIViewController {
         userData.postDates.append(postDate)
         userData.postContents.append(postContent ?? "내용 없음")
         userData.postImgNames.append(postImg)
-
+        
         defaults.set(userData.postImgNames, forKey: "postImgNames")
         defaults.set(userData.postTitles, forKey: "postTitles")
         defaults.set(userData.postDates, forKey: "postDates")
         defaults.set(userData.postContents, forKey: "postContents")
-        print(defaults.array(forKey: "postTitles")!.count)
-//        let mainPageStoryboardID = UIStoryboard(name: "Main", bundle: .none).instantiateViewController(identifier: "mainPageViewControllerID") as! MainPageViewController
-//        navigationController?.pushViewController(mainPageStoryboardID, animated: false)
+
         if self.presentingViewController != nil {
              self.dismiss(animated: true)
            } else if self.navigationController != nil {
@@ -61,9 +62,7 @@ class WritingViewController: UIViewController {
     }
     
     func setupViews() {
-//        clickAdd.setTitle("사진", for: .normal)
         clickAdd.addTarget(self, action: #selector(uploadPhoto), for: .touchUpInside)
-        
         view.addSubview(imageView)
         view.addSubview(clickAdd)
     }
@@ -79,14 +78,8 @@ class WritingViewController: UIViewController {
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .photoLibrary
         imagePicker.delegate = self
-        // imagePicker.allowsEditing = true
         present(imagePicker, animated: true)
     }
-    
-    
-    @IBOutlet weak var titleLabel: UILabel!
-    
-    
 }
 
 extension WritingViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -102,8 +95,6 @@ extension WritingViewController: UIImagePickerControllerDelegate, UINavigationCo
         dismiss(animated: true, completion: nil)
     }
 }
-
-
 // 추후 적용
 
 //        if  let data = postImg?.pngData() {
