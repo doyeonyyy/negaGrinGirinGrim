@@ -15,7 +15,6 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var detailTitleLabel: UILabel!
     @IBOutlet weak var addPostButton: UIButton!
-    @IBOutlet weak var viewProfileButton: UIButton!
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var postedImage: UIImageView!
@@ -81,6 +80,7 @@ class DetailViewController: UIViewController {
         profileImage.layer.cornerRadius = 20
         profileImage.contentMode = .scaleAspectFit
     }
+    
     func viewLayout(_ view: UIView) {
         view.layer.cornerRadius = 30
         view.layer.shadowOffset = CGSize(width: 0, height: 0)
@@ -176,16 +176,6 @@ class DetailViewController: UIViewController {
         }
         let writingViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "writingViewControllerID") as! WritingViewController
         self.navigationController?.pushViewController(writingViewController, animated: true)
-    }
-    
-    @IBAction func viewProfileButtonTapped(_ sender: UIButton) {
-//        senderanimateButton(sender)
-        if let profileViewController = self.navigationController?.viewControllers.first(where: { $0 is ProfileViewController }) as? ProfileViewController {
-            self.navigationController?.pushViewController(profileViewController, animated: true)
-        }
-        let profileViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "profileViewControllerID") as! ProfileViewController
-        self.navigationController?.pushViewController(profileViewController, animated: true)
-
     }
     
     @IBAction func reactionButtonTapped(_ sender: UIButton) {

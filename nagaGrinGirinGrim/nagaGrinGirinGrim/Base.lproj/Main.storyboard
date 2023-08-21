@@ -518,7 +518,7 @@
                                         <rect key="frame" x="5" y="5.6666666666666714" width="383" height="40"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5yr-4U-Snd">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhC-If-W5m">
                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -533,7 +533,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BqV-u9-Uhy">
-                                                        <rect key="frame" x="45" y="0.0" width="255" height="40"/>
+                                                        <rect key="frame" x="45" y="0.0" width="298" height="40"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -541,7 +541,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="WXH-vV-HTt">
-                                                <rect key="frame" x="300" y="0.0" width="83" height="40"/>
+                                                <rect key="frame" x="343" y="0.0" width="40" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbC-gr-VjZ">
                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -553,18 +553,6 @@
                                                         <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
                                                         <connections>
                                                             <action selector="addPostButtonTapped:" destination="bQE-iv-ayX" eventType="touchUpInside" id="Acc-2l-7PH"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17Z-z4-WQF">
-                                                        <rect key="frame" x="43" y="0.0" width="40" height="40"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="17Z-z4-WQF" secondAttribute="height" multiplier="1:1" id="e32-ag-dDV"/>
-                                                            <constraint firstAttribute="width" constant="40" id="oDC-kZ-DBD"/>
-                                                        </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="person.circle" catalog="system"/>
-                                                        <connections>
-                                                            <action selector="viewProfileButtonTapped:" destination="bQE-iv-ayX" eventType="touchUpInside" id="hVV-OU-SNI"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -765,7 +753,6 @@
                         <outlet property="secondEmoji" destination="gwX-7m-edL" id="mgq-fq-Ug5"/>
                         <outlet property="thirdEmoji" destination="Gzq-r7-m8G" id="NeL-9W-oLq"/>
                         <outlet property="topBarView" destination="j1P-gt-T4L" id="IBa-Rq-I3E"/>
-                        <outlet property="viewProfileButton" destination="17Z-z4-WQF" id="lM7-WM-GU2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6hS-BV-mEw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -851,7 +838,6 @@
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="pencil.line" catalog="system" width="128" height="98"/>
         <image name="person" catalog="system" width="128" height="121"/>
-        <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
