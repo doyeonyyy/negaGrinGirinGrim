@@ -29,8 +29,8 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         bodyContainer.axis = .vertical
         bodyContainer.translatesAutoresizingMaskIntoConstraints = false
         //        bodyContainer.backgroundColor = UIColor.yellow
-//                bodyContainer.layer.borderColor = UIColor.gray.cgColor
-//                bodyContainer.layer.borderWidth = 1.0
+        //                bodyContainer.layer.borderColor = UIColor.gray.cgColor
+        //                bodyContainer.layer.borderWidth = 1.0
         return bodyContainer
     }()
     
@@ -39,7 +39,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         let profilePictureView = UIStackView()
         profilePictureView.axis = .vertical
         profilePictureView.translatesAutoresizingMaskIntoConstraints = false
-//        profilePictureView.backgroundColor = UIColor(hex: "ff9f1c")
+        //        profilePictureView.backgroundColor = UIColor(hex: "ff9f1c")
         //        profilePictureView.layer.borderColor = UIColor.gray.cgColor
         //        profilePictureView.layer.borderWidth = 1.0
         return profilePictureView
@@ -66,7 +66,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         profilImageEditButton.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         //        profilImageEditButton.backgroundColor = UIColor.white
         profilImageEditButton.translatesAutoresizingMaskIntoConstraints = false
-        profilImageEditButton.addTarget(EditProfileViewController.self, action: #selector(openAlbum), for: .touchUpInside)
+        profilImageEditButton.addTarget(self, action: #selector(openAlbum), for: .touchUpInside)
         return profilImageEditButton
     }()
     
@@ -76,10 +76,10 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         let userInfoView = UIStackView()
         userInfoView.axis = .vertical
         userInfoView.translatesAutoresizingMaskIntoConstraints = false
-//        userInfoView.backgroundColor = UIColor(hex: "cbf3f0")
-//        userInfoView.layer.borderColor = UIColor.gray.cgColor
-//        userInfoView.layer.borderWidth = 1
-//        userInfoView.layer.cornerRadius = 10
+        //        userInfoView.backgroundColor = UIColor(hex: "cbf3f0")
+        //        userInfoView.layer.borderColor = UIColor.gray.cgColor
+        //        userInfoView.layer.borderWidth = 1
+        //        userInfoView.layer.cornerRadius = 10
         return userInfoView
     }()
     
@@ -90,7 +90,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         // border try
         userInfoBox.frame.size.width = 280
         userInfoBox.frame.size.height = 35
-//        userInfoBox.layer.addBorder([.bottom], color: UIColor.gray, width: 1.0)
+        //        userInfoBox.layer.addBorder([.bottom], color: UIColor.gray, width: 1.0)
         return userInfoBox
     }()
     
@@ -103,7 +103,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         userInfoTitle.translatesAutoresizingMaskIntoConstraints = false
         return userInfoTitle
     }()
-        let userInfoTextField0 : UITextField = {
+    let userInfoTextField0 : UITextField = {
         let userInfotextField = UITextField()
         userInfotextField.placeholder = "사용자 ID"
         userInfotextField.font = UIFont.boldSystemFont(ofSize: 20)
@@ -122,7 +122,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         // border try
         userInfoBox.frame.size.width = 280
         userInfoBox.frame.size.height = 35
-//        userInfoBox.layer.addBorder([.bottom], color: UIColor.gray, width: 1.0)
+        //        userInfoBox.layer.addBorder([.bottom], color: UIColor.gray, width: 1.0)
         return userInfoBox
     }()
     
@@ -142,7 +142,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         userInfotextField.frame.size.width = 180
         userInfotextField.frame.size.height = 35
         userInfotextField.layer.addBorder([.bottom], color: UIColor.gray, width: 0.5)
-       return userInfotextField
+        return userInfotextField
     }()
     
     let userInfoBox2: UIStackView = {
@@ -275,7 +275,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         let otherButtonView = UIStackView()
         otherButtonView.axis = .vertical
         otherButtonView.translatesAutoresizingMaskIntoConstraints = false
-//                otherButtonView.backgroundColor = UIColor(hex: "2ec4b6")
+        //                otherButtonView.backgroundColor = UIColor(hex: "2ec4b6")
         //        otherButtonView.layer.borderColor = UIColor.gray.cgColor
         //        otherButtonView.layer.borderWidth = 1.0
         return otherButtonView
@@ -346,7 +346,7 @@ extension EditProfileViewController{
         userInfoBox4.addSubview(userInfoTextField4)
         userInfoView.addSubview(userInfoBox5)
         userInfoBox5.addSubview(userInfoTitle5)
-    
+        
         userInfoBox5.addSubview(userInfoTextField5)
         otherButtonView.addSubview(otherButton1)
         otherButtonView.addSubview(otherButton2)
@@ -580,14 +580,6 @@ extension EditProfileViewController{
                 defaults.set(introduction, forKey: "introduction")
                 defaults.set(titleOfAnni, forKey: "titleOfAnniversary")
                 defaults.set(anni, forKey: "anniversary")
-                
-                
-//                print(defaults.string(forKey: "userName")!)
-//                print(defaults.string(forKey: "name")!)
-//                print(defaults.string(forKey: "mood")!)
-//                print(defaults.string(forKey: "introduction")!)
-////                print(defaults.string(forKey: "anniversaryTitle")?)
-//                print(defaults.string(forKey: "anniversary")!)
                 
                 self.navigationController?.isNavigationBarHidden = true
                 navigationController?.popViewController(animated: true)
