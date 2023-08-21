@@ -66,7 +66,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         profilImageEditButton.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         //        profilImageEditButton.backgroundColor = UIColor.white
         profilImageEditButton.translatesAutoresizingMaskIntoConstraints = false
-        profilImageEditButton.addTarget(EditProfileViewController.self, action: #selector(openAlbum), for: .touchUpInside)
+        profilImageEditButton.addTarget(self, action: #selector(openAlbum), for: .touchUpInside)
         return profilImageEditButton
     }()
     
